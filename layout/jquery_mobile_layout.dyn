@@ -3,15 +3,25 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-[#=]::layout.title?[Dyndoc Project][#>]
+[#=]::layout.title?[Dyndoc Project]
+[#=]::page.title?[Dyndoc Project]
+[#=]::page.footer?[Dyndoc Project]
+[#>]
 <title>#{layout.title}</title>
 {#LayoutHeader#}
 </head>
 <body>
-
+<div data-role="page">
+<div data-role="header">
+	<h1>#{page.title}</h1>
+</div><!-- /header -->
+<div role="main" class="ui-content">
 #{body.content}
-
+</div><!-- /content -->
+<div data-role="footer">
+	<h4>#{page.footer}</h4>
+</div><!-- /footer -->
+</div>
 {#LayoutPostJS#}
-
 </body>
 </html>
