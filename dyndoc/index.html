@@ -10,21 +10,27 @@
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-<div data-role="page">
-<div data-role="header">
-	<h1>Dyndoc Project</h1>
+
+	<div data-role="page" id="page-dyn" data-title="Dyndoc Project">
+<div data-role="header" data-position="fixed" data-fullscreen="false">
+  <h1>Dyndoc Project</h1>
 </div><!-- /header -->
+
+<div data-role="panel" id="panel-dyn">
+<p>titi</p><a href="#page-dyn" data-rel="close">Close panel</a></div><!-- /panel -->
+
+
 <div role="main" class="ui-content">
-
-bla bla
-
-
-
+<p>toto</p><a href="#panel-dyn" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Overlay</a>
 </div><!-- /content -->
-<div data-role="footer">
-	<h4>Dyndoc Project</h4>
+
+<div data-role="footer" data-position="fixed" data-fullscreen="false">
+  <h4>Dyndoc</h4>
 </div><!-- /footer -->
-</div>
+</div><!-- /page -->
+
+
+
 <script type="text/javascript">
 </body>
 </html>
