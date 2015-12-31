@@ -11,21 +11,69 @@
 </head>
 <body>
 
-	<div data-role="page" id="page-dyn" data-title="Dyndoc Project">
+	
+<div data-role="page" id="page-dyn" data-title="Dyndoc Project">
+<div data-role="panel" id="panel-dyn">
+
+<ul data-role="listview">
+  <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li ><a href="#page-dyn" >Main page</a></li>
+<li ><a href="#page-dyn2" >Page 2</a></li>
+<li ><a href="#link3" >content3</a></li>
+</ul>
+</div><!-- /panel -->
+
 <div data-role="header" data-position="fixed" data-fullscreen="false">
+  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+
+
   <h1>Dyndoc Project</h1>
+  
 </div><!-- /header -->
 
-<div data-role="panel" id="panel-dyn">
-<p>titi</p><a href="#page-dyn" data-rel="close">Close panel</a></div><!-- /panel -->
-
-
 <div role="main" class="ui-content">
-<p>toto</p><a href="#panel-dyn" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Overlay</a>
+
+<p>toto</p>
+<a href="#panel-dyn" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Menu</a>
 </div><!-- /content -->
 
 <div data-role="footer" data-position="fixed" data-fullscreen="false">
+  
   <h4>Dyndoc</h4>
+  
+</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="page-dyn2" data-title="Dyndoc Project">
+<div data-role="panel" id="panel-dyn2">
+
+<ul data-role="listview">
+  <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li ><a href="#page-dyn" >Main page</a></li>
+<li ><a href="#page-dyn2" >Page 2</a></li>
+<li ><a href="#link3" >content3</a></li>
+</ul>
+</div><!-- /panel -->
+
+<div data-role="header" data-position="fixed" data-fullscreen="false">
+  <a href="#panel-dyn2" data-icon="bars" data-iconpos="notext"></a>
+
+
+  <h1>Dyndoc Project</h1>
+  
+</div><!-- /header -->
+
+<div role="main" class="ui-content">
+
+<p>toto2</p>
+<a href="#panel-dyn2" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Menu</a>
+</div><!-- /content -->
+
+<div data-role="footer" data-position="fixed" data-fullscreen="false">
+  
+  <h4>Dyndoc</h4>
+  
 </div><!-- /footer -->
 </div><!-- /page -->
 

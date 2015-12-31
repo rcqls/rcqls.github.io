@@ -1,10 +1,31 @@
+[#%]Put it apart because reusable in many page
+[#=]menu-panel-content[page-dyn:Main page|page-dyn2:Page 2
+link3:content3]
 
+
+[#>]
 {#jqmPage]page-dyn
 [#page.title][Dyndoc Project]
 [#header.title][Dyndoc Project]
+[#header.left]{#jqmHeaderButton]panel-dyn[#}
 [#footer.title][Dyndoc]
 [#->]panel
-[#>]{#jqmPanel]panel-dyn[#>]<p>titi</p><a href="#page-dyn" data-rel="close">Close panel</a>[#jqmPanel}
+[#>]{#jqmPanel]panel-dyn[#>]{#jqmMenuListView]#{menu-panel-content}[#}[#jqmPanel}
 [#->]body
-[#>]<p>toto</p><a href="#panel-dyn" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Overlay</a>
+[#>]
+<p>toto</p>
+<a href="#panel-dyn" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Menu</a>
+[#jqmPage}
+
+{#jqmPage]page-dyn2
+[#page.title][Dyndoc Project]
+[#header.title][Dyndoc Project]
+[#header.left]{#jqmHeaderButton]panel-dyn2[#}
+[#footer.title][Dyndoc]
+[#->]panel
+[#>]{#jqmPanel]panel-dyn2[#>]{#jqmMenuListView]#{menu-panel-content}[#}[#jqmPanel}
+[#->]body
+[#>]
+<p>toto2</p>
+<a href="#panel-dyn2" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Menu</a>
 [#jqmPage}
