@@ -1,0 +1,28 @@
+
+{#jqmTabNavBar]tabs
+[#tabs][
+  <<[
+    <<href[one]
+    <<title[One]
+    <<content[toto1]
+  ]
+  <<[
+    <<href[two]
+    <<title[Two]
+    <<content[toto2]
+  ]
+  <<[
+    <<href[ajax-content-ignore.html]
+    <<title[Three]
+    <<content[toto3]
+  ]
+]
+[#}
+
+{#jqmTabsNavBar][#=]id[tabs]
+[#href]one[#title]One[#tab]
+      Content One
+[#href]two[#title]Two[#tab]
+     Content Two
+[#href]ajax-content-ignore.html[#title]Three
+[#jqmTabsNavBar}
