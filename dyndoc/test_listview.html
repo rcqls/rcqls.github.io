@@ -54,8 +54,8 @@
 </li>
 <li class="ui-body ui-body-a">
   <fieldset class="ui-grid-a">
-    <div class="ui-block-a" id="btns-dyn-a"><button type="button" class="ui-btn ui-corner-all ui-btn-a">Cancel</button></div>
-    <div class="ui-block-b" id="btns-dyn-b"><button type="button" class="ui-btn ui-corner-all ui-btn-a">Submit</button></div>
+    <div class="ui-block-a" id="#btns-dyn-a"><button type="button" class="ui-btn ui-corner-all ui-btn-a">Cancel</button></div>
+    <div class="ui-block-b" id="#btns-dyn-b"><button type="button" class="ui-btn ui-corner-all ui-btn-a">Submit</button></div>
   </fieldset>
 </li>
 </ul></form>
@@ -110,6 +110,16 @@
 
 
 <script type="text/javascript">
+$(function () {
+    $("#btns-dyn-a").on('click',function () {
+    toto;
+    
+  });
+    $("#btns-dyn-b").on('click',function () {
+    
+    titi
+  });
+});
 </script>
 </body>
 </html>

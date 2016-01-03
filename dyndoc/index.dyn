@@ -41,7 +41,7 @@ link3:content3
 {#jqmSelectChoice]sc-dyn[#title]Choose shipping method:[#choices]standard (Standard: 7 day) | rush (Rush: 3 days)
  express(Express: next day) | overnight (Overnight)
 [#}
-{#jqmButtonSet]btns-dyn[#}
+{#jqmButtonSet]btns-dyn[#on.click.a]alert("toto")[#}
 [#jqmForm}
 [#href]three[#title]Three[#tab]
   {#jqmGrid]

@@ -95,8 +95,8 @@
 <li class="ui-field-contain">
     <label for="flip-dyn">Flip switch:</label>
     <select name="flip-dyn" id="flip-dyn" data-role="slider">
-        <option value="#{off.val}">Off</option>
-        <option value="#{on.val}">On</option>
+        <option value="off">Off</option>
+        <option value="on">On</option>
     </select>
 </li>
 <li class="ui-field-contain">
@@ -151,6 +151,12 @@
 
 
 <script type="text/javascript">
+$(function () {
+    $("#btns-dyn-a").on('click',function () {
+    alert("toto");
+    
+  });
+});
 </script>
 </body>
 </html>
