@@ -1,0 +1,10 @@
+[#<]{#LayoutLoad]
+[#css_header]jquery_mobile_cdnjs
+[#js_header]jquery_cdnjs,jquery_mobile_cdnjs
+[#}
+[#>]
+{#jqmGrid]
+[#ncol]3[#elt]A[#elt]B[#elt][C]
+[#ncol]4[#elt]A[#elt]B[#elt]C[#elt][D]
+[#ncol]2[#elt]A[#elt][B]
+[#jqmGrid}

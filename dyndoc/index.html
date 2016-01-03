@@ -26,7 +26,6 @@
 <div data-role="header" data-position="fixed" data-fullscreen="false">
   <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
 
-
   <h1>Dyndoc Project</h1>
   
 </div><!-- /header -->
@@ -59,7 +58,6 @@
 <div data-role="header" data-position="fixed" data-fullscreen="false">
   <a href="#panel-dyn2" data-icon="bars" data-iconpos="notext"></a>
 
-
   <h1>Dyndoc Project2</h1>
   
 </div><!-- /header -->
@@ -68,19 +66,76 @@
 
 <p>toto2 luvyu</p>
 <a href="#panel-dyn2" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Menu</a>
-<div data-role="tabs" id="tabs">
+<div data-role="tabs" id="tabs-dyn">
 <div data-role="navbar"><ul>
 <li><a href="#one" data-ajax="false">One</a></li>
 <li><a href="#two" data-ajax="false">Two</a></li>
-<li><a href="ajax-content-ignore.html" data-ajax="false">Three</a></li>
+<li><a href="#three" data-ajax="false">Three</a></li>
+<li><a href="#four" data-ajax="false">Four</a></li>
 </ul></div>
 
       <div id="one">
-      toto1
+      
+      Content One
+
       </div>
     
       <div id="two">
-      toto2
+      
+<form><ul data-role="listview" data-inset="true">
+
+<li class="ui-field-contain">
+    <label for="input-dyn">Text Input:</label>
+    <input type="text" name="input-dyn" id="input-dyn" value="" data-clear-btn="true">
+</li>
+<li class="ui-field-contain">
+    <label for="textarea-dyn">Textarea:</label>
+    <textarea cols="40" rows="8" name="textarea-dyn" id="textarea-dyn"></textarea>
+</li>
+<li class="ui-field-contain">
+    <label for="flip-dyn">Flip switch:</label>
+    <select name="flip-dyn" id="flip-dyn" data-role="slider">
+        <option value="#{off.val}">Off</option>
+        <option value="#{on.val}">On</option>
+    </select>
+</li>
+<li class="ui-field-contain">
+    <label for="slider-dyn">Slider:</label>
+    <input type="range" name="slider-dyn" id="slider-dyn" value="0" min="0" max="100" data-highlight="true">
+</li>
+<li class="ui-field-contain">
+  <label for="sc-dyn">Choose shipping method:</label>
+  <select name="sc-dyn" id="sc-dyn" data-native-menu="false">
+    <option value="standard">Standard: 7 day</option>
+    <option value="rush">Rush: 3 days</option>
+    <option value="express">Express: next day</option>
+    <option value="overnight">Overnight</option>
+  </select>
+</li>
+<li class="ui-body ui-body-a">
+  <fieldset class="ui-grid-a">
+    <div class="ui-block-a" id="btns-dyn-a"><button type="button" class="ui-btn ui-corner-all ui-btn-a">Cancel</button></div>
+    <div class="ui-block-b" id="btns-dyn-b"><button type="button" class="ui-btn ui-corner-all ui-btn-a">Submit</button></div>
+  </fieldset>
+</li>
+</ul></form>
+
+
+      </div>
+    
+      <div id="three">
+      
+  <div class="ui-grid-b ui-responsive"><div class="ui-block-a">A</div><div class="ui-block-b">B</div><div class="ui-block-c">C</div></div><div class="ui-grid-c ui-responsive"><div class="ui-block-a">A</div><div class="ui-block-b">B</div><div class="ui-block-c">C</div><div class="ui-block-d">D</div></div><div class="ui-grid-a ui-responsive"><div class="ui-block-a"><a href="#panel-dyn2" class="ui-btn  ui-corner-all">A</a></div><div class="ui-block-b"><a href="#page-dyn" class="ui-btn  ui-corner-all">B</a>
+  </div></div>
+
+      </div>
+    
+      <div id="four">
+      
+    <div class="ui-grid-a ui-responsive"><div class="ui-block-a"><a href="#panel-dyn2" class="ui-btn  ui-corner-all">A</a></div><div class="ui-block-b"><a href="#page-dyn" class="ui-btn  ui-corner-all">B</a>
+    </div></div><div class="ui-grid-a ui-responsive"><div class="ui-block-a"><a href="#panel-dyn2" class="ui-btn  ui-corner-all">C</a></div><div class="ui-block-b"><a href="#page-dyn" class="ui-btn  ui-corner-all">D</a>
+    </div></div>
+
       </div>
     <div>
 
@@ -96,5 +151,6 @@
 
 
 <script type="text/javascript">
+</script>
 </body>
 </html>

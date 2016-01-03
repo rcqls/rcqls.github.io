@@ -4,7 +4,6 @@ page-dyn:Main page|page-dyn2:Page 2
 link3:content3
 ]
 
-
 [#>]
 {#jqmPage]page-dyn
 [#page.title][Dyndoc Project]
@@ -30,23 +29,30 @@ link3:content3
 [#>]
 <p>toto2 luvyu</p>
 <a href="#panel-dyn2" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Menu</a>
-{#jqmTabNavBar]tabs
-[#tabs][
-  <<[
-    <<href[one]
-    <<title[One]
-    <<content[toto1]
-  ]
-  <<[
-    <<href[two]
-    <<title[Two]
-    <<content[toto2]
-  ]
-  <<[
-    <<href[ajax-content-ignore.html]
-    <<title[Three]
-    <<content[toto3]
-  ]
-]
+{#jqmTabNavBar][#=]id[tabs-dyn]
+[#href]one[#title]One[#tab]
+      Content One
+[#href]two[#title]Two[#tab]
+{#jqmForm][#>]
+{#jqmInput]input-dyn[#title]Text Input:[#}
+{#jqmTextArea]textarea-dyn[#title]Textarea:[#}
+{#jqmFlip]flip-dyn[#title]Flip switch:[#}
+{#jqmSlider]slider-dyn[#title]Slider:[#}
+{#jqmSelectChoice]sc-dyn[#title]Choose shipping method:[#choices]standard (Standard: 7 day) | rush (Rush: 3 days)
+ express(Express: next day) | overnight (Overnight)
 [#}
+{#jqmButtonSet]btns-dyn[#}
+[#jqmForm}
+[#href]three[#title]Three[#tab]
+  {#jqmGrid]
+  [#ncol]3[#elt]A[#elt]B[#elt][C]
+  [#ncol]4[#elt]A[#elt]B[#elt]C[#elt][D]
+  [#ncol]2[#elt]{#jqmLink]panel-dyn2[#,]A[#}[#elt]{#jqmLink]page-dyn[#,]B[#}
+  [#jqmGrid}
+[#href]four[#title]Four[#tab]
+    {#jqmGrid][#ncol]2
+    [#elt]{#jqmLink]panel-dyn2[#,]A[#}[#elt]{#jqmLink]page-dyn[#,]B[#}
+    [#elt]{#jqmLink]panel-dyn2[#,]C[#}[#elt]{#jqmLink]page-dyn[#,]D[#}
+    [#jqmGrid}
+[#jqmTabNavBar}
 [#jqmPage}

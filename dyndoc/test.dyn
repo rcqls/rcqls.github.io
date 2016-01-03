@@ -1,5 +1,20 @@
+{#jqmTabNavBar][#=]id[tabs]
+[#href]one[#title]One[#tab]
+      Content One
+[#href]two[#title]Two[#tab]
+     Content Two
+[#href]ajax-content-ignore.html[#title]Three
+[#href]four[#title]Four[#tab]
+  {#jqmTabNavBar][#=]id[tabs2]
+  [#href]one2[#title]One2[#tab]
+        Content One 2
+  [#href]two2[#title]Two2[#tab]
+       Content Two 2
+  [#jqmTabNavBar}
+[#jqmTabNavBar}
 
-{#jqmTabNavBar]tabs
+
+{#jqmTabNavBar_ary]tabs
 [#tabs][
   <<[
     <<href[one]
@@ -18,11 +33,3 @@
   ]
 ]
 [#}
-
-{#jqmTabsNavBar][#=]id[tabs]
-[#href]one[#title]One[#tab]
-      Content One
-[#href]two[#title]Two[#tab]
-     Content Two
-[#href]ajax-content-ignore.html[#title]Three
-[#jqmTabsNavBar}
