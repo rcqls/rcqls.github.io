@@ -1,18 +1,17 @@
-[#%]Put it apart because reusable in many page
-[#=]menu-panel-dyn[
-page-home:Home page
-page-todo:Todo Page
-page-test-adoc:Asciidoctor Test Page
-]
-[#>]
-{#jqmPanel]panel-dyn[#>]{#jqmMenuListView]#{menu-panel-dyn}[#}[#jqmPanel}
+{#jqmPanel]panel-dyn[#>]
+  {#jqmMenuListView]
+    page-home:Home page
+    page-todo:Todo Page
+    page-test-adoc:Asciidoctor Test Page
+  [#}
+[#jqmPanel}
 
 {#jqmPage]page-home
 [#page.title][Dyndoc Project]
 [#header.title][Dyndoc Project]
 [#header.left]{#jqmHeaderButton]panel-dyn[#}
 [#footer.title][Dyndoc]
-[#adoc>]== TO WRITE
+[#adoc>]== Short description
 [#jqmPage}
 
 {#jqmPage]page-todo
@@ -30,7 +29,7 @@ page-test-adoc:Asciidoctor Test Page
 === Dyndocker
 
 - [*] dyntask is avoiding
-- [ ] bash replace with red which is cross-platform
+- [ ] When red ready: bash replaced with red which is cross-platform
 
 ]
 [#>]

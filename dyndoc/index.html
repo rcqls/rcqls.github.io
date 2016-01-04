@@ -416,6 +416,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
+<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript">
@@ -425,15 +426,16 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 </head>
 <body>
 
-	
-<div data-role="panel" id="panel-dyn" data-theme="a">
+	<div data-role="panel" id="panel-dyn" data-theme="a">
 
+  
 <ul data-role="listview">
   <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
 <li ><a href="#page-home" >Home page</a></li>
 <li ><a href="#page-todo" >Todo Page</a></li>
 <li ><a href="#page-test-adoc" >Asciidoctor Test Page</a></li>
 </ul>
+
 </div><!-- /panel -->
 
 
@@ -447,7 +449,7 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 
 <div role="main" class="ui-content">
 <div class="sect1">
-<h2 id="_to_write">TO WRITE</h2>
+<h2 id="_short_description">Short description</h2>
 <div class="sectionbody">
 
 </div>
@@ -478,10 +480,10 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p>&#10063; Homebrew formula to install in MacOSX</p>
+<p><i class="fa fa-square-o"></i> Homebrew formula to install in MacOSX</p>
 </li>
 <li>
-<p>&#10063; MSys2 documentation only to install on Windows. The regular way is with docker</p>
+<p><i class="fa fa-square-o"></i> MSys2 documentation only to install on Windows. The regular way is with docker</p>
 </li>
 </ul>
 </div>
@@ -491,10 +493,10 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p>&#10003; dyntask is avoiding</p>
+<p><i class="fa fa-check-square-o"></i> dyntask is avoiding</p>
 </li>
 <li>
-<p>&#10063; bash replace with red which is cross-platform</p>
+<p><i class="fa fa-square-o"></i> When red ready: bash replaced with red which is cross-platform</p>
 </li>
 </ul>
 </div>
@@ -529,7 +531,7 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 An admonition paragraph draws the reader&#8217;s attention to
@@ -547,7 +549,7 @@ at the beginning of the paragraph.
 <table>
 <tr>
 <td class="icon">
-<div class="title">Tip</div>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 Pro tip&#8230;&#8203;
@@ -559,7 +561,7 @@ Pro tip&#8230;&#8203;
 <table>
 <tr>
 <td class="icon">
-<div class="title">Important</div>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 Don&#8217;t forget&#8230;&#8203;
@@ -571,7 +573,7 @@ Don&#8217;t forget&#8230;&#8203;
 <table>
 <tr>
 <td class="icon">
-<div class="title">Warning</div>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 Watch out for&#8230;&#8203;
@@ -583,7 +585,7 @@ Watch out for&#8230;&#8203;
 <table>
 <tr>
 <td class="icon">
-<div class="title">Caution</div>
+<i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
 Ensure that&#8230;&#8203;
