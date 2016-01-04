@@ -1,4 +1,9 @@
+[#=]js_panel_code[
+$(function() { $("div[data-role='panel']").enhanceWithin().panel();});
+]
+[#rb<]LayoutMngr << [:js_code,#{=js_panel_code}]
 [#<]{#LayoutLoad]
-[#css_header]jquery_mobile_cdnjs
+[#css_header]jquery_mobile_cdnjs,adoc
 [#js_header]jquery_cdnjs,jquery_mobile_cdnjs
+[#js_code]#{=js_panel_code}
 [#}
