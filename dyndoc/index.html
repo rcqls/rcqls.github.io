@@ -433,6 +433,7 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
   <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
 <li ><a href="#page-home" >Home page</a></li>
 <li ><a href="#page-todo" >Todo Page</a></li>
+<li ><a href="#page-dev" >Devel Page</a></li>
 <li ><a href="#page-test-adoc" >Asciidoctor Test Page</a></li>
 </ul>
 
@@ -449,9 +450,21 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 
 <div role="main" class="ui-content">
 <div class="sect1">
-<h2 id="_short_description">Short description</h2>
+<h2 id="_dyndoc_short_presentation">Dyndoc (short presentation)</h2>
 <div class="sectionbody">
-
+<div class="ulist">
+<ul>
+<li>
+<p>macro-language based on an exotic tag system to live inside a human readable format document (<code>latex</code>,<code>html</code>,<code>makdown</code>,&#8230;&#8203;)</p>
+</li>
+<li>
+<p>similarly to <code>sweave</code> or <code>knitr</code> (in the <code>R</code> world), it can embed <code>R</code> language but also many other languages like <code>ruby</code> and <code>julia</code>.</p>
+</li>
+<li>
+<p>similarly to <code>eruby</code> (in the <code>ruby</code> world), <code>R</code> and <code>ruby</code> can be used to dynamically make content</p>
+</li>
+</ul>
+</div>
 </div>
 </div></div><!-- /content -->
 
@@ -496,7 +509,7 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 <p><i class="fa fa-check-square-o"></i> dyntask is avoiding</p>
 </li>
 <li>
-<p><i class="fa fa-square-o"></i> When red ready: bash replaced with red which is cross-platform</p>
+<p><i class="fa fa-square-o"></i> bash replaced with red which is cross-platform</p>
 </li>
 </ul>
 </div>
@@ -505,6 +518,42 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 </div>
 
 </div><!-- /content -->
+
+<div data-role="footer" data-position="fixed" data-fullscreen="false">
+  
+  <h4>Dyndoc</h4>
+  
+</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="page-dev" data-title="[Dyndoc Dev Page">
+<div data-role="header" data-position="fixed" data-fullscreen="false">
+  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+
+  <h1>[Dyndoc Dev Page</h1>
+  
+</div><!-- /header -->
+
+<div role="main" class="ui-content">
+<div class="sect1">
+<h2 id="_development_of_dyndoc">Development of Dyndoc</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is mainly two modes for installing <code>dyndoc</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>direct installation</p>
+</li>
+<li>
+<p>docker</p>
+</li>
+</ul>
+</div>
+</div>
+</div></div><!-- /content -->
 
 <div data-role="footer" data-position="fixed" data-fullscreen="false">
   

@@ -1,3 +1,4 @@
+[#%]This makes the panel available for every page
 [#=]js_panel_code[
 $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 ]

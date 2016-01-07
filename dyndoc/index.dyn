@@ -2,6 +2,7 @@
   {#jqmMenuListView]
     page-home:Home page
     page-todo:Todo Page
+    page-dev:Devel Page
     page-test-adoc:Asciidoctor Test Page
   [#}
 [#jqmPanel}
@@ -11,7 +12,13 @@
 [#header.title][Dyndoc Project]
 [#header.left]{#jqmHeaderButton]panel-dyn[#}
 [#footer.title][Dyndoc]
-[#adoc>]== Short description
+[#adoc>]
+== Dyndoc (short presentation)
+
+* macro-language based on an exotic tag system to live inside a human readable format document (`latex`,`html`,`makdown`,...)
+* similarly to `sweave` or `knitr` (in the `R` world), it can embed `R` language but also many other languages like `ruby` and `julia`.
+* similarly to `eruby` (in the `ruby` world), `R` and `ruby` can be used to dynamically make content
+
 [#jqmPage}
 
 {#jqmPage]page-todo
@@ -19,7 +26,8 @@
 [#header.title][Dyndoc TODO]
 [#header.left]{#jqmHeaderButton]panel-dyn[#}
 [#footer.title][Dyndoc]
-[#adoc>][== TODO list
+[#adoc>][
+== TODO list
 
 === Install
 
@@ -29,10 +37,24 @@
 === Dyndocker
 
 - [*] dyntask is avoiding
-- [ ] When red ready: bash replaced with red which is cross-platform
+- [ ] bash replaced with red which is cross-platform
 
 ]
 [#>]
+
+[#jqmPage}
+
+{#jqmPage]page-dev
+[#header.title][[Dyndoc Dev Page]
+[#header.left]{#jqmHeaderButton]panel-dyn[#}
+[#footer.title][Dyndoc]
+[#adoc>]
+==  Development of Dyndoc
+
+There is mainly two modes for installing `dyndoc`:
+
+* direct installation
+* docker
 
 [#jqmPage}
 
@@ -42,7 +64,8 @@
 [#header.title][Asciidoctor Test]
 [#header.left]{#jqmHeaderButton]panel-dyn[#}
 [#footer.title][Dyndoc]
-[#adoc>][== TODO
+[#adoc>][
+== TODO
 
 NOTE: An admonition paragraph draws the reader's attention to
 auxiliary information.
