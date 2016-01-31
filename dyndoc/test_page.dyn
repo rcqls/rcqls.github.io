@@ -1,3 +1,7 @@
+[#<]{#LayoutLoad]
+[#css_header]jquery_mobile_cdnjs,adoc
+[#js_header]jquery_cdnjs,jquery_mobile_cdnjs
+[#}
 [#%]Put it apart because reusable in many page
 [#=]menu-panel-content[
 page-dyn:Main page|page-dyn2:Page 2

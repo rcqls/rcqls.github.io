@@ -1,0 +1,19 @@
+{#jqmPanel]panel-dyn[#>]
+  {#jqmMenuListView]
+    page-home:Home page
+    http://rcqls.github.io/dyndoc:Dyndoc
+    http://rcqls.github.io/ensgt:Teaching
+  [#}
+[#jqmPanel}
+
+{#jqmPage]page-home
+[#page.title][RCqls Projects]
+[#header.title][RCqls Projects]
+[#header.left]{#jqmHeaderButton]panel-dyn[#}
+[#footer.title][Projects]
+[#adoc>]
+This page gathers all projects developped by RCqls:
+* Dyndoc Project
+* R Packages
+* Teaching Project
+[#jqmPage}
