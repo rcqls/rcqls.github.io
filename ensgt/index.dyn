@@ -59,16 +59,13 @@ L'un des points fondamental de ce cours est de facilement (grâce à l'A.E.P.) d
   La formule d'obtention de l'erreur standard dépend bien évidemment de la nature du paramètre d'intérêt à estimer (voir formulaire de cours). Sur un plan pratique, ces quantités s'obtiennent par une simple formule R (grâce au package R asympTest).
 ** *Intervalle de Confiance* (cadre asymptotique, i.e. $n\geq30$)
 *** L'estimation par Intervalle de Confiance (à $95\% de niveau de confiance) est une extension naturelle de l'estimation ponctuelle qui intègre la notion d'*erreur standard* mesurant la qualité d'estimation.
-*** L'Intervalle de Confiance (à $95\%$ de niveau de confiance) est défini très simplement par: *estimation moins ou plus 2 fois l'erreur standard*
+*** L'Intervalle de Confiance (à $95\%$ de niveau de confiance) est défini très simplement par *estimation moins ou plus 2 fois l'erreur standard*:
 \[
 IC_{\mu,95\%}(\mathbf{y})=[\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})]
 \]
-*** via l'*A.E.P.*, c'est l'un parmi une infinité d'intervalles de confiance $\left(IC_{\mu,95\%}(\mathbf{y_{[.]}})\right)_{+\infty}$ qu'on on aurait pu construire dont on sait qu'approximativement $95\%$ contiendraient le vrai paramètre $\mu$ *inconnu*.
-*** Cela traduit la formule *A.M.P.*:
-\[
-\mathbb{P}\left(\mu \in IC_{\mu,95\%}(\mathbf{Y})\right)=95\%
-\]
-* Outil d'aide à la décision et p-valeur
+*** via l'*A.E.P.*, $IC_{\mu,95\%}(\mathbf{y})$ est un Intervalle de Confiance parmi une infinité d'Intervalles de Confiance $\left(IC_{\mu,95\%}(\mathbf{y_{[.]}})\right)_{+\infty}$ qu'on on aurait pu construire dont on sait qu'approximativement $95\%$ contiendraient le vrai paramètre $\mu$ *inconnu*.
+*** Cela traduit la définition *A.M.P.* d'un Intervalle de Confiance de $\mu$ : $\mathbb{P}\left(\mu \in IC_{\mu,95\%}(\mathbf{Y})\right)\simeq 95\%$
+* Outil d'aide à la décision et p-valeur (TODO)
 ]
 [#jqmPage}
 
