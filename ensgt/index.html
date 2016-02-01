@@ -419,6 +419,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 <script type="text/javascript">
 $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 
@@ -426,261 +429,169 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 </head>
 <body>
 
-	<div data-role="panel" id="panel-dyn" data-theme="a">
+	<div data-role="panel" id="panel-dyn" data-position="left" data-display="reveal" data-theme="a">
 
   
 <ul data-role="listview">
   <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
-<li ><a href="#page-home" >Home page</a></li>
-<li ><a href="#page-todo" >Todo Page</a></li>
-<li ><a href="#page-dev" >Devel Page</a></li>
-<li ><a href="#page-test-adoc" >Asciidoctor Test Page</a></li>
+<li ><a href="#page-home" >Home Page</a></li>
+<li ><a href="#page-stat-inf" >Stat Inf</a></li>
+<li ><a href="#page-econo" >Econo</a></li>
+<li ><a href="#page-stat-desc" >Stat Desc</a></li>
+<li ><a href="#page-anova" >ANOVA</a></li>
+<li ><a href="#page-R" >Formation R</a></li>
 </ul>
 
 </div><!-- /panel -->
 
 
-<div data-role="page" id="page-home" data-title="Dyndoc Project">
+<div data-role="page" id="page-home" data-title="RCqls Teaching">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
   <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
 
-  <h1>Dyndoc Project</h1>
+  <h1>RCqls Teaching</h1>
   
 </div><!-- /header -->
 
 <div role="main" class="ui-content">
-<div class="sect1">
-<h2 id="_dyndoc_short_presentation">Dyndoc (short presentation)</h2>
-<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>macro-language based on an exotic tag system to live inside a human readable format document (<code>latex</code>,<code>html</code>,<code>makdown</code>,&#8230;&#8203;)</p>
+<p>Statistique Inférentielle</p>
 </li>
 <li>
-<p>similarly to <code>sweave</code> or <code>knitr</code> (in the <code>R</code> world), it can embed <code>R</code> language but also many other languages like <code>ruby</code> and <code>julia</code>.</p>
+<p>Econométrie</p>
 </li>
 <li>
-<p>similarly to <code>eruby</code> (in the <code>ruby</code> world), <code>R</code> and <code>ruby</code> can be used to dynamically make content</p>
+<p>Statistique Descriptive</p>
+</li>
+<li>
+<p>ANOVA</p>
+</li>
+</ul>
+</div></div><!-- /content -->
+
+<div data-role="footer" data-position="fixed" data-fullscreen="false">
+  
+  <h4>Teaching</h4>
+  
+</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="page-stat-inf" data-title="Statistique Inférentielle">
+<div data-role="header" data-position="fixed" data-fullscreen="false">
+  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+
+  <h1>Statistique Inférentielle</h1>
+  
+</div><!-- /header -->
+
+<div role="main" class="ui-content">
+<div class="sect2">
+<h3 id="_plan_et_rythme_du_cours">Plan et Rythme du Cours</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>A.E.P. en complément de l&#8217;A.M.P.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Approche Expérimentale des Probabilités s&#8217;appuyant sur les outils de statistique descriptive
+pour représenter un grand nombre <code>m</code> (en théorie une infinité) de réalisations d&#8217;une variable aléatoire <code>Y</code>, notée <code>y_{[1]},\cdots,y_{[m]}</code>.</p>
 </li>
 </ul>
 </div>
+</li>
+<li>
+<p>Erreur Standard et Estimation par Intervalle de Confiance</p>
+</li>
+<li>
+<p>P-Valeur</p>
+</li>
+</ul>
 </div>
 </div></div><!-- /content -->
 
 <div data-role="footer" data-position="fixed" data-fullscreen="false">
   
-  <h4>Dyndoc</h4>
+  <h4>Teaching</h4>
   
 </div><!-- /footer -->
 </div><!-- /page -->
 
 
-<div data-role="page" id="page-todo" data-title="Dyndoc TODO">
+<div data-role="page" id="page-econo" data-title="Econométrie">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
   <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
 
-  <h1>Dyndoc TODO</h1>
+  <h1>Econométrie</h1>
   
 </div><!-- /header -->
 
 <div role="main" class="ui-content">
-<div class="sect1">
-<h2 id="_todo_list">TODO list</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_install">Install</h3>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-square-o"></i> Homebrew formula to install in MacOSX</p>
-</li>
-<li>
-<p><i class="fa fa-square-o"></i> MSys2 documentation only to install on Windows. The regular way is with docker</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_dyndocker">Dyndocker</h3>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> dyntask is avoiding</p>
-</li>
-<li>
-<p><i class="fa fa-square-o"></i> bash replaced with red which is cross-platform</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-
 </div><!-- /content -->
 
 <div data-role="footer" data-position="fixed" data-fullscreen="false">
   
-  <h4>Dyndoc</h4>
+  <h4>Teaching</h4>
   
 </div><!-- /footer -->
 </div><!-- /page -->
 
 
-<div data-role="page" id="page-dev" data-title="[Dyndoc Dev Page">
+<div data-role="page" id="page-stat-desc" data-title="Econométrie">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
   <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
 
-  <h1>[Dyndoc Dev Page</h1>
+  <h1>Econométrie</h1>
   
 </div><!-- /header -->
 
 <div role="main" class="ui-content">
-<div class="sect1">
-<h2 id="_development_of_dyndoc">Development of Dyndoc</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>There is mainly two modes for installing <code>dyndoc</code>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>direct installation</p>
-</li>
-<li>
-<p>docker</p>
-</li>
-</ul>
-</div>
-</div>
-</div></div><!-- /content -->
-
-<div data-role="footer" data-position="fixed" data-fullscreen="false">
-  
-  <h4>Dyndoc</h4>
-  
-</div><!-- /footer -->
-</div><!-- /page -->
-
-
-
-<div data-role="page" id="page-test-adoc" data-title="Asciidoctor Test">
-<div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
-
-  <h1>Asciidoctor Test</h1>
-  
-</div><!-- /header -->
-
-<div role="main" class="ui-content">
-<div class="sect1">
-<h2 id="_todo">TODO</h2>
-<div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-An admonition paragraph draws the reader&#8217;s attention to
-auxiliary information.
-Its purpose is determined by the label
-at the beginning of the paragraph.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Here are the other built-in admonition types:</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Pro tip&#8230;&#8203;
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Don&#8217;t forget&#8230;&#8203;
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Watch out for&#8230;&#8203;
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-Ensure that&#8230;&#8203;
-</td>
-</tr>
-</table>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Artist</th>
-<th class="tableblock halign-left valign-top">Track</th>
-<th class="tableblock halign-left valign-top">Genre</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Baauer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Harlem Shake</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hip Hop</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><a href="http://asciidoctor.org" class="bare">http://asciidoctor.org</a> - automatic!</p>
-</div>
-<div class="paragraph">
-<p><a href="http://asciidoctor.org">Asciidoctor</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://github.com/asciidoctor">Asciidoctor @ <strong>GitHub</strong></a></p>
-</div>
-</div>
-</div>
-<p>toto2 luvyu</p>
-<a href="#panel-dyn" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Menu</a>
 </div><!-- /content -->
 
 <div data-role="footer" data-position="fixed" data-fullscreen="false">
   
-  <h4>Dyndoc</h4>
+  <h4>Teaching</h4>
+  
+</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="page-anova" data-title="ANOVA">
+<div data-role="header" data-position="fixed" data-fullscreen="false">
+  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+
+  <h1>ANOVA</h1>
+  
+</div><!-- /header -->
+
+<div role="main" class="ui-content">
+</div><!-- /content -->
+
+<div data-role="footer" data-position="fixed" data-fullscreen="false">
+  
+  <h4>Teaching</h4>
+  
+</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="page-R" data-title="Formation R">
+<div data-role="header" data-position="fixed" data-fullscreen="false">
+  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+
+  <h1>Formation R</h1>
+  
+</div><!-- /header -->
+
+<div role="main" class="ui-content">
+</div><!-- /content -->
+
+<div data-role="footer" data-position="fixed" data-fullscreen="false">
+  
+  <h4>Teaching</h4>
   
 </div><!-- /footer -->
 </div><!-- /page -->
