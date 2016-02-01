@@ -29,11 +29,46 @@
 [#adoc>][
 === Plan et Rythme du Cours
 
-* A.E.P. en complément de l'A.M.P.
-** Approche Expérimentale des Probabilités s'appuyant sur les outils de statistique descriptive
-    pour représenter un grand nombre `m` (en théorie une infinité) de réalisations d'une variable aléatoire `Y`, notée `y_{[1]},\cdots,y_{[m]}`.
-* Erreur Standard et Estimation par Intervalle de Confiance
-* P-Valeur
+* *A.E.P.* (*Approche Expérimentale des Probabilités*) en complément de l'*A.M.P.* (*Approche Mathématique des Probabilités*)
+**  *A.E.P.* s'appuie sur les simples outils de *statistique descriptive*
+    pour représenter un très grand nombre $m$ (en théorie une infinité, i.e. $m=+\infty$) de réalisations
+    d'une variable aléatoire $Y$, notée $\mathbf{y_{[m]}}={\left(y_{[.]}\right)}_m=\left(y_{[1]},\cdots,y_{[m]}\right)$.
+** Notamment les liens avec l'*A.M.P.* sont établis :
+*** Espérance (ou Moyenne) de $Y$: $\mathbb{E}(Y)=\overline{{\left(y_{[.]}\right)}_{+\infty}}$
+*** Ecart-type de $Y$: $\sigma(Y)=\overleftrightarrow{{\left(y_{[.]}\right)}_{+\infty}}$ (et $\sigma(Y)=\sqrt{\mathbb{V}ar(Y)}$)
+*** Quantile de $Y$: $q_{95\%}(Y)=q_{95\%}({\left(y_{[.]}\right)}_{+\infty})$
+*** Loi de probabilité de $Y$: $[\infty]$-histogramme (discret ou continue) représentant la répartition de "toutes" les réalisations $\mathbf{y_{[+\infty]}}$ de $Y$.
+* Estimation, *Erreur Standard* et Estimation par *Intervalle de Confiance*
+** Estimation de moyenne $\mu:=\mathbb{E}(Y)$ à partir d'un:
+*** échantillon aléatoire ("futur") $\mathbf{Y}=(Y_1,\cdots,Y_n)$: $\widehat{\mu}(\mathbf{Y}):=\overline{Y}:=\displaystyle\frac1{n}\sum_{i=1}^n Y_i$
+*** échantillon du jour J ("présent") $\mathbf{y}=(y_1,\cdots,y_n)$: $\widehat{\mu}(\mathbf{y}):=\overline{y}:=\displaystyle\frac1{n}\sum_{i=1}^n y_i$
+*** échantillon possible ("conditionnel") $\mathbf{y_{[k]}}=(y_{[k],1},\cdots,y_{[k],n})$: $\widehat{\mu}(\mathbf{y_{[k]}}):=\overline{y_{[k]}}:=\displaystyle\frac1{n}\sum_{i=1}^n y_{[k],i}$
+  Rmq: Seul l'estimation (du paramètre d'intérêt) de moyenne est présentée ici mais il n'est pas difficile de les adapter aux estimations de proportion $p$ et variance $\sigma^2$.
+** Théorème de la Limite Centrale (loi de probabilité de la moyenne d'un "futur" échantillon $\mathbf{Y}=(Y_1,\cdots,Y_n)$)
+\[\overline{Y}=\displaystyle\frac1n\sum_{i=1}^n Y_i\mbox{ suit aprroximativement une loi }\mathcal{N}(\mu,\frac{\sigma}{\sqrt{n}})\]
+qui s'interprète via l'*A.E.P.* par le fait que le $[+\infty]$-histogramme représentant la répartition d'une infinité de réalisations $\left(\overline{y_{[.]}}\right)_{+\infty}$ a pour forme une courbe d'équation $\frac{\sqrt{n}}{\sigma\sqrt{2\pi}}\exp\left(-\frac{n}{2}\left(\frac{x-\mu}{\sigma}\right)^2\right)$ représentant une "bosse" centrée en $\mu$ et d'autant plus concentrée autour de $\mu$ que la taille $n$ de l'échantillon est grande.
+Via l'*A.E.P.*, on voit un point (une $[+\infty]$-brique) sous cette courbe comme une moyenne possible $\overline{y_{[.]}}$ dont la valeur se lit en abscisse.
+** *Qualité des estimations* et *Erreur Standard* (Standard Error en anglais)
++
+L'un des points fondamental de ce cours est de facilement (grâce à l'A.E.P.) de décrire les propriétés des estimations.
++
+*** Estimation sans biais: $\overline{\widehat{\mu}(\mathbf{y_{[.]}})}_{+\infty}=\mathbb{E}(\widehat{\mu}(\mathbf{Y}))=\mu$
+*** Estimation autant meilleur que $n$ est grand: $\sigma_{\widehat{\mu}}:=\overleftrightarrow{\widehat{\mu}(\mathbf{y_{[.]}})}_{+\infty}=\sigma(\widehat{\mu}(\mathbf{Y}))$ tend vers $0$ quand $n$ tend vers $+\infty$
+  La quantité $\sigma_{\widehat{\mu}}$, appelée la qualité de l'estimation $\widehat{\mu}(.)$, est l'une des notions fondamentales de cours.
+  Cependant, cette quantité est inconnue et, grâce à l'A.M.P., est fort heureusement estimée le jour J par l'erreur standard $\widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}):=\frac{\widehat{\sigma}(\mathbf{y})}{\sqrt{n}}$.
+  La formule d'obtention de l'erreur standard dépend bien évidemment de la nature du paramètre d'intérêt à estimer (voir formulaire de cours). Sur un plan pratique, ces quantités s'obtiennent par une simple formule R (grâce au package R asympTest).
+** *Intervalle de Confiance* (cadre asymptotique, i.e. $n\geq30$)
+*** L'estimation par Intervalle de Confiance (à $95\% de niveau de confiance) est une extension naturelle de l'estimation ponctuelle qui intègre la notion d'*erreur standard* mesurant la qualité d'estimation.
+*** L'Intervalle de Confiance (à $95\%$ de niveau de confiance) est défini très simplement par: *estimation moins ou plus 2 fois l'erreur standard*
+\[
+IC_{\mu,95\%}(\mathbf{y})=[\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})]
+\]
+*** via l'*A.E.P.*, c'est l'un parmi une infinité d'intervalles de confiance $\left(IC_{\mu,95\%}(\mathbf{y_{[.]}})\right)_{+\infty}$ qu'on on aurait pu construire dont on sait qu'approximativement $95\%$ contiendraient le vrai paramètre $\mu$ *inconnu*.
+*** Cela traduit la formule *A.M.P.*:
+\[
+\mathbb{P}\left(\mu \in IC_{\mu,95\%}(\mathbf{Y})\right)=95\%
+\]
+* Outil d'aide à la décision et p-valeur
 ]
 [#jqmPage}
 
