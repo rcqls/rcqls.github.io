@@ -435,7 +435,7 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 </head>
 <body>
 
-	<div data-role="panel" id="panel-dyn" data-position="left" data-display="reveal" data-theme="a">
+	<div data-role="panel" id="panel-teaching" data-position="left" data-display="reveal" data-theme="a">
 
   
 <ul data-role="listview">
@@ -453,7 +453,7 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 
 <div data-role="page" id="page-home" data-title="RCqls Teaching">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+  <a href="#panel-teaching" data-icon="bars" data-iconpos="notext"></a>
 
   <h1>RCqls Teaching</h1>
   
@@ -463,7 +463,7 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 <div class="ulist">
 <ul>
 <li>
-<p>Statistique Inférentielle</p>
+<p><a href="http://rcqls.github.io/ensgt/#page-stat-inf">Statistique Inférentielle</a></p>
 </li>
 <li>
 <p>Econométrie</p>
@@ -487,7 +487,7 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 
 <div data-role="page" id="page-stat-inf" data-title="Statistique Inférentielle">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+  <a href="#panel-teaching" data-icon="bars" data-iconpos="notext"></a>
 
   <h1>Statistique Inférentielle</h1>
   
@@ -544,8 +544,10 @@ d&#8217;une variable aléatoire $Y$, notée $\mathbf{y_{[m]}}={\left(y_{[.]}\rig
 <p>échantillon du jour J ("présent") $\mathbf{y}=(y_1,\cdots,y_n)$: $\widehat{\mu}(\mathbf{y}):=\overline{y}:=\displaystyle\frac1{n}\sum_{i=1}^n y_i$</p>
 </li>
 <li>
-<p>échantillon possible ("conditionnel") $\mathbf{y_{[k]}}=(y_{[k],1},\cdots,y_{[k],n})$: $\widehat{\mu}(\mathbf{y_{[k]}}):=\overline{y_{[k]}}:=\displaystyle\frac1{n}\sum_{i=1}^n y_{[k],i}$
-Rmq: Seul l&#8217;estimation (du paramètre d&#8217;intérêt) de moyenne est présentée ici mais il n&#8217;est pas difficile de les adapter aux estimations de proportion $p$ et variance $\sigma^2$.</p>
+<p>échantillon possible ("conditionnel") $\mathbf{y_{[k]}}=(y_{[k],1},\cdots,y_{[k],n})$: $\widehat{\mu}(\mathbf{y_{[k]}}):=\overline{y_{[k]}}:=\displaystyle\frac1{n}\sum_{i=1}^n y_{[k],i}$</p>
+<div class="paragraph">
+<p>Rmq: Seul l&#8217;estimation (du paramètre d&#8217;intérêt) de moyenne est présentée ici mais il n&#8217;est pas difficile de les adapter aux estimations de proportion $p$ et variance $\sigma^2$.</p>
+</div>
 </li>
 </ul>
 </div>
@@ -580,7 +582,7 @@ La formule d&#8217;obtention de l&#8217;erreur standard dépend bien évidemment
 <div class="ulist">
 <ul>
 <li>
-<p>L&#8217;estimation par Intervalle de Confiance (à $95\% de niveau de confiance) est une extension naturelle de l&#8217;estimation ponctuelle qui intègre la notion d'<strong>erreur standard</strong> mesurant la qualité d&#8217;estimation.</p>
+<p>L&#8217;estimation par Intervalle de Confiance (à $95\%$ de niveau de confiance) est une extension naturelle de l&#8217;estimation ponctuelle qui intègre la notion d'<strong>erreur standard</strong> mesurant la qualité d&#8217;estimation.</p>
 </li>
 <li>
 <p>L&#8217;Intervalle de Confiance (à $95\%$ de niveau de confiance) est défini très simplement par <strong>estimation moins ou plus 2 fois l&#8217;erreur standard</strong>:
@@ -617,7 +619,7 @@ IC_{\mu,95\%}(\mathbf{y})=[\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_
 
 <div data-role="page" id="page-econo" data-title="Econométrie">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+  <a href="#panel-teaching" data-icon="bars" data-iconpos="notext"></a>
 
   <h1>Econométrie</h1>
   
@@ -636,7 +638,7 @@ IC_{\mu,95\%}(\mathbf{y})=[\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_
 
 <div data-role="page" id="page-stat-desc" data-title="Econométrie">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+  <a href="#panel-teaching" data-icon="bars" data-iconpos="notext"></a>
 
   <h1>Econométrie</h1>
   
@@ -655,7 +657,7 @@ IC_{\mu,95\%}(\mathbf{y})=[\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_
 
 <div data-role="page" id="page-anova" data-title="ANOVA">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+  <a href="#panel-teaching" data-icon="bars" data-iconpos="notext"></a>
 
   <h1>ANOVA</h1>
   
@@ -674,7 +676,7 @@ IC_{\mu,95\%}(\mathbf{y})=[\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_
 
 <div data-role="page" id="page-R" data-title="Formation R">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+  <a href="#panel-teaching" data-icon="bars" data-iconpos="notext"></a>
 
   <h1>Formation R</h1>
   
