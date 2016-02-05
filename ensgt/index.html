@@ -603,7 +603,69 @@ IC_{\mu,95\%}(\mathbf{y})=[\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_
 </div>
 </li>
 <li>
-<p>Outil d&#8217;aide à la décision et p-valeur (TODO)</p>
+<p>Outil d&#8217;aide à la décision et p-valeur</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Affirmation d&#8217;intérêt</strong> exprime la comparaison du <strong>paramètre d&#8217;intérêt</strong> INCONNU (ici $\mu$) à une <strong>valeur de référence</strong> (notée $\mu_0$), prédéfinie dans la problématique étudiée (ex: $\mu_0=0.15$ seuil de rentabilité du produit B).
+De manière équivalente, dans ce cours et à des fins pédagogiques, l'<strong>affirmation d&#8217;intérêt</strong> est aussi exprimée à partir du <strong>paramètre d&#8217;écart (standardisé)</strong> défini par $\delta_{\mu,\mu_0}:=\frac{\mu-\mu_0}{\sigma_{\widehat\mu}}$, mesurant l&#8217;écart du <strong>paramètre d&#8217;écart</strong> à la <strong>valeur de référence</strong> divisé par la <strong>qualité d&#8217;estimation</strong> de $\widehat\mu$.</p>
+</li>
+<li>
+<p>L'<strong>affirmation d&#8217;intérêt</strong> prend l&#8217;une des trois formes suivantes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>cas <strong>unilatéral gauche</strong>:  $\mu&lt;\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}&lt;0$</p>
+</li>
+<li>
+<p>cas <strong>unilatéral droit</strong>:  $\mu&gt;\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}&gt;0$</p>
+</li>
+<li>
+<p>cas <strong>bilatéral</strong>:  $\mu\neq\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}\neq0$</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Dans l&#8217;exemple du produit B, elle s&#8217;exprime par: $\mu^B&gt;0.15 \Longleftrightarrow \delta_{\mu^B,0.15}&lt;0$ avec $\delta_{\mu^B,0.15} := \frac{\mu^B-0.15}{\sigma_{\widehat\mu}}$</p>
+</li>
+<li>
+<p>La <strong>Règle de Décision</strong> exprime à partir des <strong>données du jour J</strong> la condition à satisfaire pour accepter l'<strong>affirmation d&#8217;intérêt</strong>. Assez naturellement, elle s&#8217;exprime à partir de l&#8217;estimation du <strong>paramètre d&#8217;intérêt</strong> ou du <strong>paramètre d&#8217;écart (standardisé)</strong>  a pour forme:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>cas <strong>unilatéral gauche</strong>:  $\widehat\mu(\mathbf{y})&lt;\mu^{&lt;}_{lim} \Longleftrightarrow \widehat\delta_{\mu,\mu_0}(\mathbf{y})&lt;\delta^{&lt;}_{lim}$</p>
+</li>
+<li>
+<p>cas <strong>unilatéral droit</strong>:  $\widehat\mu(\mathbf{y})&gt;\mu^{&gt;}_{lim} \Longleftrightarrow \widehat\delta_{\mu,\mu_0}(\mathbf{y})&lt;\delta^{&gt;}_{lim}$</p>
+</li>
+<li>
+<p>cas <strong>bilatéral</strong>: $\left(\widehat\mu(\mathbf{y})&lt;\mu^{&lt;}_{lim} \mbox{ ou } \widehat\mu(\mathbf{y})&gt;\mu^{&gt;}_{lim}\right)$ $\Longleftrightarrow$ $\left(\widehat\delta_{\mu,\mu_0}(\mathbf{y})&lt;\delta^{&lt;}_{lim}  \mbox{ ou }  \widehat\delta_{\mu,\mu_0}(\mathbf{y})&lt;\delta^{&gt;}_{lim}\right)$</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Il est à noter que le paramètre d&#8217;écart s&#8217;estime naturellement par $\widehat\delta_{\mu,\mu_0}(\mathbf{y}) := \frac{\widehat\mu(\mathbf{y}) - \mu_0}{\widehat\sigma_{\widehat\mu}(\mathbf{y})}$, mesurant l&#8217;écart de l'<strong>estimation</strong> à la <strong>valeur de référence</strong> divisé par l'<strong>erreur standard</strong> (qui estime la qualité de l&#8217;estimation).</p>
+</li>
+<li>
+<p>Comme l'<strong>affirmation d&#8217;intérêt</strong> s&#8217;exprime à  partir du <strong>paramètre d&#8217;intérêt INCONNU</strong> et la <strong>Règle de Décision</strong> s&#8217;exprime à partir de l'<strong>estimation</strong> basée sur l'<strong>échantillon du jour J</strong>, nous ne pouvons être certain de toujours prendre la bonne décision en appliquant la <strong>Règle de Décision</strong>. Les <strong>erreurs de décision</strong> sont de deux types:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Type I</strong> ou <strong>1ère espèce</strong>: Accepter à tort avec les données l&#8217;affirmation d&#8217;intérêt (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=3 &gt; \delta^{+}_{lim}:=2$ alors que $\mu^B=0.1$)</p>
+</li>
+<li>
+<p><strong>Type II</strong> ou <strong>2ème espèce</strong>: Ne pas accepter à tort avec les données l&#8217;affirmation d&#8217;intérêt (ex produit B: (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=1 \ngtr \delta^{+}_{lim}:=2$ alors que $\mu^B=0.2$)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Notre objectif</strong>: déterminer les seuils limite (à franchir) $\delta^{-}_{lim}$ et/ou $\delta^{+}_{lim}$ selon le cas à traiter (<strong>unilatéral gauche ou droit</strong> ou <strong>bilatéral</strong>). Soulignons que les seuils limite $\mu^{&lt;}_{lim}$ ou $\mu^{&gt;}_{lim}$ sont malheureusement impossible à déterminer sauf pour un paramètre d&#8217;intérêt de type proportion (cf. le produit A).</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>

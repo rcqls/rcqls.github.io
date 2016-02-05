@@ -68,7 +68,23 @@ IC_{\mu,95\%}(\mathbf{y})=[\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_
 \]
 *** via l'*A.E.P.*, $IC_{\mu,95\%}(\mathbf{y})$ est un Intervalle de Confiance parmi une infinité d'Intervalles de Confiance $\left(IC_{\mu,95\%}(\mathbf{y_{[.]}})\right)_{+\infty}$ qu'on on aurait pu construire dont on sait qu'approximativement $95\%$ contiendraient le vrai paramètre $\mu$ *inconnu*.
 *** Cela traduit la définition *A.M.P.* d'un Intervalle de Confiance de $\mu$ : $\mathbb{P}\left(\mu \in IC_{\mu,95\%}(\mathbf{Y})\right)\simeq 95\%$
-* Outil d'aide à la décision et p-valeur (TODO)
+* Outil d'aide à la décision et p-valeur
+** *Affirmation d'intérêt* exprime la comparaison du *paramètre d'intérêt* INCONNU (ici $\mu$) à une *valeur de référence* (notée $\mu_0$), prédéfinie dans la problématique étudiée (ex: $\mu_0=0.15$ seuil de rentabilité du produit B).
+De manière équivalente, dans ce cours et à des fins pédagogiques, l'*affirmation d'intérêt* est aussi exprimée à partir du *paramètre d'écart (standardisé)* défini par $\delta_{\mu,\mu_0}:=\frac{\mu-\mu_0}{\sigma_{\widehat\mu}}$, mesurant l'écart du *paramètre d'écart* à la *valeur de référence* divisé par la *qualité d'estimation* de $\widehat\mu$.
+** L'*affirmation d'intérêt* prend l'une des trois formes suivantes:
+*** cas *unilatéral gauche*:  $\mu<\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}<0$
+*** cas *unilatéral droit*:  $\mu>\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}>0$
+*** cas *bilatéral*:  $\mu\neq\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}\neq0$
+** Dans l'exemple du produit B, elle s'exprime par: $\mu^B>0.15 \Longleftrightarrow \delta_{\mu^B,0.15}<0$ avec $\delta_{\mu^B,0.15} := \frac{\mu^B-0.15}{\sigma_{\widehat\mu}}$
+** La *Règle de Décision* exprime à partir des *données du jour J* la condition à satisfaire pour accepter l'*affirmation d'intérêt*. Assez naturellement, elle s'exprime à partir de l'estimation du *paramètre d'intérêt* ou du *paramètre d'écart (standardisé)*  a pour forme:
+*** cas *unilatéral gauche*:  $\widehat\mu(\mathbf{y})<\mu^{<}_{lim} \Longleftrightarrow \widehat\delta_{\mu,\mu_0}(\mathbf{y})<\delta^{<}_{lim}$
+*** cas *unilatéral droit*:  $\widehat\mu(\mathbf{y})>\mu^{>}_{lim} \Longleftrightarrow \widehat\delta_{\mu,\mu_0}(\mathbf{y})<\delta^{>}_{lim}$
+*** cas *bilatéral*: $\left(\widehat\mu(\mathbf{y})<\mu^{<}_{lim} \mbox{ ou } \widehat\mu(\mathbf{y})>\mu^{>}_{lim}\right)$ $\Longleftrightarrow$ $\left(\widehat\delta_{\mu,\mu_0}(\mathbf{y})<\delta^{<}_{lim}  \mbox{ ou }  \widehat\delta_{\mu,\mu_0}(\mathbf{y})<\delta^{>}_{lim}\right)$
+** Il est à noter que le paramètre d'écart s'estime naturellement par $\widehat\delta_{\mu,\mu_0}(\mathbf{y}) := \frac{\widehat\mu(\mathbf{y}) - \mu_0}{\widehat\sigma_{\widehat\mu}(\mathbf{y})}$, mesurant l'écart de l'*estimation* à la *valeur de référence* divisé par l'*erreur standard* (qui estime la qualité de l'estimation).
+** Comme l'*affirmation d'intérêt* s'exprime à  partir du *paramètre d'intérêt INCONNU* et la *Règle de Décision* s'exprime à partir de l'*estimation* basée sur l'*échantillon du jour J*, nous ne pouvons être certain de toujours prendre la bonne décision en appliquant la *Règle de Décision*. Les *erreurs de décision* sont de deux types:
+*** *Type I* ou *1ère espèce*: Accepter à tort avec les données l'affirmation d'intérêt (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=3 > \delta^{+}_{lim}:=2$ alors que $\mu^B=0.1$)
+*** *Type II* ou *2ème espèce*: Ne pas accepter à tort avec les données l'affirmation d'intérêt (ex produit B: (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=1 \ngtr \delta^{+}_{lim}:=2$ alors que $\mu^B=0.2$)
+** *Notre objectif*: déterminer les seuils limite (à franchir) $\delta^{-}_{lim}$ et/ou $\delta^{+}_{lim}$ selon le cas à traiter (*unilatéral gauche ou droit* ou *bilatéral*). Soulignons que les seuils limite $\mu^{<}_{lim}$ ou $\mu^{>}_{lim}$ sont malheureusement impossible à déterminer sauf pour un paramètre d'intérêt de type proportion (cf. le produit A).
 ]
 [#jqmPage}
 
