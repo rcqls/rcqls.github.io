@@ -653,16 +653,78 @@ De manière équivalente, dans ce cours et à des fins pédagogiques, l'<strong>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Type I</strong> ou <strong>1ère espèce</strong>: Accepter à tort avec les données l&#8217;affirmation d&#8217;intérêt (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=3 &gt; \delta^{+}_{lim}:=2$ alors que $\mu^B=0.1$)</p>
+<p><strong>Type I</strong> ou <strong>1ère espèce</strong>: Accepter à tort avec les données l&#8217;affirmation d&#8217;intérêt (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=3 &gt; \delta^{&gt;}_{lim}:=2$ alors que $\mu^B=0.1$)</p>
 </li>
 <li>
-<p><strong>Type II</strong> ou <strong>2ème espèce</strong>: Ne pas accepter à tort avec les données l&#8217;affirmation d&#8217;intérêt (ex produit B: (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=1 \ngtr \delta^{+}_{lim}:=2$ alors que $\mu^B=0.2$)</p>
+<p><strong>Type II</strong> ou <strong>2ème espèce</strong>: Ne pas accepter à tort avec les données l&#8217;affirmation d&#8217;intérêt (ex produit B: (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=1 \ngtr \delta^{&gt;}_{lim}:=2$ alors que $\mu^B=0.2$)</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Notre objectif</strong>: déterminer les seuils limite (à franchir) $\delta^{-}_{lim}$ et/ou $\delta^{+}_{lim}$ selon le cas à traiter (<strong>unilatéral gauche ou droit</strong> ou <strong>bilatéral</strong>). Soulignons que les seuils limite $\mu^{&lt;}_{lim}$ ou $\mu^{&gt;}_{lim}$ sont malheureusement impossible à déterminer sauf pour un paramètre d&#8217;intérêt de type proportion (cf. le produit A).</p>
+<p><strong>Notre objectif</strong>: déterminer les <strong>seuils limite</strong> (à franchir) $\delta^{&lt;}_{lim}$ et/ou $\delta^{&gt;}_{lim}$ selon le cas à traiter (<strong>unilatéral gauche ou droit</strong> ou <strong>bilatéral</strong>). Soulignons que les <strong>seuils limite</strong> $\mu^{&lt;}_{lim}$ ou $\mu^{&gt;}_{lim}$ sont malheureusement impossibles à déterminer sauf pour un <strong>paramètre d&#8217;intérêt</strong> de type <strong>proportion</strong> (cf. produit A).</p>
+</li>
+<li>
+<p>La suite du raisonnement s&#8217;appuie sur les représentations graphiques faites en cours en s&#8217;appuyant sur l&#8217;outil disponible à <a href="http://rcqls.github.io/statinfAEP" class="bare">http://rcqls.github.io/statinfAEP</a> appliqués à l&#8217;exemple du probuit B et dont voilà les principales conclusions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>le <strong>paramètre d&#8217;intérêt</strong> (ici, $\mu^B$) étant inconnu, on envisage toutes les situations en déplaçant librement la valeur de $\mu^B$. L&#8217;ensemble des estimations des <strong>paramètres d&#8217;intérêt</strong> (resp. <strong>paramètre d&#8217;écart (standardisé)</strong>) se répartissent autour du <strong>paramètre d&#8217;intérêt</strong> (resp. <strong>paramètre d&#8217;écart</strong>) sous la forme d&#8217;une loi <strong>Normale</strong>.</p>
+</li>
+<li>
+<p>il y a généralement 2 types de situations: les <strong>bonnes situations</strong> représentant les valeurs de $\mu^B$ satisfaisant l'<strong>affirmation d&#8217;intérêt</strong> (ici $\mu^B&gt;0.15$, le produit B est rentable) et par conséquent les <strong>mauvaises situations</strong> correspondant donc à $\mu^B\leq 0.15$. Insistons sur le fait que le cas de l&#8217;égalité du <strong>paramètre d&#8217;intérêt</strong> à la <strong>valeur de référence</strong> (ici, $\mu^B=0.15$) est parmi les <strong>mauvaise situations</strong>.</p>
+</li>
+<li>
+<p>pour toute valeur fixée arbitrairement d&#8217;un <strong>seuil limite</strong> ($\mu_{lim}$ ou $\delta_{lim}$), on constate que les deux risques associés aux deux types d&#8217;erreur de décision s&#8217;exprime via l'<strong>A.E.P.</strong> par</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Risque de Type I</strong> ou <strong>1ère espèce</strong>: dans une <strong>mauvaise situation</strong>, c&#8217;est la proportion des <strong>estimations</strong> franchissant le(s) <strong>seuil(s) limite</strong> nous conduisant à penser (à tort) avec les <strong>échantillons</strong> associés que nous sommes dans <strong>une bonne situation</strong>.</p>
+</li>
+<li>
+<p><strong>Risque de Type II</strong> ou <strong>2ème espèce</strong>: dans une <strong>bonne situation</strong>, c&#8217;est la proportion des <strong>estimations</strong> NE franchissant PAS le(s) <strong>seuil(s) limite</strong> nous conduisant à penser (à tort) avec les <strong>échantillons</strong> associés que nous NE sommes PAS dans <strong>une bonne situation</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>graphiquement, nous constatons que ces deux risques sont <strong>maximaux</strong> quand logiquement nous nous approchons de la situation où le <strong>paramètre d&#8217;intérêt</strong> est le plus possible de la <strong>valeur de référence</strong>.</p>
+</li>
+<li>
+<p>une conséquence directe est que la somme des deux <strong>risques maximaux de 1ère et 2ème espèces</strong> est (quasiment) égale à $100\%$</p>
+</li>
+<li>
+<p>on ne pourra donc pas déterminer le(s) <strong>seuil(s) limite</strong> de sorte à contrôler simultanément les <strong>risques de de 1ère et 2ème espèces</strong> raisonnablement "petits" (puique "petit" + "petit" ne peut être égal à $100\%$).</p>
+</li>
+<li>
+<p>on ne pourra donc déterminer le(s) <strong>seuil(s) limite</strong> qu&#8217;en contrôlant le plus grave de ces deux risques qui sera toujours le <strong>risque de 1ère espèce</strong> (dans le produit B, c&#8217;est le <strong>risque de devenir pauvre</strong>).</p>
+</li>
+<li>
+<p>on ne considère alors que les <strong>mauvaises situations</strong> ($\mu^B\leq 0.15$) et il apparaît que, parmi ces situations, le <strong>risque de 1ère espèce</strong> est <strong>maximal</strong> dans la <strong>pire des (mauvaises) situations</strong></p>
+</li>
+<li>
+<p>en conclusion et ce sera une règle générale: pour déterminer le(s) <strong>seuil(s) limite</strong>, il faut se placer dans la <strong>pire des situations</strong> qui représente l&#8217;unique situation où le <strong>paramètre d&#8217;intérêt</strong> est égale à la <strong>valeur de référence</strong>. De manière équivalente, elle correspond à la situation où le <strong>paramètre d&#8217;écart (standardisé)</strong> est égale à 0.</p>
+</li>
+<li>
+<p>la dernière étape consiste à fixer à une valeur raisonnablement petite ($\alpha=5\%$ en général), dans la <strong>pire des situations</strong>, la (les) surface(s) correspondant aux <strong>estimations</strong>  du côté du (des) <strong>seuil(s) limite</strong> de sorte à accepter l'<strong>affirmation d&#8217;intérêt</strong>.</p>
+</li>
+<li>
+<p>puisque, pour un <strong>paramètre d&#8217;intérêt</strong> $\mu$ de type <strong>moyenne</strong> et dans la <strong>pire des situations</strong>, nous ne connaissons la répartition des <strong>estimations</strong> (loi $\mathcal{N}(0,1)$) que pour le <strong>paramètre d&#8217;écart (standardisé)</strong> $\delta_{\mu,\mu_0}$, seul(s) le(s) <strong>seuil(s) limite</strong> $\delta^{&lt;}_{lim}$ et/ou $\delta^{&gt;}_{lim}$ ne sont déterminables, représentant des <strong>quantiles</strong> de la loi Normale $\mathcal{N}(0,1)$. La répartition des <strong>estimations</strong> du <strong>paramètre d&#8217;intérêt</strong> est en général INCONNUE dans la <strong>pire des situations</strong> puisqu&#8217;elle dépend généralement de la <strong>qualité des estimations</strong>, mesurée par l&#8217;écart-type $\sigma_{\widehat\mu}:=\frac{\sigma}{\sqrt{n}}$ de toutes ces <strong>estimations</strong> qui dépend du <strong>paramètre "parasite"</strong> INCONNU $\sigma$.</p>
+</li>
+<li>
+<p>de manière exceptionnelle, pour le cas d&#8217;un <strong>paramètre d&#8217;intérêt</strong> $p$ de type <strong>proportion</strong>, la <strong>qualité des estimations</strong> ne dépend uniquement que de la <strong>taille d&#8217;échantillon</strong> et du <strong>paramètre d&#8217;intérêt</strong> $p$ puisque $\sigma=\sqrt{p\times(1-p)}$. Il en résulte que dans la pire des situations (ex: produit A, $p^A=15\%$), la <strong>qualité d&#8217;estimations</strong> $\sigma_{\widehat{p^A}}$ est égale à $\sqrt{\frac{15\%\times85\%}{1000}}$. Pour l&#8217;exemple du produit A, nous pouvons aussi déterminer le(s) <strong>seuil(s) limite</strong> $p^{&lt;}_{lim}$ et $p^{&gt;}_{lim}$ qui s&#8217;obtiennent donc comme des <strong>quantiles</strong> d&#8217;une <strong>loi Normale</strong> $\mathcal{N}\left(15\%,\sqrt{\frac{15\%\times85\%}{1000}}\right)$.</p>
+</li>
+<li>
+<p>toutefois, sur un plan méthodologique, nous priviligierons toujours la <strong>Règle de Décision</strong> basée sur l'<strong>estimation du jour J</strong> du <strong>paramètre d&#8217;écart (standardisé)</strong> puisqu&#8217;il est toujours possible de déterminer le(s) <strong>seuil(s) limite</strong> indépendamment de la nature du <strong>paramètre d&#8217;intérêt</strong> (<strong>proportion</strong>, <strong>moyenne</strong> ou <strong>variance</strong>) qui s&#8217;obtiennent comme des quantiles de la <strong>loi Normale centrée réduite</strong> $\mathcal{N}(0,1)$.</p>
+</li>
+<li>
+<p>en R, cela ne revient, en général, qu&#8217;à connaître l&#8217;instruction $\mathbf{qnorm}$ appliquée aux ordres des quantiles $95\%$ et $97.5\%$, i.e. $\mathbf{qnorm(.95)\simeq 1.645}$ et $\mathbf{qnorm(.95)\simeq 1.96 \simeq 2}$.</p>
+</li>
+<li>
+<p>sur un plan pratique, cela se résume à comparer le <strong>jour J</strong>, \[\mbox{Estimation du paramètre d&#8217;écart (standardisé)}:=\frac{\mbox{Estimation (du paramètre d&#8217;intérêt)} - \mbox{Valeur de Référence}}{\mbox{Erreur Standard}}\] au(x) <strong>seuil(s) limite</strong> directement reliés aux <strong>quantiles</strong> $\mathbf{qnorm(.95)}$ ou $\mathbf{qnorm(.975)}$.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
