@@ -1,7 +1,7 @@
 [#=]rcqls[http://rcqls.github.io]
 [#>]{#jqmPanel]ensgt-panel[#>]
   {#jqmMenuListView]
-    ensgt:Page Enseignement
+    ensgt:RCqls Enseignement
     ensgt-stat-inf:Stat Inf
     ensgt-econo:Econo
     ensgt-stat-desc:Stat Desc

@@ -1,16 +1,16 @@
-{#jqmPanel]panel-dyn[#>]
+{#jqmPanel]dyndoc-panel[#>]
   {#jqmMenuListView]
-    page-home:Home page
-    page-todo:Todo Page
-    page-dev:Devel Page
-    page-test-adoc:Asciidoctor Test Page
+    dyndoc:Dyndoc
+    dyndoc-todo:Todo
+    dyndoc-dev:Devel
+    dyndoc-test-adoc:Asciidoctor Test
   [#}
 [#jqmPanel}
 
-{#jqmPage]page-home
+{#jqmPage]dyndoc
 [#page.title][Dyndoc Project]
 [#header.title][Dyndoc Project]
-[#header.left]{#jqmHeaderButton]panel-dyn[#}
+[#header.left]{#jqmHeaderButton]dyndoc-panel[#}
 [#footer.title][Dyndoc]
 [#adoc>]
 == Dyndoc (short presentation)
@@ -21,10 +21,10 @@
 
 [#jqmPage}
 
-{#jqmPage]page-todo
+{#jqmPage]dyndoc-todo
 [#page.title][Dyndoc TODO]
 [#header.title][Dyndoc TODO]
-[#header.left]{#jqmHeaderButton]panel-dyn[#}
+[#header.left]{#jqmHeaderButton]dyndoc-panel[#}
 [#footer.title][Dyndoc]
 [#adoc>][
 == TODO list
@@ -44,9 +44,9 @@
 
 [#jqmPage}
 
-{#jqmPage]page-dev
+{#jqmPage]dyndoc-dev
 [#header.title][[Dyndoc Dev Page]
-[#header.left]{#jqmHeaderButton]panel-dyn[#}
+[#header.left]{#jqmHeaderButton]dyndoc-panel[#}
 [#footer.title][Dyndoc]
 [#adoc>]
 ==  Development of Dyndoc
@@ -59,10 +59,10 @@ There is mainly two modes for installing `dyndoc`:
 [#jqmPage}
 
 
-{#jqmPage]page-test-adoc
+{#jqmPage]dyndoc-test-adoc
 [#page.title][Asciidoctor Test]
 [#header.title][Asciidoctor Test]
-[#header.left]{#jqmHeaderButton]panel-dyn[#}
+[#header.left]{#jqmHeaderButton]dyndoc-panel[#}
 [#footer.title][Dyndoc]
 [#adoc>][
 == TODO

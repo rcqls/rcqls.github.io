@@ -426,23 +426,23 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 </head>
 <body>
 
-	<div data-role="panel" id="panel-dyn" data-theme="a">
+	<div data-role="panel" id="dyndoc-panel" data-position="left" data-display="reveal" data-theme="a">
 
   
 <ul data-role="listview">
   <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
-<li ><a href="#page-home" >Home page</a></li>
-<li ><a href="#page-todo" >Todo Page</a></li>
-<li ><a href="#page-dev" >Devel Page</a></li>
-<li ><a href="#page-test-adoc" >Asciidoctor Test Page</a></li>
+<li ><a href="#dyndoc" >Dyndoc</a></li>
+<li ><a href="#dyndoc-todo" >Todo</a></li>
+<li ><a href="#dyndoc-dev" >Devel</a></li>
+<li ><a href="#dyndoc-test-adoc" >Asciidoctor Test</a></li>
 </ul>
 
 </div><!-- /panel -->
 
 
-<div data-role="page" id="page-home" data-title="Dyndoc Project">
+<div data-role="page" id="dyndoc" data-title="Dyndoc Project">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+  <a href="#dyndoc-panel" data-icon="bars" data-iconpos="notext"></a>
 
   <h1>Dyndoc Project</h1>
   
@@ -476,9 +476,9 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 </div><!-- /page -->
 
 
-<div data-role="page" id="page-todo" data-title="Dyndoc TODO">
+<div data-role="page" id="dyndoc-todo" data-title="Dyndoc TODO">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+  <a href="#dyndoc-panel" data-icon="bars" data-iconpos="notext"></a>
 
   <h1>Dyndoc TODO</h1>
   
@@ -527,9 +527,9 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 </div><!-- /page -->
 
 
-<div data-role="page" id="page-dev" data-title="[Dyndoc Dev Page">
+<div data-role="page" id="dyndoc-dev" data-title="[Dyndoc Dev Page">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+  <a href="#dyndoc-panel" data-icon="bars" data-iconpos="notext"></a>
 
   <h1>[Dyndoc Dev Page</h1>
   
@@ -564,9 +564,9 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 
 
 
-<div data-role="page" id="page-test-adoc" data-title="Asciidoctor Test">
+<div data-role="page" id="dyndoc-test-adoc" data-title="Asciidoctor Test">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#panel-dyn" data-icon="bars" data-iconpos="notext"></a>
+  <a href="#dyndoc-panel" data-icon="bars" data-iconpos="notext"></a>
 
   <h1>Asciidoctor Test</h1>
   
