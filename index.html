@@ -601,7 +601,7 @@ d&#8217;une variable aléatoire $Y$, notée $\mathbf{y_{[m]}}={\left(y_{[.]}\rig
 </li>
 <li>
 <p>Théorème de la Limite Centrale (loi de probabilité de la moyenne d&#8217;un "futur" échantillon $\mathbf{Y}=(Y_1,\cdots,Y_n)$)
-\[\overline{Y}=\displaystyle\frac1n\sum_{i=1}^n Y_i\mbox{ suit aprroximativement une loi }\mathcal{N}(\mu,\frac{\sigma}{\sqrt{n}})\]
+\[\overline{Y}=\displaystyle\frac1n\sum_{i=1}^n Y_i\mbox{ suit approximativement une loi }\mathcal{N}(\mu,\frac{\sigma}{\sqrt{n}})\]
 qui s&#8217;interprète via l'<strong>A.E.P.</strong> par le fait que le $[\infty]$-histogramme représentant la répartition d'une infinité de réalisations $\left(\overline{y_{[.]}}\right)_{\infty}$ a pour forme une courbe d&#8217;équation $\frac{\sqrt{n}}{\sigma\sqrt{2\pi}}\exp\left(-\frac{n}{2}\left(\frac{x-\mu}{\sigma}\right)^2\right)$ représentant une "bosse" centrée en $\mu$ et d&#8217;autant plus concentrée autour de $\mu$ que la taille $n$ de l&#8217;échantillon est grande.
 Via l'<strong>A.E.P.</strong>, on voit un point (une $[+\infty]$-brique) sous cette courbe comme une moyenne possible $\overline{y_{[.]}}$ dont la valeur se lit en abscisse.</p>
 </li>
@@ -633,9 +633,10 @@ La formule d&#8217;obtention de l&#8217;erreur standard dépend bien évidemment
 </li>
 <li>
 <p>L&#8217;Intervalle de Confiance (à $95\%$ de niveau de confiance) est défini très simplement par <strong>estimation moins ou plus 2 fois l&#8217;erreur standard</strong>:
-\[
-IC_{\mu,95\%}(\mathbf{y})=[\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})]
-\]</p>
+\begin{eqnarray}
+IC_{\mu,95\%}(\mathbf{y}) &amp;=&amp; [\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})] \nonumber \\
+&amp;=&amp; \widehat{\mu}(\mathbf{y}) \mp 1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}) \nonumber
+\end{eqnarray}</p>
 </li>
 <li>
 <p>via l'<strong>A.E.P.</strong>, $IC_{\mu,95\%}(\mathbf{y})$ est un Intervalle de Confiance parmi une infinité d&#8217;Intervalles de Confiance $\left(IC_{\mu,95\%}(\mathbf{y_{[.]}})\right)_{+\infty}$ qu&#8217;on on aurait pu construire dont on sait qu&#8217;approximativement $95\%$ contiendraient le vrai paramètre $\mu$ <strong>inconnu</strong>.</p>

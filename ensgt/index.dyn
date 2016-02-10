@@ -48,7 +48,7 @@
 Rmq: Seul l'estimation (du paramètre d'intérêt) de moyenne est présentée ici mais il n'est pas difficile de les adapter aux estimations de proportion $p$ et variance $\sigma^2$.
 +
 ** Théorème de la Limite Centrale (loi de probabilité de la moyenne d'un "futur" échantillon $\mathbf{Y}=(Y_1,\cdots,Y_n)$)
-\[\overline{Y}=\displaystyle\frac1n\sum_{i=1}^n Y_i\mbox{ suit aprroximativement une loi }\mathcal{N}(\mu,\frac{\sigma}{\sqrt{n}})\]
+\[\overline{Y}=\displaystyle\frac1n\sum_{i=1}^n Y_i\mbox{ suit approximativement une loi }\mathcal{N}(\mu,\frac{\sigma}{\sqrt{n}})\]
 qui s'interprète via l'*A.E.P.* par le fait que le $[+\infty]$-histogramme représentant la répartition d'une infinité de réalisations $\left(\overline{y_{[.]}}\right)_{+\infty}$ a pour forme une courbe d'équation $\frac{\sqrt{n}}{\sigma\sqrt{2\pi}}\exp\left(-\frac{n}{2}\left(\frac{x-\mu}{\sigma}\right)^2\right)$ représentant une "bosse" centrée en $\mu$ et d'autant plus concentrée autour de $\mu$ que la taille $n$ de l'échantillon est grande.
 Via l'*A.E.P.*, on voit un point (une $[+\infty]$-brique) sous cette courbe comme une moyenne possible $\overline{y_{[.]}}$ dont la valeur se lit en abscisse.
 ** *Qualité des estimations* et *Erreur Standard* (Standard Error en anglais)
@@ -63,9 +63,11 @@ L'un des points fondamental de ce cours est de facilement (grâce à l'A.E.P.) d
 ** *Intervalle de Confiance* (cadre asymptotique, i.e. $n\geq30$)
 *** L'estimation par Intervalle de Confiance (à $95\%$ de niveau de confiance) est une extension naturelle de l'estimation ponctuelle qui intègre la notion d'*erreur standard* mesurant la qualité d'estimation.
 *** L'Intervalle de Confiance (à $95\%$ de niveau de confiance) est défini très simplement par *estimation moins ou plus 2 fois l'erreur standard*:
-\[
-IC_{\mu,95\%}(\mathbf{y})=[\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})]
-\]
+$$\begin{eqnarray}
+IC_{\mu,95\%}(\mathbf{y}) &=& [\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})] \nonumber \\
+&=& \widehat{\mu}(\mathbf{y}) \mp 1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}) \nonumber
+\end{eqnarray}$$
+
 *** via l'*A.E.P.*, $IC_{\mu,95\%}(\mathbf{y})$ est un Intervalle de Confiance parmi une infinité d'Intervalles de Confiance $\left(IC_{\mu,95\%}(\mathbf{y_{[.]}})\right)_{+\infty}$ qu'on on aurait pu construire dont on sait qu'approximativement $95\%$ contiendraient le vrai paramètre $\mu$ *inconnu*.
 *** Cela traduit la définition *A.M.P.* d'un Intervalle de Confiance de $\mu$ : $\mathbb{P}\left(\mu \in IC_{\mu,95\%}(\mathbf{Y})\right)\simeq 95\%$
 * Outil d'aide à la décision et p-valeur
