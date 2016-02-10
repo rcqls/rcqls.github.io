@@ -1,6 +1,6 @@
 [#%]This makes the panel available for every page
 [#=]js_panel_code[
-$(function() { $("div[data-role='panel']").enhanceWithin().panel();});
+//$(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 ]
 [#rb<]LayoutMngr << [:js_code,#{=js_panel_code}]
 [#<]{#LayoutLoad]
