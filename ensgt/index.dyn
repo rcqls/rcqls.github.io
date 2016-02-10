@@ -16,13 +16,13 @@
 [#header.left]{#jqmHeaderButton]ensgt-panel[#}
 [#footer.title][Enseignement]
 [#adoc>]
-* #{rcqls}/ensgt/index.html#page-stat-inf[Statistique Inférentielle]
+* #{rcqls}/ensgt/index.html#ensgt-stat-inf[Statistique Inférentielle]
 * Econométrie
 * Statistique Descriptive
 * ANOVA
 [#jqmPage}
 
-{#jqmPage]stat-inf
+{#jqmPage]ensgt-stat-inf
 [#page.title][Statistique Inférentielle]
 [#header.title][Statistique Inférentielle]
 [#header.left]{#jqmHeaderButton]ensgt-panel[#}
