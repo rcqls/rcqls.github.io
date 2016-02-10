@@ -1,8 +1,8 @@
 {#jqmPanel]panel-dyn[#>]
   {#jqmMenuListView]
     page-home:Home page
-    http://rcqls.github.io/dyndoc:Dyndoc
-    http://rcqls.github.io/ensgt:Teaching
+    http://rcqls.github.io/dyndoc/:Dyndoc
+    http://rcqls.github.io/ensgt/:Teaching
   [#}
 [#jqmPanel}
 
