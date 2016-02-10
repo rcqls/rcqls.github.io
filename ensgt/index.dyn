@@ -1,5 +1,5 @@
 [#=]rcqls[http://rcqls.github.io]
-[#=]teaching-panel[{#jqmPanel]panel-teaching[#>]
+[#>]{#jqmPanel]panel-teaching[#>]
   {#jqmMenuListView]
     page-home:Home Page
     page-stat-inf:Stat Inf
@@ -9,8 +9,7 @@
     page-R:Formation R
   [#}
 [#jqmPanel}
-]
-[#>]
+
 {#jqmPage]page-home
 [#page.title][RCqls Teaching]
 [#header.title][RCqls Teaching]
@@ -21,7 +20,6 @@
 * Econométrie
 * Statistique Descriptive
 * ANOVA
-[#>]#{teaching-panel}
 [#jqmPage}
 
 {#jqmPage]page-stat-inf
