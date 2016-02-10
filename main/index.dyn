@@ -1,15 +1,15 @@
-{#jqmPanel]panel-dyn[#>]
+{#jqmPanel]rcqls-panel[#>]
   {#jqmMenuListView]
-    page-home:Home page
+    rcqls-projects:RCqls Projects
     dyndoc:Dyndoc
     ensgt:Teaching
   [#}
 [#jqmPanel}
 
-{#jqmPage]page-home
+{#jqmPage]rcqls-projects
 [#page.title][RCqls Projects]
 [#header.title][RCqls Projects]
-[#header.left]{#jqmHeaderButton]panel-dyn[#}
+[#header.left]{#jqmHeaderButton]rcqls-panel[#}
 [#footer.title][Projects]
 [#adoc>]
 This page gathers all projects developped by RCqls:

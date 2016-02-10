@@ -98,5 +98,5 @@ https://github.com/asciidoctor[Asciidoctor @ *GitHub*]
 ]
 [#>]
 <p>toto2 luvyu</p>
-<a href="#panel-dyn" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Menu</a>
+<a href="#dyndoc-panel" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Menu</a>
 [#jqmPage}
