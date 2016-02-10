@@ -441,7 +441,7 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 <ul data-role="listview">
   <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
 <li ><a href="#page-home" >Home Page</a></li>
-<li ><a href="#page-stat-inf" >Stat Inf</a></li>
+<li ><a href="http://rcqls.github.io/ensgt/index.html#page-stat-inf" >Stat Inf</a></li>
 <li ><a href="#page-econo" >Econo</a></li>
 <li ><a href="#page-stat-desc" >Stat Desc</a></li>
 <li ><a href="#page-anova" >ANOVA</a></li>
@@ -463,7 +463,7 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://rcqls.github.io/ensgt/#page-stat-inf">Statistique Inférentielle</a></p>
+<p><a href="http://rcqls.github.io/ensgt/index.html#page-stat-inf">Statistique Inférentielle</a></p>
 </li>
 <li>
 <p>Econométrie</p>
@@ -569,7 +569,7 @@ Via l'<strong>A.E.P.</strong>, on voit un point (une $[+\infty]$-brique) sous ce
 <p>Estimation sans biais: $\overline{\widehat{\mu}(\mathbf{y_{[.]}})}_{+\infty}=\mathbb{E}(\widehat{\mu}(\mathbf{Y}))=\mu$</p>
 </li>
 <li>
-<p>Estimation autant meilleur que $n$ est grand: $\sigma_{\widehat{\mu}}:=\overleftrightarrow{\widehat{\mu}(\mathbf{y_{[.]}})}_{\infty}=\sigma(\widehat{\mu}(\mathbf{Y}))$ tend vers $0$ quand $n$ tend vers $\infty$
+<p>Estimation autant meilleur que $n$ est grand: $\sigma_{\widehat{\mu}}:=\overleftrightarrow{\widehat{\mu}(\mathbf{y_{[.]}})}_{\infty}=\sigma(\widehat{\mu}(\mathbf{Y})) = \frac{\sigma}{\sqrt{n}}$ tend vers $0$ quand $n$ tend vers $\infty$
 La quantité $\sigma_{\widehat{\mu}}$, appelée la qualité de l&#8217;estimation $\widehat{\mu}(.)$, est l&#8217;une des notions fondamentales de cours.
 Cependant, cette quantité est inconnue et, grâce à l&#8217;A.M.P., est fort heureusement estimée le jour J par l&#8217;erreur standard $\widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}):=\frac{\widehat{\sigma}(\mathbf{y})}{\sqrt{n}}$.
 La formule d&#8217;obtention de l&#8217;erreur standard dépend bien évidemment de la nature du paramètre d&#8217;intérêt à estimer (voir formulaire de cours). Sur un plan pratique, ces quantités s&#8217;obtiennent par une simple formule R (grâce au package R asympTest).</p>

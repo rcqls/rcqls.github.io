@@ -2,7 +2,7 @@
 [#>]{#jqmPanel]panel-teaching[#>]
   {#jqmMenuListView]
     page-home:Home Page
-    page-stat-inf:Stat Inf
+    http://rcqls.github.io/ensgt/index.html#page-stat-inf:Stat Inf
     page-econo:Econo
     page-stat-desc:Stat Desc
     page-anova:ANOVA
@@ -16,7 +16,7 @@
 [#header.left]{#jqmHeaderButton]panel-teaching[#}
 [#footer.title][Teaching]
 [#adoc>]
-* #{rcqls}/ensgt/#page-stat-inf[Statistique Inférentielle]
+* #{rcqls}/ensgt/index.html#page-stat-inf[Statistique Inférentielle]
 * Econométrie
 * Statistique Descriptive
 * ANOVA
@@ -56,7 +56,7 @@ Via l'*A.E.P.*, on voit un point (une $[+\infty]$-brique) sous cette courbe comm
 L'un des points fondamental de ce cours est de facilement (grâce à l'A.E.P.) de décrire les propriétés des estimations.
 +
 *** Estimation sans biais: $\overline{\widehat{\mu}(\mathbf{y_{[.]}})}_{+\infty}=\mathbb{E}(\widehat{\mu}(\mathbf{Y}))=\mu$
-*** Estimation autant meilleur que $n$ est grand: $\sigma_{\widehat{\mu}}:=\overleftrightarrow{\widehat{\mu}(\mathbf{y_{[.]}})}_{+\infty}=\sigma(\widehat{\mu}(\mathbf{Y}))$ tend vers $0$ quand $n$ tend vers $+\infty$
+*** Estimation autant meilleur que $n$ est grand: $\sigma_{\widehat{\mu}}:=\overleftrightarrow{\widehat{\mu}(\mathbf{y_{[.]}})}_{+\infty}=\sigma(\widehat{\mu}(\mathbf{Y})) = \frac{\sigma}{\sqrt{n}}$ tend vers $0$ quand $n$ tend vers $+\infty$
   La quantité $\sigma_{\widehat{\mu}}$, appelée la qualité de l'estimation $\widehat{\mu}(.)$, est l'une des notions fondamentales de cours.
   Cependant, cette quantité est inconnue et, grâce à l'A.M.P., est fort heureusement estimée le jour J par l'erreur standard $\widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}):=\frac{\widehat{\sigma}(\mathbf{y})}{\sqrt{n}}$.
   La formule d'obtention de l'erreur standard dépend bien évidemment de la nature du paramètre d'intérêt à estimer (voir formulaire de cours). Sur un plan pratique, ces quantités s'obtiennent par une simple formule R (grâce au package R asympTest).
