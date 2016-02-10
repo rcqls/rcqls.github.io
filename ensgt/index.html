@@ -429,7 +429,7 @@ MathJax.Hub.Config({
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/javascript">
-//$(function() { $("div[data-role='panel']").enhanceWithin().panel();});
+$(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 
 </script>
 </head>
@@ -487,6 +487,20 @@ MathJax.Hub.Config({
 
 
 <div data-role="page" id="page-stat-inf" data-title="Statistique Inférentielle">
+<div data-role="panel" id="panel-teaching" data-position="left" data-display="reveal" data-theme="a">
+
+
+<ul data-role="listview">
+<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+<li ><a href="#page-home" >Home Page</a></li>
+<li ><a href="#page-stat-inf" >Stat Inf</a></li>
+<li ><a href="#page-econo" >Econo</a></li>
+<li ><a href="#page-stat-desc" >Stat Desc</a></li>
+<li ><a href="#page-anova" >ANOVA</a></li>
+<li ><a href="#page-R" >Formation R</a></li>
+</ul>
+
+</div><!-- /panel -->
 <div data-role="header" data-position="fixed" data-fullscreen="false">
   <a href="#panel-teaching" data-icon="bars" data-iconpos="notext"></a>
 
