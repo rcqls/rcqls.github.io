@@ -1,20 +1,20 @@
 [#=]rcqls[http://rcqls.github.io]
-[#>]{#jqmPanel]panel-teaching[#>]
+[#>]{#jqmPanel]ensgt-panel[#>]
   {#jqmMenuListView]
-    page-home:Home Page
-    page-stat-inf:Stat Inf
-    page-econo:Econo
-    page-stat-desc:Stat Desc
-    page-anova:ANOVA
-    page-R:Formation R
+    ensgt:Page Enseignement
+    ensgt-stat-inf:Stat Inf
+    ensgt-econo:Econo
+    ensgt-stat-desc:Stat Desc
+    ensgt-anova:ANOVA
+    ensgt-R:Formation R
   [#}
 [#jqmPanel}
 
-{#jqmPage]page-home
-[#page.title][RCqls Teaching]
-[#header.title][RCqls Teaching]
-[#header.left]{#jqmHeaderButton]panel-teaching[#}
-[#footer.title][Teaching]
+{#jqmPage]ensgt
+[#page.title][RCqls Enseignement]
+[#header.title][RCqls Enseignement]
+[#header.left]{#jqmHeaderButton]ensgt-panel[#}
+[#footer.title][Enseignement]
 [#adoc>]
 * #{rcqls}/ensgt/index.html#page-stat-inf[Statistique Inférentielle]
 * Econométrie
@@ -22,11 +22,11 @@
 * ANOVA
 [#jqmPage}
 
-{#jqmPage]page-stat-inf
+{#jqmPage]stat-inf
 [#page.title][Statistique Inférentielle]
 [#header.title][Statistique Inférentielle]
-[#header.left]{#jqmHeaderButton]panel-teaching[#}
-[#footer.title][Teaching]
+[#header.left]{#jqmHeaderButton]ensgt-panel[#}
+[#footer.title][Enseignement]
 [#adoc>][
 === Plan et Rythme du Cours
 
@@ -106,38 +106,38 @@ De manière équivalente, dans ce cours et à des fins pédagogiques, l'*affirma
 ]
 [#jqmPage}
 
-{#jqmPage]page-econo
+{#jqmPage]ensgt-econo
 [#page.title][Econométrie]
 [#header.title][Econométrie]
-[#header.left]{#jqmHeaderButton]panel-teaching[#}
-[#footer.title][Teaching]
+[#header.left]{#jqmHeaderButton]ensgt-panel[#}
+[#footer.title][Enseignement]
 [#adoc>][
 ]
 [#jqmPage}
 
-{#jqmPage]page-stat-desc
+{#jqmPage]ensgt-stat-desc
 [#page.title][Econométrie]
 [#header.title][Econométrie]
-[#header.left]{#jqmHeaderButton]panel-teaching[#}
-[#footer.title][Teaching]
+[#header.left]{#jqmHeaderButton]ensgt-panel[#}
+[#footer.title][Enseignement]
 [#adoc>][
 ]
 [#jqmPage}
 
-{#jqmPage]page-anova
+{#jqmPage]ensgt-anova
 [#page.title][ANOVA]
 [#header.title][ANOVA]
-[#header.left]{#jqmHeaderButton]panel-teaching[#}
-[#footer.title][Teaching]
+[#header.left]{#jqmHeaderButton]ensgt-panel[#}
+[#footer.title][Enseignement]
 [#adoc>][
 ]
 [#jqmPage}
 
-{#jqmPage]page-R
+{#jqmPage]ensgt-R
 [#page.title][Formation R]
 [#header.title][Formation R]
-[#header.left]{#jqmHeaderButton]panel-teaching[#}
-[#footer.title][Teaching]
+[#header.left]{#jqmHeaderButton]ensgt-panel[#}
+[#footer.title][Enseignement]
 [#adoc>][
 ]
 [#jqmPage}

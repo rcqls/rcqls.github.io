@@ -1,8 +1,8 @@
 {#jqmPanel]panel-dyn[#>]
   {#jqmMenuListView]
     page-home:Home page
-    http://rcqls.github.io/dyndoc:Dyndoc
-    http://rcqls.github.io/ensgt:Teaching
+    dyndoc:Dyndoc
+    ensgt:Teaching
   [#}
 [#jqmPanel}
 
@@ -18,3 +18,5 @@ This page gathers all projects developped by RCqls:
 * R Packages
 * Teaching Project
 [#jqmPage}
+
+[#<<]/Users/remy/Github/rcqls.github.io/ensgt/index.dyn
