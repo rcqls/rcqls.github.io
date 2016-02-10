@@ -30,17 +30,26 @@
 [#adoc>][
 === Plan et Rythme du Cours
 
-* *A.E.P.* (*Approche Expérimentale des Probabilités*) en complément de l'*A.M.P.* (*Approche Mathématique des Probabilités*)
+++++
+<div class="expand" id="expand-aep">
+  AEP
+</div>
+<div class="expandable" id="expandable-aep">
+++++
+* #*A.E.P.*# (#*Approche Expérimentale des Probabilités*#) en complément de l'[aqua-background]#*A.M.P.*# ([aqua-background]#*Approche Mathématique des Probabilités*#)
 **  *A.E.P.* s'appuie sur les simples outils de *statistique descriptive*
     pour représenter un très grand nombre $m$ (en théorie une infinité, i.e. $m=+\infty$) de réalisations
-    d'une variable aléatoire $Y$, notée $\mathbf{y_{[m]}}={\left(y_{[.]}\right)}_m=\left(y_{[1]},\cdots,y_{[m]}\right)$.
+    d'une variable aléatoire $Y$, notée $\bbox[yellow]{\mathbf{y_{[m]}}={\left(y_{[.]}\right)}_m := \left(y_{[1]},\cdots,y_{[m]}\right)}$. Dans le cas particulier "limite" où $m=+\infty$, on note $\bbox[yellow]{\mathbf{y_{[+\infty]}}={\left(y_{[.]}\right)}_{+\infty} := \left(y_{[1]},y_{[2]},\ldots\right)}$.
 ** Notamment les liens avec l'*A.M.P.* sont établis :
-*** Espérance (ou Moyenne) de $Y$: $\mathbb{E}(Y)=\overline{{\left(y_{[.]}\right)}_{+\infty}}$
-*** Ecart-type de $Y$: $\sigma(Y)=\overleftrightarrow{{\left(y_{[.]}\right)}_{+\infty}}$ (et $\sigma(Y)=\sqrt{\mathbb{V}ar(Y)}$)
-*** Quantile de $Y$: $q_{95\%}(Y)=q_{95\%}({\left(y_{[.]}\right)}_{+\infty})$
-*** Loi de probabilité de $Y$: $[\infty]$-histogramme (discret ou continue) représentant la répartition de "toutes" les réalisations $\mathbf{y_{[+\infty]}}$ de $Y$.
+*** Espérance (ou Moyenne) de $Y$: $\bbox[aqua]{\mathbb{E}(Y)}=\bbox[yellow]{\overline{{\left(y_{[.]}\right)}}_{+\infty}}$
+*** Ecart-type de $Y$: $\bbox[aqua]{\sigma(Y)}=\bbox[yellow]{\overleftrightarrow{{\left(y_{[.]}\right)}}_{+\infty}}$ (et $\sigma(Y)=\sqrt{\mathbb{V}ar(Y)}$)
+*** Quantile de $Y$: $\bbox[aqua]{q_{95\%}(Y)}=\bbox[yellow]{q_{95\%}({\left(y_{[.]}\right)}_{+\infty})}$
+*** Loi de probabilité de $Y$: #$[\infty]$-histogramme (discret ou continu)# représentant la #répartition de "toutes" les réalisations $\mathbf{y_{[+\infty]}}$# de $Y$.
+++++
+</div>
+++++
 * Estimation, *Erreur Standard* et Estimation par *Intervalle de Confiance*
-** Estimation de moyenne $\mu:=\mathbb{E}(Y)$ à partir d'un:
+** Estimation de moyenne $\bbox[aqua]{\mu:=\mathbb{E}(Y)}$ à partir d'un:
 *** échantillon aléatoire ("futur") $\mathbf{Y}=(Y_1,\cdots,Y_n)$: $\widehat{\mu}(\mathbf{Y}):=\overline{Y}:=\displaystyle\frac1{n}\sum_{i=1}^n Y_i$
 *** échantillon du jour J ("présent") $\mathbf{y}=(y_1,\cdots,y_n)$: $\widehat{\mu}(\mathbf{y}):=\overline{y}:=\displaystyle\frac1{n}\sum_{i=1}^n y_i$
 *** échantillon possible ("conditionnel") $\mathbf{y_{[k]}}=(y_{[k],1},\cdots,y_{[k],n})$: $\widehat{\mu}(\mathbf{y_{[k]}}):=\overline{y_{[k]}}:=\displaystyle\frac1{n}\sum_{i=1}^n y_{[k],i}$
@@ -64,15 +73,15 @@ L'un des points fondamental de ce cours est de facilement (grâce à l'A.E.P.) d
 *** L'estimation par Intervalle de Confiance (à $95\%$ de niveau de confiance) est une extension naturelle de l'estimation ponctuelle qui intègre la notion d'*erreur standard* mesurant la qualité d'estimation.
 *** L'Intervalle de Confiance (à $95\%$ de niveau de confiance) est défini très simplement par *estimation moins ou plus 2 fois l'erreur standard*:
 $$\begin{eqnarray}
-IC_{\mu,95\%}(\mathbf{y}) &=& [\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})] \nonumber \\
-&=& \widehat{\mu}(\mathbf{y}) \mp 1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}) \nonumber
+\bbox[background-color: #FF88FF]{IC_{\mu,95\%}(\mathbf{y})} &=& [\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})] \nonumber \\
+&=& \bbox[background-color: #FF88FF]{\widehat{\mu}(\mathbf{y}) \mp 1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})} \nonumber
 \end{eqnarray}$$
 
 *** via l'*A.E.P.*, $IC_{\mu,95\%}(\mathbf{y})$ est un Intervalle de Confiance parmi une infinité d'Intervalles de Confiance $\left(IC_{\mu,95\%}(\mathbf{y_{[.]}})\right)_{+\infty}$ qu'on on aurait pu construire dont on sait qu'approximativement $95\%$ contiendraient le vrai paramètre $\mu$ *inconnu*.
 *** Cela traduit la définition *A.M.P.* d'un Intervalle de Confiance de $\mu$ : $\mathbb{P}\left(\mu \in IC_{\mu,95\%}(\mathbf{Y})\right)\simeq 95\%$
 * Outil d'aide à la décision et p-valeur
 ** *Affirmation d'intérêt* exprime la comparaison du *paramètre d'intérêt* INCONNU (ici $\mu$) à une *valeur de référence* (notée $\mu_0$), prédéfinie dans la problématique étudiée (ex: $\mu_0=0.15$ seuil de rentabilité du produit B).
-De manière équivalente, dans ce cours et à des fins pédagogiques, l'*affirmation d'intérêt* est aussi exprimée à partir du *paramètre d'écart (standardisé)* défini par $\delta_{\mu,\mu_0}:=\frac{\mu-\mu_0}{\sigma_{\widehat\mu}}$, mesurant l'écart du *paramètre d'écart* à la *valeur de référence* divisé par la *qualité d'estimation* de $\widehat\mu$.
+De manière équivalente, dans ce cours et à des fins pédagogiques, l'*affirmation d'intérêt* est aussi exprimée à partir du *paramètre d'écart (standardisé)* défini par $\bbox[yellow]{\delta_{\mu,\mu_0}:=\frac{\mu-\mu_0}{\sigma_{\widehat\mu}}}$, mesurant l'écart du *paramètre d'écart* à la *valeur de référence* divisé par la *qualité d'estimation* de $\widehat\mu$.
 ** L'*affirmation d'intérêt* prend l'une des trois formes suivantes:
 *** cas *unilatéral gauche*:  $\mu<\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}<0$
 *** cas *unilatéral droit*:  $\mu>\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}>0$

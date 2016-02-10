@@ -546,29 +546,29 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 <div class="ulist">
 <ul>
 <li>
-<p><strong>A.E.P.</strong> (<strong>Approche Expérimentale des Probabilités</strong>) en complément de l'<strong>A.M.P.</strong> (<strong>Approche Mathématique des Probabilités</strong>)</p>
+<p><mark><strong>A.E.P.</strong></mark> (<mark><strong>Approche Expérimentale des Probabilités</strong></mark>) en complément de l'<span class="aqua-background"><strong>A.M.P.</strong></span> (<span class="aqua-background"><strong>Approche Mathématique des Probabilités</strong></span>)</p>
 <div class="ulist">
 <ul>
 <li>
 <p><strong>A.E.P.</strong> s&#8217;appuie sur les simples outils de <strong>statistique descriptive</strong>
-pour représenter un très grand nombre $m$ (en théorie une infinité, i.e. $m=+\infty$) de réalisations
-d&#8217;une variable aléatoire $Y$, notée $\mathbf{y_{[m]}}={\left(y_{[.]}\right)}_m=\left(y_{[1]},\cdots,y_{[m]}\right)$.</p>
+pour représenter un très grand nombre $m$ (en théorie une infinité, i.e. $m=\infty$) de réalisations
+d'une variable aléatoire $Y$, notée $\bbox[yellow]{\mathbf{y_{[m]}}={\left(y_{[.]}\right)}_m := \left(y_{[1]},\cdots,y_{[m]}\right)}$. Dans le cas particulier "limite" où $m=\infty$, on note $\bbox[yellow]{\mathbf{y_{[\infty]}}={\left(y_{[.]}\right)}_{\infty} := \left(y_{[1]},y_{[2]},\ldots\right)}$.</p>
 </li>
 <li>
 <p>Notamment les liens avec l'<strong>A.M.P.</strong> sont établis :</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Espérance (ou Moyenne) de $Y$: $\mathbb{E}(Y)=\overline{{\left(y_{[.]}\right)}_{+\infty}}$</p>
+<p>Espérance (ou Moyenne) de $Y$: $\bbox[aqua]{\mathbb{E}(Y)}=\bbox[yellow]{\overline{{\left(y_{[.]}\right)}}_{+\infty}}$</p>
 </li>
 <li>
-<p>Ecart-type de $Y$: $\sigma(Y)=\overleftrightarrow{{\left(y_{[.]}\right)}_{+\infty}}$ (et $\sigma(Y)=\sqrt{\mathbb{V}ar(Y)}$)</p>
+<p>Ecart-type de $Y$: $\bbox[aqua]{\sigma(Y)}=\bbox[yellow]{\overleftrightarrow{{\left(y_{[.]}\right)}}_{+\infty}}$ (et $\sigma(Y)=\sqrt{\mathbb{V}ar(Y)}$)</p>
 </li>
 <li>
-<p>Quantile de $Y$: $q_{95\%}(Y)=q_{95\%}({\left(y_{[.]}\right)}_{+\infty})$</p>
+<p>Quantile de $Y$: $\bbox[aqua]{q_{95\%}(Y)}=\bbox[yellow]{q_{95\%}({\left(y_{[.]}\right)}_{+\infty})}$</p>
 </li>
 <li>
-<p>Loi de probabilité de $Y$: $[\infty]$-histogramme (discret ou continue) représentant la répartition de "toutes" les réalisations $\mathbf{y_{[+\infty]}}$ de $Y$.</p>
+<p>Loi de probabilité de $Y$: <mark>$[\infty]$-histogramme (discret ou continu)</mark> représentant la <mark>répartition de "toutes" les réalisations $\mathbf{y_{[+\infty]}}$</mark> de $Y$.</p>
 </li>
 </ul>
 </div>
@@ -581,7 +581,7 @@ d&#8217;une variable aléatoire $Y$, notée $\mathbf{y_{[m]}}={\left(y_{[.]}\rig
 <div class="ulist">
 <ul>
 <li>
-<p>Estimation de moyenne $\mu:=\mathbb{E}(Y)$ à partir d&#8217;un:</p>
+<p>Estimation de moyenne $\bbox[aqua]{\mu:=\mathbb{E}(Y)}$ à partir d&#8217;un:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -634,8 +634,8 @@ La formule d&#8217;obtention de l&#8217;erreur standard dépend bien évidemment
 <li>
 <p>L&#8217;Intervalle de Confiance (à $95\%$ de niveau de confiance) est défini très simplement par <strong>estimation moins ou plus 2 fois l&#8217;erreur standard</strong>:
 \begin{eqnarray}
-IC_{\mu,95\%}(\mathbf{y}) &amp;=&amp; [\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})] \nonumber \\
-&amp;=&amp; \widehat{\mu}(\mathbf{y}) \mp 1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}) \nonumber
+\bbox[fuchsia]{IC_{\mu,95\%}(\mathbf{y})} &amp;=&amp; [\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})] \nonumber \\
+&amp;=&amp; \bbox[F8F]{\widehat{\mu}(\mathbf{y}) \mp 1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})} \nonumber
 \end{eqnarray}</p>
 </li>
 <li>
@@ -656,7 +656,7 @@ IC_{\mu,95\%}(\mathbf{y}) &amp;=&amp; [\widehat{\mu}(\mathbf{y})-1.96\times \wid
 <ul>
 <li>
 <p><strong>Affirmation d&#8217;intérêt</strong> exprime la comparaison du <strong>paramètre d&#8217;intérêt</strong> INCONNU (ici $\mu$) à une <strong>valeur de référence</strong> (notée $\mu_0$), prédéfinie dans la problématique étudiée (ex: $\mu_0=0.15$ seuil de rentabilité du produit B).
-De manière équivalente, dans ce cours et à des fins pédagogiques, l'<strong>affirmation d&#8217;intérêt</strong> est aussi exprimée à partir du <strong>paramètre d&#8217;écart (standardisé)</strong> défini par $\delta_{\mu,\mu_0}:=\frac{\mu-\mu_0}{\sigma_{\widehat\mu}}$, mesurant l&#8217;écart du <strong>paramètre d&#8217;écart</strong> à la <strong>valeur de référence</strong> divisé par la <strong>qualité d&#8217;estimation</strong> de $\widehat\mu$.</p>
+De manière équivalente, dans ce cours et à des fins pédagogiques, l'<strong>affirmation d&#8217;intérêt</strong> est aussi exprimée à partir du <strong>paramètre d&#8217;écart (standardisé)</strong> défini par $\bbox[yellow]{\delta_{\mu,\mu_0}:=\frac{\mu-\mu_0}{\sigma_{\widehat\mu}}}$, mesurant l&#8217;écart du <strong>paramètre d&#8217;écart</strong> à la <strong>valeur de référence</strong> divisé par la <strong>qualité d&#8217;estimation</strong> de $\widehat\mu$.</p>
 </li>
 <li>
 <p>L'<strong>affirmation d&#8217;intérêt</strong> prend l&#8217;une des trois formes suivantes:</p>
