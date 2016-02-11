@@ -417,6 +417,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .show-for-print{display:inherit!important}}
 </style>
 <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<style type="text/css" media="screen">
+		.expand {
+			cursor: pointer;
+		}
+		.expandable {
+			display:none;
+		}
+		</style>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/x-mathjax-config">
@@ -543,12 +551,17 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 <div role="main" class="ui-content">
 <div class="sect2">
 <h3 id="_plan_et_rythme_du_cours">Plan et Rythme du Cours</h3>
+<div class="expand" id="expand-aep">
+<div class="paragraph">
+<p>&#8594; <strong>Approche Expérimentale des Probabilités</strong> (<strong>A.E.P.</strong>)</p>
+</div>
+</div>
+<div class="expandable" id="expandable-aep">
 <div class="ulist">
 <ul>
 <li>
 <p><mark><strong>A.E.P.</strong></mark> (<mark><strong>Approche Expérimentale des Probabilités</strong></mark>) en complément de l'<span class="aqua-background"><strong>A.M.P.</strong></span> (<span class="aqua-background"><strong>Approche Mathématique des Probabilités</strong></span>)</p>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p><strong>A.E.P.</strong> s&#8217;appuie sur les simples outils de <strong>statistique descriptive</strong>
 pour représenter un très grand nombre $m$ (en théorie une infinité, i.e. $m=\infty$) de réalisations
@@ -575,9 +588,13 @@ d'une variable aléatoire $Y$, notée $\bbox[yellow]{\mathbf{y_{[m]}}={\left(y_{
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>Estimation, <strong>Erreur Standard</strong> et Estimation par <strong>Intervalle de Confiance</strong></p>
+</div>
+<div class="expand" id="expand-estimation">
+<div class="paragraph">
+<p>&#8594; <strong>Estimation par Intervalle de Confiance</strong></p>
+</div>
+</div>
+<div class="expandable" id="expandable-estimation">
 <div class="ulist">
 <ul>
 <li>
@@ -596,14 +613,14 @@ d'une variable aléatoire $Y$, notée $\bbox[yellow]{\mathbf{y_{[m]}}={\left(y_{
 <p>Rmq: Seul l&#8217;estimation (du paramètre d&#8217;intérêt) de moyenne est présentée ici mais il n&#8217;est pas difficile de les adapter aux estimations de proportion $p$ et variance $\sigma^2$.</p>
 </div>
 </li>
-</ul>
-</div>
-</li>
 <li>
 <p>Théorème de la Limite Centrale (loi de probabilité de la moyenne d&#8217;un "futur" échantillon $\mathbf{Y}=(Y_1,\cdots,Y_n)$)
 \[\overline{Y}=\displaystyle\frac1n\sum_{i=1}^n Y_i\mbox{ suit approximativement une loi }\mathcal{N}(\mu,\frac{\sigma}{\sqrt{n}})\]
 qui s&#8217;interprète via l'<strong>A.E.P.</strong> par le fait que le $[\infty]$-histogramme représentant la répartition d'une infinité de réalisations $\left(\overline{y_{[.]}}\right)_{\infty}$ a pour forme une courbe d&#8217;équation $\frac{\sqrt{n}}{\sigma\sqrt{2\pi}}\exp\left(-\frac{n}{2}\left(\frac{x-\mu}{\sigma}\right)^2\right)$ représentant une "bosse" centrée en $\mu$ et d&#8217;autant plus concentrée autour de $\mu$ que la taille $n$ de l&#8217;échantillon est grande.
 Via l'<strong>A.E.P.</strong>, on voit un point (une $[+\infty]$-brique) sous cette courbe comme une moyenne possible $\overline{y_{[.]}}$ dont la valeur se lit en abscisse.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><strong>Qualité des estimations</strong> et <strong>Erreur Standard</strong> (Standard Error en anglais)</p>
@@ -634,8 +651,8 @@ La formule d&#8217;obtention de l&#8217;erreur standard dépend bien évidemment
 <li>
 <p>L&#8217;Intervalle de Confiance (à $95\%$ de niveau de confiance) est défini très simplement par <strong>estimation moins ou plus 2 fois l&#8217;erreur standard</strong>:
 \begin{eqnarray}
-\bbox[fuchsia]{IC_{\mu,95\%}(\mathbf{y})} &amp;=&amp; [\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})] \nonumber \\
-&amp;=&amp; \bbox[F8F]{\widehat{\mu}(\mathbf{y}) \mp 1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})} \nonumber
+\bbox[background-color: #FF88FF]{IC_{\mu,95\%}(\mathbf{y})} &amp;=&amp; [\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})] \nonumber \\
+&amp;=&amp; \bbox[background-color: #FF88FF]{\widehat{\mu}(\mathbf{y}) \mp 1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})} \nonumber
 \end{eqnarray}</p>
 </li>
 <li>
@@ -649,9 +666,13 @@ La formule d&#8217;obtention de l&#8217;erreur standard dépend bien évidemment
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>Outil d&#8217;aide à la décision et p-valeur</p>
+</div>
+<div class="expand" id="expand-hypo">
+<div class="paragraph">
+<p>&#8594; <strong>Outil d&#8217;aide à la décision</strong> : <strong>test d&#8217;hypothèses</strong></p>
+</div>
+</div>
+<div class="expandable" id="expandable-hypo">
 <div class="ulist">
 <ul>
 <li>
@@ -776,8 +797,6 @@ De manière équivalente, dans ce cours et à des fins pédagogiques, l'<strong>
 </li>
 </ul>
 </div>
-</li>
-</ul>
 </div>
 </div></div><!-- /content -->
 
@@ -1124,6 +1143,11 @@ Ensure that&#8230;&#8203;
 
 
 <script type="text/javascript">
+$('.expand').click(function(){
+			target_num = $(this).attr('id').split('-')[1];
+			content_id = '#expandable-'.concat(target_num);
+			$(content_id).slideToggle('fast');
+		});
 </script>
 </body>
 </html>

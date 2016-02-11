@@ -29,30 +29,36 @@
 [#footer.title][Enseignement]
 [#adoc>][
 === Plan et Rythme du Cours
-
 ++++
 <div class="expand" id="expand-aep">
-  AEP
+++++
+-> *Approche Expérimentale des Probabilités* (*A.E.P.*)
+++++
 </div>
 <div class="expandable" id="expandable-aep">
 ++++
 * #*A.E.P.*# (#*Approche Expérimentale des Probabilités*#) en complément de l'[aqua-background]#*A.M.P.*# ([aqua-background]#*Approche Mathématique des Probabilités*#)
-**  *A.E.P.* s'appuie sur les simples outils de *statistique descriptive*
+*  *A.E.P.* s'appuie sur les simples outils de *statistique descriptive*
     pour représenter un très grand nombre $m$ (en théorie une infinité, i.e. $m=+\infty$) de réalisations
     d'une variable aléatoire $Y$, notée $\bbox[yellow]{\mathbf{y_{[m]}}={\left(y_{[.]}\right)}_m := \left(y_{[1]},\cdots,y_{[m]}\right)}$. Dans le cas particulier "limite" où $m=+\infty$, on note $\bbox[yellow]{\mathbf{y_{[+\infty]}}={\left(y_{[.]}\right)}_{+\infty} := \left(y_{[1]},y_{[2]},\ldots\right)}$.
-** Notamment les liens avec l'*A.M.P.* sont établis :
-*** Espérance (ou Moyenne) de $Y$: $\bbox[aqua]{\mathbb{E}(Y)}=\bbox[yellow]{\overline{{\left(y_{[.]}\right)}}_{+\infty}}$
-*** Ecart-type de $Y$: $\bbox[aqua]{\sigma(Y)}=\bbox[yellow]{\overleftrightarrow{{\left(y_{[.]}\right)}}_{+\infty}}$ (et $\sigma(Y)=\sqrt{\mathbb{V}ar(Y)}$)
-*** Quantile de $Y$: $\bbox[aqua]{q_{95\%}(Y)}=\bbox[yellow]{q_{95\%}({\left(y_{[.]}\right)}_{+\infty})}$
-*** Loi de probabilité de $Y$: #$[\infty]$-histogramme (discret ou continu)# représentant la #répartition de "toutes" les réalisations $\mathbf{y_{[+\infty]}}$# de $Y$.
+* Notamment les liens avec l'*A.M.P.* sont établis :
+** Espérance (ou Moyenne) de $Y$: $\bbox[aqua]{\mathbb{E}(Y)}=\bbox[yellow]{\overline{{\left(y_{[.]}\right)}}_{+\infty}}$
+** Ecart-type de $Y$: $\bbox[aqua]{\sigma(Y)}=\bbox[yellow]{\overleftrightarrow{{\left(y_{[.]}\right)}}_{+\infty}}$ (et $\sigma(Y)=\sqrt{\mathbb{V}ar(Y)}$)
+** Quantile de $Y$: $\bbox[aqua]{q_{95\%}(Y)}=\bbox[yellow]{q_{95\%}({\left(y_{[.]}\right)}_{+\infty})}$
+** Loi de probabilité de $Y$: #$[\infty]$-histogramme (discret ou continu)# représentant la #répartition de "toutes" les réalisations $\mathbf{y_{[+\infty]}}$# de $Y$.
 ++++
 </div>
+<div class="expand" id="expand-estimation">
 ++++
-* Estimation, *Erreur Standard* et Estimation par *Intervalle de Confiance*
-** Estimation de moyenne $\bbox[aqua]{\mu:=\mathbb{E}(Y)}$ à partir d'un:
-*** échantillon aléatoire ("futur") $\mathbf{Y}=(Y_1,\cdots,Y_n)$: $\widehat{\mu}(\mathbf{Y}):=\overline{Y}:=\displaystyle\frac1{n}\sum_{i=1}^n Y_i$
-*** échantillon du jour J ("présent") $\mathbf{y}=(y_1,\cdots,y_n)$: $\widehat{\mu}(\mathbf{y}):=\overline{y}:=\displaystyle\frac1{n}\sum_{i=1}^n y_i$
-*** échantillon possible ("conditionnel") $\mathbf{y_{[k]}}=(y_{[k],1},\cdots,y_{[k],n})$: $\widehat{\mu}(\mathbf{y_{[k]}}):=\overline{y_{[k]}}:=\displaystyle\frac1{n}\sum_{i=1}^n y_{[k],i}$
+-> *Estimation par Intervalle de Confiance*
+++++
+</div>
+<div class="expandable" id="expandable-estimation">
+++++
+* Estimation de moyenne $\bbox[aqua]{\mu:=\mathbb{E}(Y)}$ à partir d'un:
+** échantillon aléatoire ("futur") $\mathbf{Y}=(Y_1,\cdots,Y_n)$: $\widehat{\mu}(\mathbf{Y}):=\overline{Y}:=\displaystyle\frac1{n}\sum_{i=1}^n Y_i$
+** échantillon du jour J ("présent") $\mathbf{y}=(y_1,\cdots,y_n)$: $\widehat{\mu}(\mathbf{y}):=\overline{y}:=\displaystyle\frac1{n}\sum_{i=1}^n y_i$
+** échantillon possible ("conditionnel") $\mathbf{y_{[k]}}=(y_{[k],1},\cdots,y_{[k],n})$: $\widehat{\mu}(\mathbf{y_{[k]}}):=\overline{y_{[k]}}:=\displaystyle\frac1{n}\sum_{i=1}^n y_{[k],i}$
 +
 Rmq: Seul l'estimation (du paramètre d'intérêt) de moyenne est présentée ici mais il n'est pas difficile de les adapter aux estimations de proportion $p$ et variance $\sigma^2$.
 +
@@ -60,60 +66,70 @@ Rmq: Seul l'estimation (du paramètre d'intérêt) de moyenne est présentée ic
 \[\overline{Y}=\displaystyle\frac1n\sum_{i=1}^n Y_i\mbox{ suit approximativement une loi }\mathcal{N}(\mu,\frac{\sigma}{\sqrt{n}})\]
 qui s'interprète via l'*A.E.P.* par le fait que le $[+\infty]$-histogramme représentant la répartition d'une infinité de réalisations $\left(\overline{y_{[.]}}\right)_{+\infty}$ a pour forme une courbe d'équation $\frac{\sqrt{n}}{\sigma\sqrt{2\pi}}\exp\left(-\frac{n}{2}\left(\frac{x-\mu}{\sigma}\right)^2\right)$ représentant une "bosse" centrée en $\mu$ et d'autant plus concentrée autour de $\mu$ que la taille $n$ de l'échantillon est grande.
 Via l'*A.E.P.*, on voit un point (une $[+\infty]$-brique) sous cette courbe comme une moyenne possible $\overline{y_{[.]}}$ dont la valeur se lit en abscisse.
-** *Qualité des estimations* et *Erreur Standard* (Standard Error en anglais)
+* *Qualité des estimations* et *Erreur Standard* (Standard Error en anglais)
 +
 L'un des points fondamental de ce cours est de facilement (grâce à l'A.E.P.) de décrire les propriétés des estimations.
 +
-*** Estimation sans biais: $\overline{\widehat{\mu}(\mathbf{y_{[.]}})}_{+\infty}=\mathbb{E}(\widehat{\mu}(\mathbf{Y}))=\mu$
-*** Estimation autant meilleur que $n$ est grand: $\sigma_{\widehat{\mu}}:=\overleftrightarrow{\widehat{\mu}(\mathbf{y_{[.]}})}_{+\infty}=\sigma(\widehat{\mu}(\mathbf{Y})) = \frac{\sigma}{\sqrt{n}}$ tend vers $0$ quand $n$ tend vers $+\infty$
+** Estimation sans biais: $\overline{\widehat{\mu}(\mathbf{y_{[.]}})}_{+\infty}=\mathbb{E}(\widehat{\mu}(\mathbf{Y}))=\mu$
+** Estimation autant meilleur que $n$ est grand: $\sigma_{\widehat{\mu}}:=\overleftrightarrow{\widehat{\mu}(\mathbf{y_{[.]}})}_{+\infty}=\sigma(\widehat{\mu}(\mathbf{Y})) = \frac{\sigma}{\sqrt{n}}$ tend vers $0$ quand $n$ tend vers $+\infty$
   La quantité $\sigma_{\widehat{\mu}}$, appelée la qualité de l'estimation $\widehat{\mu}(.)$, est l'une des notions fondamentales de cours.
   Cependant, cette quantité est inconnue et, grâce à l'A.M.P., est fort heureusement estimée le jour J par l'erreur standard $\widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}):=\frac{\widehat{\sigma}(\mathbf{y})}{\sqrt{n}}$.
   La formule d'obtention de l'erreur standard dépend bien évidemment de la nature du paramètre d'intérêt à estimer (voir formulaire de cours). Sur un plan pratique, ces quantités s'obtiennent par une simple formule R (grâce au package R asympTest).
-** *Intervalle de Confiance* (cadre asymptotique, i.e. $n\geq30$)
-*** L'estimation par Intervalle de Confiance (à $95\%$ de niveau de confiance) est une extension naturelle de l'estimation ponctuelle qui intègre la notion d'*erreur standard* mesurant la qualité d'estimation.
-*** L'Intervalle de Confiance (à $95\%$ de niveau de confiance) est défini très simplement par *estimation moins ou plus 2 fois l'erreur standard*:
+* *Intervalle de Confiance* (cadre asymptotique, i.e. $n\geq30$)
+** L'estimation par Intervalle de Confiance (à $95\%$ de niveau de confiance) est une extension naturelle de l'estimation ponctuelle qui intègre la notion d'*erreur standard* mesurant la qualité d'estimation.
+** L'Intervalle de Confiance (à $95\%$ de niveau de confiance) est défini très simplement par *estimation moins ou plus 2 fois l'erreur standard*:
 $$\begin{eqnarray}
 \bbox[background-color: #FF88FF]{IC_{\mu,95\%}(\mathbf{y})} &=& [\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})] \nonumber \\
 &=& \bbox[background-color: #FF88FF]{\widehat{\mu}(\mathbf{y}) \mp 1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})} \nonumber
 \end{eqnarray}$$
-
-*** via l'*A.E.P.*, $IC_{\mu,95\%}(\mathbf{y})$ est un Intervalle de Confiance parmi une infinité d'Intervalles de Confiance $\left(IC_{\mu,95\%}(\mathbf{y_{[.]}})\right)_{+\infty}$ qu'on on aurait pu construire dont on sait qu'approximativement $95\%$ contiendraient le vrai paramètre $\mu$ *inconnu*.
-*** Cela traduit la définition *A.M.P.* d'un Intervalle de Confiance de $\mu$ : $\mathbb{P}\left(\mu \in IC_{\mu,95\%}(\mathbf{Y})\right)\simeq 95\%$
-* Outil d'aide à la décision et p-valeur
-** *Affirmation d'intérêt* exprime la comparaison du *paramètre d'intérêt* INCONNU (ici $\mu$) à une *valeur de référence* (notée $\mu_0$), prédéfinie dans la problématique étudiée (ex: $\mu_0=0.15$ seuil de rentabilité du produit B).
+** via l'*A.E.P.*, $IC_{\mu,95\%}(\mathbf{y})$ est un Intervalle de Confiance parmi une infinité d'Intervalles de Confiance $\left(IC_{\mu,95\%}(\mathbf{y_{[.]}})\right)_{+\infty}$ qu'on on aurait pu construire dont on sait qu'approximativement $95\%$ contiendraient le vrai paramètre $\mu$ *inconnu*.
+** Cela traduit la définition *A.M.P.* d'un Intervalle de Confiance de $\mu$ : $\mathbb{P}\left(\mu \in IC_{\mu,95\%}(\mathbf{Y})\right)\simeq 95\%$
+++++
+</div>
+<div class="expand" id="expand-hypo">
+++++
+-> *Outil d'aide à la décision* : *test d'hypothèses*
+++++
+</div>
+<div class="expandable" id="expandable-hypo">
+++++
+* *Affirmation d'intérêt* exprime la comparaison du *paramètre d'intérêt* INCONNU (ici $\mu$) à une *valeur de référence* (notée $\mu_0$), prédéfinie dans la problématique étudiée (ex: $\mu_0=0.15$ seuil de rentabilité du produit B).
 De manière équivalente, dans ce cours et à des fins pédagogiques, l'*affirmation d'intérêt* est aussi exprimée à partir du *paramètre d'écart (standardisé)* défini par $\bbox[yellow]{\delta_{\mu,\mu_0}:=\frac{\mu-\mu_0}{\sigma_{\widehat\mu}}}$, mesurant l'écart du *paramètre d'écart* à la *valeur de référence* divisé par la *qualité d'estimation* de $\widehat\mu$.
-** L'*affirmation d'intérêt* prend l'une des trois formes suivantes:
-*** cas *unilatéral gauche*:  $\mu<\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}<0$
-*** cas *unilatéral droit*:  $\mu>\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}>0$
-*** cas *bilatéral*:  $\mu\neq\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}\neq0$
-** Dans l'exemple du produit B, elle s'exprime par: $\mu^B>0.15 \Longleftrightarrow \delta_{\mu^B,0.15}<0$ avec $\delta_{\mu^B,0.15} := \frac{\mu^B-0.15}{\sigma_{\widehat\mu}}$
-** La *Règle de Décision* exprime à partir des *données du jour J* la condition à satisfaire pour accepter l'*affirmation d'intérêt*. Assez naturellement, elle s'exprime à partir de l'estimation du *paramètre d'intérêt* ou du *paramètre d'écart (standardisé)*  a pour forme:
-*** cas *unilatéral gauche*:  $\widehat\mu(\mathbf{y})<\mu^{<}_{lim} \Longleftrightarrow \widehat\delta_{\mu,\mu_0}(\mathbf{y})<\delta^{<}_{lim}$
-*** cas *unilatéral droit*:  $\widehat\mu(\mathbf{y})>\mu^{>}_{lim} \Longleftrightarrow \widehat\delta_{\mu,\mu_0}(\mathbf{y})<\delta^{>}_{lim}$
-*** cas *bilatéral*: $\left(\widehat\mu(\mathbf{y})<\mu^{<}_{lim} \mbox{ ou } \widehat\mu(\mathbf{y})>\mu^{>}_{lim}\right)$ $\Longleftrightarrow$ $\left(\widehat\delta_{\mu,\mu_0}(\mathbf{y})<\delta^{<}_{lim}  \mbox{ ou }  \widehat\delta_{\mu,\mu_0}(\mathbf{y})<\delta^{>}_{lim}\right)$
-** Il est à noter que le paramètre d'écart s'estime naturellement par $\widehat\delta_{\mu,\mu_0}(\mathbf{y}) := \frac{\widehat\mu(\mathbf{y}) - \mu_0}{\widehat\sigma_{\widehat\mu}(\mathbf{y})}$, mesurant l'écart de l'*estimation* à la *valeur de référence* divisé par l'*erreur standard* (qui estime la qualité de l'estimation).
-** Comme l'*affirmation d'intérêt* s'exprime à  partir du *paramètre d'intérêt INCONNU* et la *Règle de Décision* s'exprime à partir de l'*estimation* basée sur l'*échantillon du jour J*, nous ne pouvons être certain de toujours prendre la bonne décision en appliquant la *Règle de Décision*. Les *erreurs de décision* sont de deux types:
-*** *Type I* ou *1ère espèce*: Accepter à tort avec les données l'affirmation d'intérêt (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=3 > \delta^{>}_{lim}:=2$ alors que $\mu^B=0.1$)
-*** *Type II* ou *2ème espèce*: Ne pas accepter à tort avec les données l'affirmation d'intérêt (ex produit B: (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=1 \ngtr \delta^{>}_{lim}:=2$ alors que $\mu^B=0.2$)
-** *Notre objectif*: déterminer les *seuils limite* (à franchir) $\delta^{<}_{lim}$ et/ou $\delta^{>}_{lim}$ selon le cas à traiter (*unilatéral gauche ou droit* ou *bilatéral*). Soulignons que les *seuils limite* $\mu^{<}_{lim}$ ou $\mu^{>}_{lim}$ sont malheureusement impossibles à déterminer sauf pour un *paramètre d'intérêt* de type *proportion* (cf. produit A).
-** La suite du raisonnement s'appuie sur les représentations graphiques faites en cours en s'appuyant sur l'outil disponible à http://rcqls.github.io/statinfAEP appliqués à l'exemple du probuit B et dont voilà les principales conclusions:
-*** le *paramètre d'intérêt* (ici, $\mu^B$) étant inconnu, on envisage toutes les situations en déplaçant librement la valeur de $\mu^B$. L'ensemble des estimations des *paramètres d'intérêt* (resp. *paramètre d'écart (standardisé)*) se répartissent autour du *paramètre d'intérêt* (resp. *paramètre d'écart*) sous la forme d'une loi *Normale*.
-*** il y a généralement 2 types de situations: les *bonnes situations* représentant les valeurs de $\mu^B$ satisfaisant l'*affirmation d'intérêt* (ici $\mu^B>0.15$, le produit B est rentable) et par conséquent les *mauvaises situations* correspondant donc à $\mu^B\leq 0.15$. Insistons sur le fait que le cas de l'égalité du *paramètre d'intérêt* à la *valeur de référence* (ici, $\mu^B=0.15$) est parmi les *mauvaise situations*.
-*** pour toute valeur fixée arbitrairement d'un *seuil limite* ($\mu_{lim}$ ou $\delta_{lim}$), on constate que les deux risques associés aux deux types d'erreur de décision s'exprime via l'*A.E.P.* par
-**** *Risque de Type I* ou *1ère espèce*: dans une *mauvaise situation*, c'est la proportion des *estimations* franchissant le(s) *seuil(s) limite* nous conduisant à penser (à tort) avec les *échantillons* associés que nous sommes dans *une bonne situation*.
-**** *Risque de Type II* ou *2ème espèce*: dans une *bonne situation*, c'est la proportion des *estimations* NE franchissant PAS le(s) *seuil(s) limite* nous conduisant à penser (à tort) avec les *échantillons* associés que nous NE sommes PAS dans *une bonne situation*.
-*** graphiquement, nous constatons que ces deux risques sont *maximaux* quand logiquement nous nous approchons de la situation où le *paramètre d'intérêt* est le plus possible de la *valeur de référence*.
-*** une conséquence directe est que la somme des deux *risques maximaux de 1ère et 2ème espèces* est (quasiment) égale à $100\%$
-*** on ne pourra donc pas déterminer le(s) *seuil(s) limite* de sorte à contrôler simultanément les *risques de de 1ère et 2ème espèces* raisonnablement "petits" (puique "petit" + "petit" ne peut être égal à $100\%$).
-*** on ne pourra donc déterminer le(s) *seuil(s) limite* qu'en contrôlant le plus grave de ces deux risques qui sera toujours le *risque de 1ère espèce* (dans le produit B, c'est le *risque de devenir pauvre*).
-*** on ne considère alors que les *mauvaises situations* ($\mu^B\leq 0.15$) et il apparaît que, parmi ces situations, le *risque de 1ère espèce* est *maximal* dans la *pire des (mauvaises) situations*
-*** en conclusion et ce sera une règle générale: pour déterminer le(s) *seuil(s) limite*, il faut se placer dans la *pire des situations* qui représente l'unique situation où le *paramètre d'intérêt* est égale à la *valeur de référence*. De manière équivalente, elle correspond à la situation où le *paramètre d'écart (standardisé)* est égale à 0.
-*** la dernière étape consiste à fixer à une valeur raisonnablement petite ($\alpha=5\%$ en général), dans la *pire des situations*, la (les) surface(s) correspondant aux *estimations*  du côté du (des) *seuil(s) limite* de sorte à accepter l'*affirmation d'intérêt*.
-*** puisque, pour un *paramètre d'intérêt* $\mu$ de type *moyenne* et dans la *pire des situations*, nous ne connaissons la répartition des *estimations* (loi $\mathcal{N}(0,1)$) que pour le *paramètre d'écart (standardisé)* $\delta_{\mu,\mu_0}$, seul(s) le(s) *seuil(s) limite* $\delta^{<}_{lim}$ et/ou $\delta^{>}_{lim}$ ne sont déterminables, représentant des *quantiles* de la loi Normale $\mathcal{N}(0,1)$. La répartition des *estimations* du *paramètre d'intérêt* est en général INCONNUE dans la *pire des situations* puisqu'elle dépend généralement de la *qualité des estimations*, mesurée par l'écart-type $\sigma_{\widehat\mu}:=\frac{\sigma}{\sqrt{n}}$ de toutes ces *estimations* qui dépend du *paramètre "parasite"* INCONNU $\sigma$.
-*** de manière exceptionnelle, pour le cas d'un *paramètre d'intérêt* $p$ de type *proportion*, la *qualité des estimations* ne dépend uniquement que de la *taille d'échantillon* et du *paramètre d'intérêt* $p$ puisque $\sigma=\sqrt{p\times(1-p)}$. Il en résulte que dans la pire des situations (ex: produit A, $p^A=15\%$), la *qualité d'estimations* $\sigma_{\widehat{p^A}}$ est égale à $\sqrt{\frac{15\%\times85\%}{1000}}$. Pour l'exemple du produit A, nous pouvons aussi déterminer le(s) *seuil(s) limite* $p^{<}_{lim}$ et $p^{>}_{lim}$ qui s'obtiennent donc comme des *quantiles* d'une *loi Normale* $\mathcal{N}\left(15\%,\sqrt{\frac{15\%\times85\%}{1000}}\right)$.
-*** toutefois, sur un plan méthodologique, nous priviligierons toujours la *Règle de Décision* basée sur l'*estimation du jour J* du *paramètre d'écart (standardisé)* puisqu'il est toujours possible de déterminer le(s) *seuil(s) limite* indépendamment de la nature du *paramètre d'intérêt* (*proportion*, *moyenne* ou *variance*) qui s'obtiennent comme des quantiles de la *loi Normale centrée réduite* $\mathcal{N}(0,1)$.
-*** en R, cela ne revient, en général, qu'à connaître l'instruction $\mathbf{qnorm}$ appliquée aux ordres des quantiles $95\%$ et $97.5\%$, i.e. $\mathbf{qnorm(.95)\simeq 1.645}$ et $\mathbf{qnorm(.95)\simeq 1.96 \simeq 2}$.
-*** sur un plan pratique, cela se résume à comparer le *jour J*, \[\mbox{Estimation du paramètre d'écart (standardisé)}:=\frac{\mbox{Estimation (du paramètre d'intérêt)} - \mbox{Valeur de Référence}}{\mbox{Erreur Standard}}\] au(x) *seuil(s) limite* directement reliés aux *quantiles* $\mathbf{qnorm(.95)}$ ou $\mathbf{qnorm(.975)}$.
+* L'*affirmation d'intérêt* prend l'une des trois formes suivantes:
+** cas *unilatéral gauche*:  $\mu<\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}<0$
+** cas *unilatéral droit*:  $\mu>\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}>0$
+** cas *bilatéral*:  $\mu\neq\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}\neq0$
+* Dans l'exemple du produit B, elle s'exprime par: $\mu^B>0.15 \Longleftrightarrow \delta_{\mu^B,0.15}<0$ avec $\delta_{\mu^B,0.15} := \frac{\mu^B-0.15}{\sigma_{\widehat\mu}}$
+* La *Règle de Décision* exprime à partir des *données du jour J* la condition à satisfaire pour accepter l'*affirmation d'intérêt*. Assez naturellement, elle s'exprime à partir de l'estimation du *paramètre d'intérêt* ou du *paramètre d'écart (standardisé)*  a pour forme:
+** cas *unilatéral gauche*:  $\widehat\mu(\mathbf{y})<\mu^{<}_{lim} \Longleftrightarrow \widehat\delta_{\mu,\mu_0}(\mathbf{y})<\delta^{<}_{lim}$
+** cas *unilatéral droit*:  $\widehat\mu(\mathbf{y})>\mu^{>}_{lim} \Longleftrightarrow \widehat\delta_{\mu,\mu_0}(\mathbf{y})<\delta^{>}_{lim}$
+** cas *bilatéral*: $\left(\widehat\mu(\mathbf{y})<\mu^{<}_{lim} \mbox{ ou } \widehat\mu(\mathbf{y})>\mu^{>}_{lim}\right)$ $\Longleftrightarrow$ $\left(\widehat\delta_{\mu,\mu_0}(\mathbf{y})<\delta^{<}_{lim}  \mbox{ ou }  \widehat\delta_{\mu,\mu_0}(\mathbf{y})<\delta^{>}_{lim}\right)$
+* Il est à noter que le paramètre d'écart s'estime naturellement par $\widehat\delta_{\mu,\mu_0}(\mathbf{y}) := \frac{\widehat\mu(\mathbf{y}) - \mu_0}{\widehat\sigma_{\widehat\mu}(\mathbf{y})}$, mesurant l'écart de l'*estimation* à la *valeur de référence* divisé par l'*erreur standard* (qui estime la qualité de l'estimation).
+* Comme l'*affirmation d'intérêt* s'exprime à  partir du *paramètre d'intérêt INCONNU* et la *Règle de Décision* s'exprime à partir de l'*estimation* basée sur l'*échantillon du jour J*, nous ne pouvons être certain de toujours prendre la bonne décision en appliquant la *Règle de Décision*. Les *erreurs de décision* sont de deux types:
+** *Type I* ou *1ère espèce*: Accepter à tort avec les données l'affirmation d'intérêt (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=3 > \delta^{>}_{lim}:=2$ alors que $\mu^B=0.1$)
+** *Type II* ou *2ème espèce*: Ne pas accepter à tort avec les données l'affirmation d'intérêt (ex produit B: (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=1 \ngtr \delta^{>}_{lim}:=2$ alors que $\mu^B=0.2$)
+* *Notre objectif*: déterminer les *seuils limite* (à franchir) $\delta^{<}_{lim}$ et/ou $\delta^{>}_{lim}$ selon le cas à traiter (*unilatéral gauche ou droit* ou *bilatéral*). Soulignons que les *seuils limite* $\mu^{<}_{lim}$ ou $\mu^{>}_{lim}$ sont malheureusement impossibles à déterminer sauf pour un *paramètre d'intérêt* de type *proportion* (cf. produit A).
+* La suite du raisonnement s'appuie sur les représentations graphiques faites en cours en s'appuyant sur l'outil disponible à http://rcqls.github.io/statinfAEP appliqués à l'exemple du probuit B et dont voilà les principales conclusions:
+** le *paramètre d'intérêt* (ici, $\mu^B$) étant inconnu, on envisage toutes les situations en déplaçant librement la valeur de $\mu^B$. L'ensemble des estimations des *paramètres d'intérêt* (resp. *paramètre d'écart (standardisé)*) se répartissent autour du *paramètre d'intérêt* (resp. *paramètre d'écart*) sous la forme d'une loi *Normale*.
+** il y a généralement 2 types de situations: les *bonnes situations* représentant les valeurs de $\mu^B$ satisfaisant l'*affirmation d'intérêt* (ici $\mu^B>0.15$, le produit B est rentable) et par conséquent les *mauvaises situations* correspondant donc à $\mu^B\leq 0.15$. Insistons sur le fait que le cas de l'égalité du *paramètre d'intérêt* à la *valeur de référence* (ici, $\mu^B=0.15$) est parmi les *mauvaise situations*.
+** pour toute valeur fixée arbitrairement d'un *seuil limite* ($\mu_{lim}$ ou $\delta_{lim}$), on constate que les deux risques associés aux deux types d'erreur de décision s'exprime via l'*A.E.P.* par
+*** *Risque de Type I* ou *1ère espèce*: dans une *mauvaise situation*, c'est la proportion des *estimations* franchissant le(s) *seuil(s) limite* nous conduisant à penser (à tort) avec les *échantillons* associés que nous sommes dans *une bonne situation*.
+*** *Risque de Type II* ou *2ème espèce*: dans une *bonne situation*, c'est la proportion des *estimations* NE franchissant PAS le(s) *seuil(s) limite* nous conduisant à penser (à tort) avec les *échantillons* associés que nous NE sommes PAS dans *une bonne situation*.
+** graphiquement, nous constatons que ces deux risques sont *maximaux* quand logiquement nous nous approchons de la situation où le *paramètre d'intérêt* est le plus possible de la *valeur de référence*.
+** une conséquence directe est que la somme des deux *risques maximaux de 1ère et 2ème espèces* est (quasiment) égale à $100\%$
+** on ne pourra donc pas déterminer le(s) *seuil(s) limite* de sorte à contrôler simultanément les *risques de de 1ère et 2ème espèces* raisonnablement "petits" (puique "petit" + "petit" ne peut être égal à $100\%$).
+** on ne pourra donc déterminer le(s) *seuil(s) limite* qu'en contrôlant le plus grave de ces deux risques qui sera toujours le *risque de 1ère espèce* (dans le produit B, c'est le *risque de devenir pauvre*).
+** on ne considère alors que les *mauvaises situations* ($\mu^B\leq 0.15$) et il apparaît que, parmi ces situations, le *risque de 1ère espèce* est *maximal* dans la *pire des (mauvaises) situations*
+** en conclusion et ce sera une règle générale: pour déterminer le(s) *seuil(s) limite*, il faut se placer dans la *pire des situations* qui représente l'unique situation où le *paramètre d'intérêt* est égale à la *valeur de référence*. De manière équivalente, elle correspond à la situation où le *paramètre d'écart (standardisé)* est égale à 0.
+** la dernière étape consiste à fixer à une valeur raisonnablement petite ($\alpha=5\%$ en général), dans la *pire des situations*, la (les) surface(s) correspondant aux *estimations*  du côté du (des) *seuil(s) limite* de sorte à accepter l'*affirmation d'intérêt*.
+** puisque, pour un *paramètre d'intérêt* $\mu$ de type *moyenne* et dans la *pire des situations*, nous ne connaissons la répartition des *estimations* (loi $\mathcal{N}(0,1)$) que pour le *paramètre d'écart (standardisé)* $\delta_{\mu,\mu_0}$, seul(s) le(s) *seuil(s) limite* $\delta^{<}_{lim}$ et/ou $\delta^{>}_{lim}$ ne sont déterminables, représentant des *quantiles* de la loi Normale $\mathcal{N}(0,1)$. La répartition des *estimations* du *paramètre d'intérêt* est en général INCONNUE dans la *pire des situations* puisqu'elle dépend généralement de la *qualité des estimations*, mesurée par l'écart-type $\sigma_{\widehat\mu}:=\frac{\sigma}{\sqrt{n}}$ de toutes ces *estimations* qui dépend du *paramètre "parasite"* INCONNU $\sigma$.
+** de manière exceptionnelle, pour le cas d'un *paramètre d'intérêt* $p$ de type *proportion*, la *qualité des estimations* ne dépend uniquement que de la *taille d'échantillon* et du *paramètre d'intérêt* $p$ puisque $\sigma=\sqrt{p\times(1-p)}$. Il en résulte que dans la pire des situations (ex: produit A, $p^A=15\%$), la *qualité d'estimations* $\sigma_{\widehat{p^A}}$ est égale à $\sqrt{\frac{15\%\times85\%}{1000}}$. Pour l'exemple du produit A, nous pouvons aussi déterminer le(s) *seuil(s) limite* $p^{<}_{lim}$ et $p^{>}_{lim}$ qui s'obtiennent donc comme des *quantiles* d'une *loi Normale* $\mathcal{N}\left(15\%,\sqrt{\frac{15\%\times85\%}{1000}}\right)$.
+** toutefois, sur un plan méthodologique, nous priviligierons toujours la *Règle de Décision* basée sur l'*estimation du jour J* du *paramètre d'écart (standardisé)* puisqu'il est toujours possible de déterminer le(s) *seuil(s) limite* indépendamment de la nature du *paramètre d'intérêt* (*proportion*, *moyenne* ou *variance*) qui s'obtiennent comme des quantiles de la *loi Normale centrée réduite* $\mathcal{N}(0,1)$.
+** en R, cela ne revient, en général, qu'à connaître l'instruction $\mathbf{qnorm}$ appliquée aux ordres des quantiles $95\%$ et $97.5\%$, i.e. $\mathbf{qnorm(.95)\simeq 1.645}$ et $\mathbf{qnorm(.95)\simeq 1.96 \simeq 2}$.
+** sur un plan pratique, cela se résume à comparer le *jour J*, \[\mbox{Estimation du paramètre d'écart (standardisé)}:=\frac{\mbox{Estimation (du paramètre d'intérêt)} - \mbox{Valeur de Référence}}{\mbox{Erreur Standard}}\] au(x) *seuil(s) limite* directement reliés aux *quantiles* $\mathbf{qnorm(.95)}$ ou $\mathbf{qnorm(.975)}$.
+++++
+</div>
+++++
 ]
 [#jqmPage}
 
