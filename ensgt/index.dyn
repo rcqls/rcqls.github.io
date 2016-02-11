@@ -39,13 +39,13 @@
 ++++
 * #*A.E.P.*# (#*Approche Expérimentale des Probabilités*#) en complément de l'[aqua-background]#*A.M.P.*# ([aqua-background]#*Approche Mathématique des Probabilités*#)
 *  *A.E.P.* s'appuie sur les simples outils de *statistique descriptive*
-    pour représenter un très grand nombre $m$ (en théorie une infinité, i.e. $m=+\infty$) de réalisations
-    d'une variable aléatoire $Y$, notée $\bbox[yellow]{\mathbf{y_{[m]}}={\left(y_{[.]}\right)}_m := \left(y_{[1]},\cdots,y_{[m]}\right)}$. Dans le cas particulier "limite" où $m=+\infty$, on note $\bbox[yellow]{\mathbf{y_{[+\infty]}}={\left(y_{[.]}\right)}_{+\infty} := \left(y_{[1]},y_{[2]},\ldots\right)}$.
+    pour représenter un très grand nombre $m$ (en théorie une infinité, i.e. $m=\+\infty$) de réalisations
+    d'une variable aléatoire $Y$, notée $\bbox[yellow]{\mathbf{y_{[m]}}={\left(y_{[.]}\right)}_m := \left(y_{[1]},\cdots,y_{[m]}\right)}$. Dans le cas particulier "limite" où $m=+\infty$, on note $\bbox[yellow]{\mathbf{y_{[\+\infty]}}={\left(y_{[.]}\right)}_{+\infty} := \left(y_{[1]},y_{[2]},\ldots\right)}$.
 * Notamment les liens avec l'*A.M.P.* sont établis :
 ** Espérance (ou Moyenne) de $Y$: $\bbox[aqua]{\mathbb{E}(Y)}=\bbox[yellow]{\overline{{\left(y_{[.]}\right)}}_{+\infty}}$
 ** Ecart-type de $Y$: $\bbox[aqua]{\sigma(Y)}=\bbox[yellow]{\overleftrightarrow{{\left(y_{[.]}\right)}}_{+\infty}}$ (et $\sigma(Y)=\sqrt{\mathbb{V}ar(Y)}$)
 ** Quantile de $Y$: $\bbox[aqua]{q_{95\%}(Y)}=\bbox[yellow]{q_{95\%}({\left(y_{[.]}\right)}_{+\infty})}$
-** Loi de probabilité de $Y$: #$[\infty]$-histogramme (discret ou continu)# représentant la #répartition de "toutes" les réalisations $\mathbf{y_{[+\infty]}}$# de $Y$.
+** Loi de probabilité de $Y$: #$[\+\infty]$-histogramme (discret ou continu)# représentant la #répartition de "toutes" les réalisations $\mathbf{y_{[+\infty]}}$# de $Y$.
 ++++
 </div>
 <div class="expand" id="expand-estimation">
