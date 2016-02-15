@@ -2,7 +2,24 @@
 [#=]js_panel_code[
 $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 ]
+[#=]css_aep_code[
+.aep{
+    border-radius: 5px;
+    background: yellow;
+    //border: 1px solid #2222DD;
+    padding: 0px;
+    width: 90%;
+}
+.amp {
+    border-radius: 5px;
+    background: aqua;
+    //border: 1px solid #DD2222;
+    padding: 0px;
+    width: 90%;
+}
+]
 [#rb<]LayoutMngr << [:js_code,#{=js_panel_code}]
+LayoutMngr << [:css_code,#{=css_aep_code}]
 [#<]{#LayoutLoad]
 [#css_header]jquery_mobile_cdnjs,adoc,jqexpand
 [#js_header]jquery_cdnjs,jquery_mobile_cdnjs,mathjax_cdnjs_inline
