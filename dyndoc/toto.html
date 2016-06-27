@@ -417,64 +417,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .show-for-print{display:inherit!important}}
 </style>
 <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<style type="text/css" media="screen">
-		div[id^='expand-'] {
-			cursor: pointer;
-		}
-		div[id^='expandable-'] {
-			display:none;
-		}
-		</style>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-});
-</script>
-
-<script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<style type="text/css" media="screen">
-.aep{
-    border-radius: 5px;
-    background: yellow;
-    //border: 1px solid #2222DD;
-    padding: 2px;
-    width: 90%;
-}
-
-.aep-frame{
-    border-radius: 2px;
-    background: ivory;
-    border: 1px solid gold;
-    padding: 2px;
-    width: 95%;
-}
-
-.amp {
-    border-radius: 5px;
-    background: aqua;
-    //border: 1px solid #DD2222;
-    padding: 2px;
-    width: 90%;
-}
-.amp-frame {
-    border-radius: 2px;
-    background: azure;
-    border: 1px solid powderblue;
-    padding: 2px;
-    width: 95%;
-}
-.r-frame {
-    border-radius: 2px;
-    background: honeydew;
-    border: 1px solid turquoise;
-    padding: 2px;
-    width: 95%;
-}
-</style>
 <script type="text/javascript">
 $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 
@@ -482,194 +426,242 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
 </head>
 <body>
 
-	<div data-role="panel" id="ensgt-panel" data-position="left" data-display="reveal" data-theme="a">
+	<div data-role="panel" id="dyndoc-panel" data-position="left" data-display="reveal" data-theme="a">
 
   
 <ul data-role="listview">
   <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
-<li ><a href="#ensgt" >RCqls Enseignement</a></li>
-<li ><a href="#ensgt-stat-inf" >Stat Inf</a></li>
-<li ><a href="#ensgt-econo" >Econo</a></li>
-<li ><a href="#ensgt-stat-desc" >Stat Desc</a></li>
-<li ><a href="#ensgt-anova" >ANOVA</a></li>
-<li ><a href="#ensgt-R" >Formation R</a></li>
+<li ><a href="#dyndoc" >Dyndoc</a></li>
+<li ><a href="#dyndoc-install" >Install</a></li>
+<li ><a href="#dyn-usage" >dyn</a></li>
+<li ><a href="#dyn-cli-usage" >dyn-cli</a></li>
+<li ><a href="#dyndoc-todo" >Todo</a></li>
+<li ><a href="#dyndoc-dev" >Devel</a></li>
+<li ><a href="#dyndoc-test-adoc" >Asciidoctor Test</a></li>
 </ul>
 
 </div><!-- /panel -->
 
 
-<div data-role="page" id="ensgt" data-title="RCqls Enseignement">
+<div data-role="page" id="dyndoc" data-title="Dyndoc Project">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#ensgt-panel" data-icon="bars" data-iconpos="notext"></a>
+  <a href="#dyndoc-panel" data-icon="bars" data-iconpos="notext"></a>
 
-  <h1>RCqls Enseignement</h1>
+  <h1>Dyndoc Project</h1>
   
 </div><!-- /header -->
 
 <div role="main" class="ui-content">
+<div class="sect1">
+<h2 id="_dyndoc_short_presentation">Dyndoc (short presentation)</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://rcqls.github.io/ensgt/index.html#ensgt-stat-inf">Statistique Inférentielle</a></p>
+<p>macro-language based on an exotic tag system to live inside a human readable format document (<code>latex</code>,<code>html</code>,<code>makdown</code>,&#8230;&#8203;)</p>
 </li>
 <li>
-<p>Econométrie</p>
+<p>similarly to <code>sweave</code> or <code>knitr</code> (in the <code>R</code> world), it can embed <code>R</code> language but also many other languages like <code>ruby</code> and <code>julia</code>.</p>
 </li>
 <li>
-<p>Statistique Descriptive</p>
-</li>
-<li>
-<p>ANOVA</p>
+<p>similarly to <code>eruby</code> (in the <code>ruby</code> world), <code>R</code> and <code>ruby</code> can be used to dynamically make content</p>
 </li>
 </ul>
+</div>
+</div>
 </div></div><!-- /content -->
 
 <div data-role="footer" data-position="fixed" data-fullscreen="false">
   
-  <h4>Enseignement</h4>
+  <h4>Dyndoc</h4>
   
 </div><!-- /footer -->
 </div><!-- /page -->
 
 
-<div data-role="page" id="ensgt-stat-inf" data-title="Statistique Inférentielle">
+<div data-role="page" id="dyn-usage" data-title="Dyndoc Usage">
 <div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#ensgt-panel" data-icon="bars" data-iconpos="notext"></a>
+  <a href="#dyndoc-panel" data-icon="bars" data-iconpos="notext"></a>
 
-  <h1>Statistique Inférentielle</h1>
+  <h1>Dyndoc Usage</h1>
   
 </div><!-- /header -->
 
 <div role="main" class="ui-content">
-<div class="sect2">
-<h3 id="_plan_et_rythme_du_cours">Plan et Rythme du Cours</h3>
-<button id="jqselect-btn-toto" data-inline="true" value="on">Toto</button>
-<button id="jqselect-btn-tata" data-inline="true" value="on">Tata</button>
-<button id="jqselect-btn-titi" data-inline="true" value="on">Titi</button>
-<div class="expand" id="expand-aep">
-<div class="paragraph">
-<p>&#8594; <strong>Approche Expérimentale des Probabilités</strong> (<strong>A.E.P.</strong>)</p>
-</div>
-</div>
-<div id="expandable-aep">
-<div class="ulist">
-<ul>
-<li>
-<p><span class="aep-frame"><strong>A.E.P.</strong></span> (<span class="aep"><strong>Approche Expérimentale des Probabilités</strong></span>) en complément de l'<span class="amp"><strong>A.M.P.</strong></span> (<span class="amp"><strong>Approche Mathématique des Probabilités</strong></span>)</p>
-</li>
-<li>
-<p><strong>A.E.P.</strong> s&#8217;appuie sur les simples outils de <strong>statistique descriptive</strong>
-pour représenter un très grand nombre $m$ (en théorie une infinité, i.e. $m=+\infty$) de réalisations
-d&#8217;une variable aléatoire $Y$, notée $\bbox[yellow]{\mathbf{y_{[m]}}={\left(y_{[.]}\right)}_m := \left(y_{[1]},\cdots,y_{[m]}\right)}$. Dans le cas particulier "limite" où $m=+\infty$, on note $\bbox[yellow]{\mathbf{y_{[+\infty]}}={\left(y_{[.]}\right)}_{+\infty} := \left(y_{[1]},y_{[2]},\ldots\right)}$.</p>
-</li>
-<li>
-<p>Notamment les liens avec l'<strong>A.M.P.</strong> sont établis :</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Espérance (ou Moyenne) de $Y$: $\bbox[aqua]{\mathbb{E}(Y)}=\bbox[yellow]{\overline{{\left(y_{[.]}\right)}}_{+\infty}}$</p>
-</li>
-<li>
-<p>Ecart-type de $Y$: $\bbox[aqua]{\sigma(Y)}=\bbox[yellow]{\overleftrightarrow{{\left(y_{[.]}\right)}}_{+\infty}}$ (et $\sigma(Y)=\sqrt{\mathbb{V}ar(Y)}$)</p>
-</li>
-<li>
-<p>Quantile de $Y$: $\bbox[aqua]{q_{95\%}(Y)}=\bbox[yellow]{q_{95\%}({\left(y_{[.]}\right)}_{+\infty})}$</p>
-</li>
-<li>
-<p>Loi de probabilité de $Y$: <span class="aep">$[+\infty]$-histogramme (discret ou continu)</span> représentant la <span class="aep">répartition de "toutes" les réalisations $\mathbf{y_{[+\infty]}}$</span> de $Y$, chacune d&#8217;elles étant représentée par une <mark>$[+\infty]$-brique</mark> (point ou "crêpe") dont l&#8217;abscisse détermine la valeur.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div id="expand-estimation">
-<div class="paragraph">
-<p>&#8594; <strong>Estimation par Intervalle de Confiance</strong></p>
-</div>
-</div>
-<div id="expandable-estimation">
-<div class="ulist">
-<ul>
-<li>
-<p>Estimation de moyenne $\bbox[aqua]{\mu:=\mathbb{E}(Y)}$ à partir d&#8217;un:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>échantillon aléatoire ("futur") $\mathbf{Y}=(Y_1,\cdots,Y_n)$: $\widehat{\mu}(\mathbf{Y}):=\overline{Y}:=\displaystyle\frac1{n}\sum_{i=1}^n Y_i$</p>
-</li>
-<li>
-<p>échantillon du jour J ("présent") $\mathbf{y}=(y_1,\cdots,y_n)$: $\widehat{\mu}(\mathbf{y}):=\overline{y}:=\displaystyle\frac1{n}\sum_{i=1}^n y_i$</p>
-</li>
-<li>
-<p>échantillon possible ("conditionnel") $\mathbf{y_{[k]}}=(y_{[k],1},\cdots,y_{[k],n})$: $\widehat{\mu}(\mathbf{y_{[k]}}):=\overline{y_{[k]}}:=\displaystyle\frac1{n}\sum_{i=1}^n y_{[k],i}$</p>
-<div class="paragraph">
-<p>Rmq: Seul l&#8217;estimation (du paramètre d&#8217;intérêt) de moyenne est présentée ici mais il n&#8217;est pas difficile de les adapter aux estimations de proportion $p$ et variance $\sigma^2$.</p>
-</div>
-</li>
-<li>
-<p>Théorème de la Limite Centrale (loi de probabilité de la moyenne d&#8217;un "futur" échantillon $\mathbf{Y}=(Y_1,\cdots,Y_n)$)
-\[\overline{Y}=\displaystyle\frac1n\sum_{i=1}^n Y_i\mbox{ suit approximativement une loi }\mathcal{N}(\mu,\frac{\sigma}{\sqrt{n}})\]
-qui s&#8217;interprète via l'<strong>A.E.P.</strong> par le fait que le $[\infty]$-histogramme représentant la répartition d'une infinité de réalisations $\left(\overline{y_{[.]}}\right)_{\infty}$ a pour forme une courbe d&#8217;équation $\frac{\sqrt{n}}{\sigma\sqrt{2\pi}}\exp\left(-\frac{n}{2}\left(\frac{x-\mu}{\sigma}\right)^2\right)$ représentant une "bosse" centrée en $\mu$ et d&#8217;autant plus concentrée autour de $\mu$ que la taille $n$ de l&#8217;échantillon est grande.
-Via l'<strong>A.E.P.</strong>, on voit un point (une $[+\infty]$-brique) sous cette courbe comme une moyenne possible $\overline{y_{[.]}}$ dont la valeur se lit en abscisse.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Qualité des estimations</strong> et <strong>Erreur Standard</strong> (Standard Error en anglais)</p>
-<div class="paragraph">
-<p>L&#8217;un des points fondamentaux de ce cours est de facilement (grâce à l&#8217;A.E.P.) décrire les propriétés des estimations.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Estimation sans biais: $\overline{\widehat{\mu}(\mathbf{y_{[.]}})}_{+\infty}=\mathbb{E}(\widehat{\mu}(\mathbf{Y}))=\mu$</p>
-</li>
-<li>
-<p>Estimation autant meilleur que $n$ est grand: $\sigma_{\widehat{\mu}}:=\overleftrightarrow{\widehat{\mu}(\mathbf{y_{[.]}})}_{+\infty}=\sigma(\widehat{\mu}(\mathbf{Y})) = \frac{\sigma}{\sqrt{n}}$ tend vers $0$ quand $n$ tend vers $+\infty$
-La quantité $\sigma_{\widehat{\mu}}$, appelée la qualité de l&#8217;estimation $\widehat{\mu}(.)$, est l&#8217;une des notions fondamentales de cours.
-Cependant, cette quantité est inconnue et, grâce à l&#8217;A.M.P., est fort heureusement estimée le jour J par l&#8217;erreur standard $\widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}):=\frac{\widehat{\sigma}(\mathbf{y})}{\sqrt{n}}$.
-La formule d&#8217;obtention de l&#8217;erreur standard dépend bien évidemment de la nature du paramètre d&#8217;intérêt à estimer (voir formulaire de cours). Sur un plan pratique, ces quantités s&#8217;obtiennent par une simple formule R (grâce au package R asympTest).</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Intervalle de Confiance</strong> (cadre asymptotique, i.e. $n\geq30$)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>L&#8217;estimation par Intervalle de Confiance (à $95\%$ de niveau de confiance) est une extension naturelle de l&#8217;estimation ponctuelle qui intègre la notion d'<strong>erreur standard</strong> mesurant la qualité d&#8217;estimation.</p>
-</li>
-<li>
-<p>L&#8217;Intervalle de Confiance (à $95\%$ de niveau de confiance) est défini très simplement par <strong>estimation moins ou plus 2 fois l&#8217;erreur standard</strong>:
-\begin{eqnarray}
-\bbox[background-color: #FF88FF]{IC_{\mu,95\%}(\mathbf{y})} &amp;=&amp; [\widehat{\mu}(\mathbf{y})-1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y}),\widehat{\mu}(\mathbf{y})+1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})] \nonumber \\
-&amp;=&amp; \bbox[background-color: #FF88FF]{\widehat{\mu}(\mathbf{y}) \mp 1.96\times \widehat{\sigma_{\widehat{\mu}}}(\mathbf{y})} \nonumber
-\end{eqnarray}</p>
-</li>
-<li>
-<p>via l'<strong>A.E.P.</strong>, $IC_{\mu,95\%}(\mathbf{y})$ est un Intervalle de Confiance parmi une infinité d&#8217;Intervalles de Confiance $\left(IC_{\mu,95\%}(\mathbf{y_{[.]}})\right)_{+\infty}$ qu&#8217;on on aurait pu construire dont on sait qu&#8217;approximativement $95\%$ contiendraient le vrai paramètre $\mu$ <strong>inconnu</strong>.</p>
-</li>
-<li>
-<p>Cela traduit la définition <strong>A.M.P.</strong> d&#8217;un Intervalle de Confiance de $\mu$ : $\mathbb{P}\left(\mu \in IC_{\mu,95\%}(\mathbf{Y})\right)\simeq 95\%$</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div id="expand-hypo">
-<div class="paragraph">
-<p>&#8594; <strong>Outil d&#8217;aide à la décision</strong> : <strong>test d&#8217;hypothèses</strong></p>
-</div>
-</div>
-<div id="expandable-hypo">
-<div class="openblock aep-frame jqselect-tag-toto">
+<div class="listingblock">
 <div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">cd ~/dyndoc/demo <i class="conum" data-value="1"></i><b>(1)</b>
+dyn first <i class="conum" data-value="2"></i><b>(2)</b>
+pdflatex first <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>change to the demo folder</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>compile first.dyn to create first.tex</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>create first.pdf</td>
+</tr>
+</table>
+</div></div><!-- /content -->
+
+<div data-role="footer" data-position="fixed" data-fullscreen="false">
+  
+  <h4>Dyndoc</h4>
+  
+</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="dyn-cli-usage" data-title="dyn-cli command">
+<div data-role="header" data-position="fixed" data-fullscreen="false">
+  <a href="#dyndoc-panel" data-icon="bars" data-iconpos="notext"></a>
+
+  <h1>dyn-cli command</h1>
+  
+</div><!-- /header -->
+
+<div role="main" class="ui-content">
+
+
+</div><!-- /content -->
+
+<div data-role="footer" data-position="fixed" data-fullscreen="false">
+  
+  <h4>Dyndoc</h4>
+  
+</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="dyndoc-install" data-title="Dyndoc Install">
+<div data-role="header" data-position="fixed" data-fullscreen="false">
+  <a href="#dyndoc-panel" data-icon="bars" data-iconpos="notext"></a>
+
+  <h1>Dyndoc Install</h1>
+  
+</div><!-- /header -->
+
+<div role="main" class="ui-content">
+
+
+</div><!-- /content -->
+
+<div data-role="footer" data-position="fixed" data-fullscreen="false">
+  
+  <h4>Dyndoc</h4>
+  
+</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="dyndoc-todo" data-title="Dyndoc TODO">
+<div data-role="header" data-position="fixed" data-fullscreen="false">
+  <a href="#dyndoc-panel" data-icon="bars" data-iconpos="notext"></a>
+
+  <h1>Dyndoc TODO</h1>
+  
+</div><!-- /header -->
+
+<div role="main" class="ui-content">
+<div class="sect1">
+<h2 id="_todo_list">TODO list</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_install">Install</h3>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> Homebrew formula to install in MacOSX</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> MSys2 documentation only to install on Windows. The regular way is with docker</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dyndocker">Dyndocker</h3>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> dyntask is avoiding</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> bash replaced with red which is cross-platform</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- /content -->
+
+<div data-role="footer" data-position="fixed" data-fullscreen="false">
+  
+  <h4>Dyndoc</h4>
+  
+</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="dyndoc-dev" data-title="[Dyndoc Dev Page">
+<div data-role="header" data-position="fixed" data-fullscreen="false">
+  <a href="#dyndoc-panel" data-icon="bars" data-iconpos="notext"></a>
+
+  <h1>[Dyndoc Dev Page</h1>
+  
+</div><!-- /header -->
+
+<div role="main" class="ui-content">
+<div class="sect1">
+<h2 id="_development_of_dyndoc">Development of Dyndoc</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is mainly two modes for installing <code>dyndoc</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>direct installation</p>
+</li>
+<li>
+<p>docker</p>
+</li>
+</ul>
+</div>
+</div>
+</div></div><!-- /content -->
+
+<div data-role="footer" data-position="fixed" data-fullscreen="false">
+  
+  <h4>Dyndoc</h4>
+  
+</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<div data-role="page" id="dyndoc-test-adoc" data-title="Asciidoctor Test">
+<div data-role="header" data-position="fixed" data-fullscreen="false">
+  <a href="#dyndoc-panel" data-icon="bars" data-iconpos="notext"></a>
+
+  <h1>Asciidoctor Test</h1>
+  
+</div><!-- /header -->
+
+<div role="main" class="ui-content">
+<div class="sect1">
+<h2 id="_todo">TODO</h2>
+<div class="sectionbody">
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -677,243 +669,104 @@ La formule d&#8217;obtention de l&#8217;erreur standard dépend bien évidemment
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div class="paragraph">
-<p>toto</p>
-</div>
+An admonition paragraph draws the reader&#8217;s attention to
+auxiliary information.
+Its purpose is determined by the label
+at the beginning of the paragraph.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>titi</p>
+<p>Here are the other built-in admonition types:</p>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Pro tip&#8230;&#8203;
+</td>
+</tr>
+</table>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Don&#8217;t forget&#8230;&#8203;
+</td>
+</tr>
+</table>
 </div>
-<div class="openblock amp-frame jqselect-tag-tata">
-<div class="content">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Watch out for&#8230;&#8203;
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Ensure that&#8230;&#8203;
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Artist</th>
+<th class="tableblock halign-left valign-top">Track</th>
+<th class="tableblock halign-left valign-top">Genre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Baauer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Harlem Shake</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hip Hop</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p>titi</p>
+<p><a href="http://asciidoctor.org" class="bare">http://asciidoctor.org</a> - automatic!</p>
 </div>
-</div>
-</div>
-<div class="openblock r-frame jqselect-tag-titi">
-<div class="content">
 <div class="paragraph">
-<p>voilà du code R</p>
+<p><a href="http://asciidoctor.org">Asciidoctor</a></p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-r" data-lang="r">rnorm(10)</code></pre>
-</div>
+<div class="paragraph">
+<p><a href="https://github.com/asciidoctor">Asciidoctor @ <strong>GitHub</strong></a></p>
 </div>
 </div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Affirmation d&#8217;intérêt</strong> exprime la comparaison du <strong>paramètre d&#8217;intérêt</strong> INCONNU (ici $\mu$) à une <strong>valeur de référence</strong> (notée $\mu_0$), prédéfinie dans la problématique étudiée (ex: $\mu_0=0.15$ seuil de rentabilité du produit B).
-De manière équivalente, dans ce cours et à des fins pédagogiques, l'<strong>affirmation d&#8217;intérêt</strong> est aussi exprimée à partir du <strong>paramètre d&#8217;écart (standardisé)</strong> défini par $\bbox[yellow]{\delta_{\mu,\mu_0}:=\frac{\mu-\mu_0}{\sigma_{\widehat\mu}}}$, mesurant l&#8217;écart du <strong>paramètre d&#8217;écart</strong> à la <strong>valeur de référence</strong> divisé par la <strong>qualité d&#8217;estimation</strong> de $\widehat\mu$.</p>
-</li>
-<li>
-<p>L'<strong>affirmation d&#8217;intérêt</strong> prend l&#8217;une des trois formes suivantes:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>cas <strong>unilatéral gauche</strong>:  $\mu&lt;\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}&lt;0$</p>
-</li>
-<li>
-<p>cas <strong>unilatéral droit</strong>:  $\mu&gt;\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}&gt;0$</p>
-</li>
-<li>
-<p>cas <strong>bilatéral</strong>:  $\mu\neq\mu_0 \Longleftrightarrow \delta_{\mu,\mu_0}\neq0$</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Dans l&#8217;exemple du produit B, elle s&#8217;exprime par: $\mu^B&gt;0.15 \Longleftrightarrow \delta_{\mu^B,0.15}&lt;0$ avec $\delta_{\mu^B,0.15} := \frac{\mu^B-0.15}{\sigma_{\widehat\mu}}$</p>
-</li>
-<li>
-<p>La <strong>Règle de Décision</strong> exprime à partir des <strong>données du jour J</strong> la condition à satisfaire pour accepter l'<strong>affirmation d&#8217;intérêt</strong>. Assez naturellement, elle s&#8217;exprime à partir de l&#8217;estimation du <strong>paramètre d&#8217;intérêt</strong> ou du <strong>paramètre d&#8217;écart (standardisé)</strong>  a pour forme:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>cas <strong>unilatéral gauche</strong>:  $\widehat\mu(\mathbf{y})&lt;\mu^{&lt;}_{lim} \Longleftrightarrow \widehat\delta_{\mu,\mu_0}(\mathbf{y})&lt;\delta^{&lt;}_{lim}$</p>
-</li>
-<li>
-<p>cas <strong>unilatéral droit</strong>:  $\widehat\mu(\mathbf{y})&gt;\mu^{&gt;}_{lim} \Longleftrightarrow \widehat\delta_{\mu,\mu_0}(\mathbf{y})&lt;\delta^{&gt;}_{lim}$</p>
-</li>
-<li>
-<p>cas <strong>bilatéral</strong>: $\left(\widehat\mu(\mathbf{y})&lt;\mu^{&lt;}_{lim} \mbox{ ou } \widehat\mu(\mathbf{y})&gt;\mu^{&gt;}_{lim}\right)$ $\Longleftrightarrow$ $\left(\widehat\delta_{\mu,\mu_0}(\mathbf{y})&lt;\delta^{&lt;}_{lim}  \mbox{ ou }  \widehat\delta_{\mu,\mu_0}(\mathbf{y})&lt;\delta^{&gt;}_{lim}\right)$</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Il est à noter que le paramètre d&#8217;écart s&#8217;estime naturellement par $\widehat\delta_{\mu,\mu_0}(\mathbf{y}) := \frac{\widehat\mu(\mathbf{y}) - \mu_0}{\widehat\sigma_{\widehat\mu}(\mathbf{y})}$, mesurant l&#8217;écart de l'<strong>estimation</strong> à la <strong>valeur de référence</strong> divisé par l'<strong>erreur standard</strong> (qui estime la qualité de l&#8217;estimation).</p>
-</li>
-<li>
-<p>Comme l'<strong>affirmation d&#8217;intérêt</strong> s&#8217;exprime à  partir du <strong>paramètre d&#8217;intérêt INCONNU</strong> et la <strong>Règle de Décision</strong> s&#8217;exprime à partir de l'<strong>estimation</strong> basée sur l'<strong>échantillon du jour J</strong>, nous ne pouvons être certain de toujours prendre la bonne décision en appliquant la <strong>Règle de Décision</strong>. Les <strong>erreurs de décision</strong> sont de deux types:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Type I</strong> ou <strong>1ère espèce</strong>: Accepter à tort avec les données l&#8217;affirmation d&#8217;intérêt (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=3 &gt; \delta^{&gt;}_{lim}:=2$ alors que $\mu^B=0.1$)</p>
-</li>
-<li>
-<p><strong>Type II</strong> ou <strong>2ème espèce</strong>: Ne pas accepter à tort avec les données l&#8217;affirmation d&#8217;intérêt (ex produit B: (ex produit B: $\delta_{\mu^B,0.15}(\mathbf{y}):=1 \ngtr \delta^{&gt;}_{lim}:=2$ alors que $\mu^B=0.2$)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Notre objectif</strong>: déterminer les <strong>seuils limite</strong> (à franchir) $\delta^{&lt;}_{lim}$ et/ou $\delta^{&gt;}_{lim}$ selon le cas à traiter (<strong>unilatéral gauche ou droit</strong> ou <strong>bilatéral</strong>). Soulignons que les <strong>seuils limite</strong> $\mu^{&lt;}_{lim}$ ou $\mu^{&gt;}_{lim}$ sont malheureusement impossibles à déterminer sauf pour un <strong>paramètre d&#8217;intérêt</strong> de type <strong>proportion</strong> (cf. produit A).</p>
-</li>
-<li>
-<p>La suite du raisonnement s&#8217;appuie sur les représentations graphiques faites en cours en s&#8217;appuyant sur l&#8217;outil disponible à <a href="http://rcqls.github.io/statinfAEP" class="bare">http://rcqls.github.io/statinfAEP</a> appliqués à l&#8217;exemple du probuit B et dont voilà les principales conclusions:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>le <strong>paramètre d&#8217;intérêt</strong> (ici, $\mu^B$) étant inconnu, on envisage toutes les situations en déplaçant librement la valeur de $\mu^B$. L&#8217;ensemble des estimations des <strong>paramètres d&#8217;intérêt</strong> (resp. <strong>paramètre d&#8217;écart (standardisé)</strong>) se répartissent autour du <strong>paramètre d&#8217;intérêt</strong> (resp. <strong>paramètre d&#8217;écart</strong>) sous la forme d&#8217;une loi <strong>Normale</strong>.</p>
-</li>
-<li>
-<p>il y a généralement 2 types de situations: les <strong>bonnes situations</strong> représentant les valeurs de $\mu^B$ satisfaisant l'<strong>affirmation d&#8217;intérêt</strong> (ici $\mu^B&gt;0.15$, le produit B est rentable) et par conséquent les <strong>mauvaises situations</strong> correspondant donc à $\mu^B\leq 0.15$. Insistons sur le fait que le cas de l&#8217;égalité du <strong>paramètre d&#8217;intérêt</strong> à la <strong>valeur de référence</strong> (ici, $\mu^B=0.15$) est parmi les <strong>mauvaise situations</strong>.</p>
-</li>
-<li>
-<p>pour toute valeur fixée arbitrairement d&#8217;un <strong>seuil limite</strong> ($\mu_{lim}$ ou $\delta_{lim}$), on constate que les deux risques associés aux deux types d&#8217;erreur de décision s&#8217;exprime via l'<strong>A.E.P.</strong> par</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Risque de Type I</strong> ou <strong>1ère espèce</strong>: dans une <strong>mauvaise situation</strong>, c&#8217;est la proportion des <strong>estimations</strong> franchissant le(s) <strong>seuil(s) limite</strong> nous conduisant à penser (à tort) avec les <strong>échantillons</strong> associés que nous sommes dans <strong>une bonne situation</strong>.</p>
-</li>
-<li>
-<p><strong>Risque de Type II</strong> ou <strong>2ème espèce</strong>: dans une <strong>bonne situation</strong>, c&#8217;est la proportion des <strong>estimations</strong> NE franchissant PAS le(s) <strong>seuil(s) limite</strong> nous conduisant à penser (à tort) avec les <strong>échantillons</strong> associés que nous NE sommes PAS dans <strong>une bonne situation</strong>.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>graphiquement, nous constatons que ces deux risques sont <strong>maximaux</strong> quand logiquement nous nous approchons de la situation où le <strong>paramètre d&#8217;intérêt</strong> est le plus possible de la <strong>valeur de référence</strong>.</p>
-</li>
-<li>
-<p>une conséquence directe est que la somme des deux <strong>risques maximaux de 1ère et 2ème espèces</strong> est (quasiment) égale à $100\%$</p>
-</li>
-<li>
-<p>on ne pourra donc pas déterminer le(s) <strong>seuil(s) limite</strong> de sorte à contrôler simultanément les <strong>risques de de 1ère et 2ème espèces</strong> raisonnablement "petits" (puique "petit" + "petit" ne peut être égal à $100\%$).</p>
-</li>
-<li>
-<p>on ne pourra donc déterminer le(s) <strong>seuil(s) limite</strong> qu&#8217;en contrôlant le plus grave de ces deux risques qui sera toujours le <strong>risque de 1ère espèce</strong> (dans le produit B, c&#8217;est le <strong>risque de devenir pauvre</strong>).</p>
-</li>
-<li>
-<p>on ne considère alors que les <strong>mauvaises situations</strong> ($\mu^B\leq 0.15$) et il apparaît que, parmi ces situations, le <strong>risque de 1ère espèce</strong> est <strong>maximal</strong> dans la <strong>pire des (mauvaises) situations</strong></p>
-</li>
-<li>
-<p>en conclusion et ce sera une règle générale: pour déterminer le(s) <strong>seuil(s) limite</strong>, il faut se placer dans la <strong>pire des situations</strong> qui représente l&#8217;unique situation où le <strong>paramètre d&#8217;intérêt</strong> est égale à la <strong>valeur de référence</strong>. De manière équivalente, elle correspond à la situation où le <strong>paramètre d&#8217;écart (standardisé)</strong> est égale à 0.</p>
-</li>
-<li>
-<p>la dernière étape consiste à fixer à une valeur raisonnablement petite ($\alpha=5\%$ en général), dans la <strong>pire des situations</strong>, la (les) surface(s) correspondant aux <strong>estimations</strong>  du côté du (des) <strong>seuil(s) limite</strong> de sorte à accepter l'<strong>affirmation d&#8217;intérêt</strong>.</p>
-</li>
-<li>
-<p>puisque, pour un <strong>paramètre d&#8217;intérêt</strong> $\mu$ de type <strong>moyenne</strong> et dans la <strong>pire des situations</strong>, nous ne connaissons la répartition des <strong>estimations</strong> (loi $\mathcal{N}(0,1)$) que pour le <strong>paramètre d&#8217;écart (standardisé)</strong> $\delta_{\mu,\mu_0}$, seul(s) le(s) <strong>seuil(s) limite</strong> $\delta^{&lt;}_{lim}$ et/ou $\delta^{&gt;}_{lim}$ ne sont déterminables, représentant des <strong>quantiles</strong> de la loi Normale $\mathcal{N}(0,1)$. La répartition des <strong>estimations</strong> du <strong>paramètre d&#8217;intérêt</strong> est en général INCONNUE dans la <strong>pire des situations</strong> puisqu&#8217;elle dépend généralement de la <strong>qualité des estimations</strong>, mesurée par l&#8217;écart-type $\sigma_{\widehat\mu}:=\frac{\sigma}{\sqrt{n}}$ de toutes ces <strong>estimations</strong> qui dépend du <strong>paramètre "parasite"</strong> INCONNU $\sigma$.</p>
-</li>
-<li>
-<p>de manière exceptionnelle, pour le cas d&#8217;un <strong>paramètre d&#8217;intérêt</strong> $p$ de type <strong>proportion</strong>, la <strong>qualité des estimations</strong> ne dépend uniquement que de la <strong>taille d&#8217;échantillon</strong> et du <strong>paramètre d&#8217;intérêt</strong> $p$ puisque $\sigma=\sqrt{p\times(1-p)}$. Il en résulte que dans la pire des situations (ex: produit A, $p^A=15\%$), la <strong>qualité d&#8217;estimations</strong> $\sigma_{\widehat{p^A}}$ est égale à $\sqrt{\frac{15\%\times85\%}{1000}}$. Pour l&#8217;exemple du produit A, nous pouvons aussi déterminer le(s) <strong>seuil(s) limite</strong> $p^{&lt;}_{lim}$ et $p^{&gt;}_{lim}$ qui s&#8217;obtiennent donc comme des <strong>quantiles</strong> d&#8217;une <strong>loi Normale</strong> $\mathcal{N}\left(15\%,\sqrt{\frac{15\%\times85\%}{1000}}\right)$.</p>
-</li>
-<li>
-<p>toutefois, sur un plan méthodologique, nous priviligierons toujours la <strong>Règle de Décision</strong> basée sur l'<strong>estimation du jour J</strong> du <strong>paramètre d&#8217;écart (standardisé)</strong> puisqu&#8217;il est toujours possible de déterminer le(s) <strong>seuil(s) limite</strong> indépendamment de la nature du <strong>paramètre d&#8217;intérêt</strong> (<strong>proportion</strong>, <strong>moyenne</strong> ou <strong>variance</strong>) qui s&#8217;obtiennent comme des quantiles de la <strong>loi Normale centrée réduite</strong> $\mathcal{N}(0,1)$.</p>
-</li>
-<li>
-<p>en R, cela ne revient, en général, qu&#8217;à connaître l&#8217;instruction $\mathbf{qnorm}$ appliquée aux ordres des quantiles $95\%$ et $97.5\%$, i.e. $\mathbf{qnorm(.95)\simeq 1.645}$ et $\mathbf{qnorm(.95)\simeq 1.96 \simeq 2}$.</p>
-</li>
-<li>
-<p>sur un plan pratique, cela se résume à comparer le <strong>jour J</strong>, \[\mbox{Estimation du paramètre d&#8217;écart (standardisé)}:=\frac{\mbox{Estimation (du paramètre d&#8217;intérêt)} - \mbox{Valeur de Référence}}{\mbox{Erreur Standard}}\] au(x) <strong>seuil(s) limite</strong> directement reliés aux <strong>quantiles</strong> $\mathbf{qnorm(.95)}$ ou $\mathbf{qnorm(.975)}$.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div></div><!-- /content -->
-
-<div data-role="footer" data-position="fixed" data-fullscreen="false">
-  
-  <h4>Enseignement</h4>
-  
-</div><!-- /footer -->
-</div><!-- /page -->
-
-
-<div data-role="page" id="ensgt-econo" data-title="Econométrie">
-<div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#ensgt-panel" data-icon="bars" data-iconpos="notext"></a>
-
-  <h1>Econométrie</h1>
-  
-</div><!-- /header -->
-
-<div role="main" class="ui-content">
+<p>toto2 luvyu</p>
+<a href="#dyndoc-panel" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-mini">Menu</a>
 </div><!-- /content -->
 
 <div data-role="footer" data-position="fixed" data-fullscreen="false">
   
-  <h4>Enseignement</h4>
-  
-</div><!-- /footer -->
-</div><!-- /page -->
-
-
-<div data-role="page" id="ensgt-stat-desc" data-title="Econométrie">
-<div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#ensgt-panel" data-icon="bars" data-iconpos="notext"></a>
-
-  <h1>Econométrie</h1>
-  
-</div><!-- /header -->
-
-<div role="main" class="ui-content">
-</div><!-- /content -->
-
-<div data-role="footer" data-position="fixed" data-fullscreen="false">
-  
-  <h4>Enseignement</h4>
-  
-</div><!-- /footer -->
-</div><!-- /page -->
-
-
-<div data-role="page" id="ensgt-anova" data-title="ANOVA">
-<div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#ensgt-panel" data-icon="bars" data-iconpos="notext"></a>
-
-  <h1>ANOVA</h1>
-  
-</div><!-- /header -->
-
-<div role="main" class="ui-content">
-</div><!-- /content -->
-
-<div data-role="footer" data-position="fixed" data-fullscreen="false">
-  
-  <h4>Enseignement</h4>
-  
-</div><!-- /footer -->
-</div><!-- /page -->
-
-
-<div data-role="page" id="ensgt-R" data-title="Formation R">
-<div data-role="header" data-position="fixed" data-fullscreen="false">
-  <a href="#ensgt-panel" data-icon="bars" data-iconpos="notext"></a>
-
-  <h1>Formation R</h1>
-  
-</div><!-- /header -->
-
-<div role="main" class="ui-content">
-</div><!-- /content -->
-
-<div data-role="footer" data-position="fixed" data-fullscreen="false">
-  
-  <h4>Enseignement</h4>
+  <h4>Dyndoc</h4>
   
 </div><!-- /footer -->
 </div><!-- /page -->
@@ -921,28 +774,6 @@ De manière équivalente, dans ce cours et à des fins pédagogiques, l'<strong>
 
 
 <script type="text/javascript">
-$('[id^=expand-]').click(function(){ //$('.expand').click(function(){
-			var target_num = $(this).attr('id').split('-')[1];
-			var content_id = '#expandable-'.concat(target_num);
-			$(content_id).slideToggle('fast');
-		});
-$('[id^=jqselect-btn]').click(function(){ //$('.jqselect').click(function(){
-			if($(this).val() === "on") {
-				$(this).val("off");
-			} else {
-				$(this).val("on");
-			};
-			var mode=$(this).val() === "on";
-			var jqselect_tag = $(this).attr('id').split('-')[2];
-			var content_id = '.jqselect-tag-'.concat(jqselect_tag);
-			$( content_id ).each(function() {
-				if(mode) {
-  				$( this ).show();
-				} else {
-					$( this ).hide();
-				}
-			});
-		});
 </script>
 </body>
 </html>

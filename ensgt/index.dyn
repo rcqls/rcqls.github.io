@@ -30,6 +30,9 @@
 [#adoc>][
 === Plan et Rythme du Cours
 ++++
+<button id="jqselect-btn-toto" data-inline="true" value="on">Toto</button>
+<button id="jqselect-btn-tata" data-inline="true" value="on">Tata</button>
+<button id="jqselect-btn-titi" data-inline="true" value="on">Titi</button>
 <div class="expand" id="expand-aep">
 ++++
 -> *Approche Expérimentale des Probabilités* (*A.E.P.*)
@@ -37,7 +40,7 @@
 </div>
 <div id="expandable-aep">
 ++++
-* [aep]#*A.E.P.*# ([aep]#*Approche Expérimentale des Probabilités*#) en complément de l'[amp]#*A.M.P.*# ([amp]#*Approche Mathématique des Probabilités*#)
+* [aep-frame]#*A.E.P.*# ([aep]#*Approche Expérimentale des Probabilités*#) en complément de l'[amp]#*A.M.P.*# ([amp]#*Approche Mathématique des Probabilités*#)
 *  *A.E.P.* s'appuie sur les simples outils de *statistique descriptive*
     pour représenter un très grand nombre $m$ (en théorie une infinité, i.e. $m=\+\infty$) de réalisations
     d'une variable aléatoire $Y$, notée $\bbox[yellow]{\mathbf{y_{[m]}}={\left(y_{[.]}\right)}_m := \left(y_{[1]},\cdots,y_{[m]}\right)}$. Dans le cas particulier "limite" où $m=+\infty$, on note $\bbox[yellow]{\mathbf{y_{[\+\infty]}}={\left(y_{[.]}\right)}_{+\infty} := \left(y_{[1]},y_{[2]},\ldots\right)}$.
@@ -93,6 +96,27 @@ $$\begin{eqnarray}
 </div>
 <div id="expandable-hypo">
 ++++
+[aep-frame.jqselect-tag-toto]
+--
+[NOTE]
+====
+toto
+====
+titi
+--
+[amp-frame.jqselect-tag-tata]
+--
+titi
+--
+[r-frame.jqselect-tag-titi]
+--
+voilà du code R
+[source,r]
+----
+rnorm(10)
+----
+--
+
 * *Affirmation d'intérêt* exprime la comparaison du *paramètre d'intérêt* INCONNU (ici $\mu$) à une *valeur de référence* (notée $\mu_0$), prédéfinie dans la problématique étudiée (ex: $\mu_0=0.15$ seuil de rentabilité du produit B).
 De manière équivalente, dans ce cours et à des fins pédagogiques, l'*affirmation d'intérêt* est aussi exprimée à partir du *paramètre d'écart (standardisé)* défini par $\bbox[yellow]{\delta_{\mu,\mu_0}:=\frac{\mu-\mu_0}{\sigma_{\widehat\mu}}}$, mesurant l'écart du *paramètre d'écart* à la *valeur de référence* divisé par la *qualité d'estimation* de $\widehat\mu$.
 * L'*affirmation d'intérêt* prend l'une des trois formes suivantes:

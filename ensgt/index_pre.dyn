@@ -7,15 +7,38 @@ $(function() { $("div[data-role='panel']").enhanceWithin().panel();});
     border-radius: 5px;
     background: yellow;
     //border: 1px solid #2222DD;
-    padding: 0px;
+    padding: 2px;
     width: 90%;
 }
+
+.aep-frame{
+    border-radius: 2px;
+    background: ivory;
+    border: 1px solid gold;
+    padding: 2px;
+    width: 95%;
+}
+
 .amp {
     border-radius: 5px;
     background: aqua;
     //border: 1px solid #DD2222;
-    padding: 0px;
+    padding: 2px;
     width: 90%;
+}
+.amp-frame {
+    border-radius: 2px;
+    background: azure;
+    border: 1px solid powderblue;
+    padding: 2px;
+    width: 95%;
+}
+.r-frame {
+    border-radius: 2px;
+    background: honeydew;
+    border: 1px solid turquoise;
+    padding: 2px;
+    width: 95%;
 }
 ]
 [#rb<]LayoutMngr << [:js_code,#{=js_panel_code}]
@@ -24,5 +47,5 @@ LayoutMngr << [:css_code,#{=css_aep_code}]
 [#css_header]jquery_mobile_cdnjs,adoc,jqexpand
 [#js_header]jquery_cdnjs,jquery_mobile_cdnjs,mathjax_cdnjs_inline
 [#js_code]#{=js_panel_code}
-[#js_code_post]jqexpand
+[#js_code_post]jqexpand,jqselect
 [#}

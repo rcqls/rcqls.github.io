@@ -1,6 +1,9 @@
 {#jqmPanel]dyndoc-panel[#>]
   {#jqmMenuListView]
     dyndoc:Dyndoc
+    dyndoc-install:Install
+    dyn-usage:dyn
+    dyn-cli-usage:dyn-cli
     dyndoc-todo:Todo
     dyndoc-dev:Devel
     dyndoc-test-adoc:Asciidoctor Test
@@ -18,6 +21,58 @@
 * macro-language based on an exotic tag system to live inside a human readable format document (`latex`,`html`,`makdown`,...)
 * similarly to `sweave` or `knitr` (in the `R` world), it can embed `R` language but also many other languages like `ruby` and `julia`.
 * similarly to `eruby` (in the `ruby` world), `R` and `ruby` can be used to dynamically make content
+
+[#jqmPage}
+
+{#jqmPage]dyn-usage
+[#page.title][Dyndoc Usage]
+[#header.title][Dyndoc Usage]
+[#header.left]{#jqmHeaderButton]dyndoc-panel[#}
+[#footer.title][Dyndoc]
+[#adoc>][
+== dyn command usage
+
+[source,bash]
+----
+cd ~/dyndoc/demo // <1>
+dyn first // <2>
+pdflatex first // <3>
+----
+<1> change to the demo folder
+<2> compile first.dyn to create first.tex
+<3> create first.pdf
+]
+[#jqmPage}
+
+{#jqmPage]dyn-cli-usage
+[#page.title][dyn-cli command]
+[#header.title][dyn-cli command]
+[#header.left]{#jqmHeaderButton]dyndoc-panel[#}
+[#footer.title][Dyndoc]
+[#adoc>][
+== dyn-cli command usage
+
+dyn-srv has to be started
+
+[source,bash]
+----
+cd ~/dyndoc/demo // <1>
+dyn first // <2>
+----
+<1> change to the demo folder
+<2> compile first.dyn to create first.html
+]
+[#jqmPage}
+
+{#jqmPage]dyndoc-install
+[#page.title][Dyndoc Install]
+[#header.title][Dyndoc Install]
+[#header.left]{#jqmHeaderButton]dyndoc-panel[#}
+[#footer.title][Dyndoc]
+[#adoc>][
+
+]
+[#>]
 
 [#jqmPage}
 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Introduction &middot; DynDoc
+    
+  </title>
+
+  <!-- CSS -->
+  <link href="http://sagag6.upmf-grenoble.fr/stylesheets/uv/css/amy.css" media="screen,projection,print" rel="Stylesheet" type="text/css" />
+  <link href="http://sagag6.upmf-grenoble.fr/stylesheets/uv/css/solarized.css" media="screen,projection,print" rel="Stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/blackdoc.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=EB+Garamond">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          DynDoc
+        </a>
+      </h1>
+      <p class="lead">A macro language</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">DynDoc</a>
+
+      
+
+      
+      
+        
+          
+            <a class="sidebar-nav-item active" href="/introduction/">Introduction</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/styles/">Theme Styles</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+          
+        
+      
+
+      <hr>
+      <a class="sidebar-nav-item" href="https://github.com/rcqls/dyndoc-ruby">GitHub project</a>
+      <span class="sidebar-nav-item">Currently v0.1.0</span>
+    </nav>
+
+    <p>&copy; 2016. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Introduction</h1>
+  <h3 id="un-exemple-de-bienvenue">Un exemple de bienvenue</h3>
+<p>Voilà un premier exemple donnant une idée générale de ce qu'est <code>dyndoc</code>. Le code source suivant (enregistré dans la fichier <code>hello.dyn</code>) propose l'habituel exemple <code>hello</code> fourni pour présenter un nouveau langage.</p>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">R&lt;</span>]<span class="Comment"><span class="Comment">#</span> R code without output since R&lt;</span>
+<span class="line-numbers">   2 </span> <span class="Variable">who</span> <span class="Keyword">&lt;-</span> <span class="QuotedString"><span class="Quotes">&quot;</span>MisteR<span class="Quotes">&quot;</span></span>
+<span class="line-numbers">   3 </span> [#<span class="Keyword">rb&lt;</span>]<span class="Comment"><span class="Comment">#</span> ruby code without output since rb&lt;</span>
+<span class="line-numbers">   4 </span> who <span class="Keyword">=</span> <span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span>Miss Ruby<span class="RubyPunctuationSection">&quot;</span></span>
+<span class="line-numbers">   5 </span> [#<span class="Keyword">&lt;</span>]<span class="DiffDeleted"> No output since &lt;.</span>
+<span class="line-numbers">   6 </span> <span class="DiffDeleted">Next, definition of function hello</span>
+<span class="line-numbers">   7 </span> <span class="DiffDeleted"></span>
+<span class="line-numbers">   8 </span> <span class="DiffDeleted"><span class="DiffDeleted">{#</span><span class="Keyword">def</span><span class="DiffDeleted">]</span>hello<span class="DiffDeleted">[#</span><span class="Keyword">,</span><span class="DiffDeleted">]</span>name[Miss]<span class="DiffDeleted">[#</span><span class="Keyword">&gt;</span><span class="DiffDeleted">]</span><span class="DiffInserted"></span></span>
+<span class="line-numbers">   9 </span> <span class="DiffDeleted"><span class="DiffInserted"><span class="Invalid">  <span class="Invalid">[</span></span>from Dyn, Hello <span class="Comment">#{</span><span class="Variable">name</span><span class="Comment">}</span><span class="Invalid"><span class="Invalid">]</span></span></span></span>
+<span class="line-numbers">  10 </span> <span class="DiffDeleted"><span class="DiffInserted"></span><span class="DiffDeleted">[#</span><span class="DiffDeleted">}</span></span>
+<span class="line-numbers">  11 </span> <span class="DiffDeleted"></span>
+<span class="line-numbers">  12 </span> <span class="DiffDeleted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted"></span>
+<span class="line-numbers">  13 </span> <span class="DiffInserted"></span>
+<span class="line-numbers">  14 </span> <span class="DiffInserted"><span class="Invalid">  <span class="Invalid">[</span></span><span class="DiffInserted">{#</span><span class="Keyword">hello</span><span class="DiffInserted">#}</span></span>
+<span class="line-numbers">  15 </span> <span class="DiffInserted"><span class="Invalid">  <span class="Invalid">|</span></span><span class="DiffInserted">{#</span><span class="TagName">hello</span><span class="DiffInserted">]</span>Mister<span class="DiffInserted">[#</span><span class="DiffInserted">}</span></span>
+<span class="line-numbers">  16 </span> <span class="DiffInserted"><span class="Invalid">  <span class="Invalid">|</span></span>from ruby, Hello <span class="Comment">:{</span><span class="Variable">who</span><span class="Comment">}</span></span>
+<span class="line-numbers">  17 </span> <span class="DiffInserted"><span class="Invalid">  <span class="Invalid">|</span></span>from R, Hello <span class="Comment">:r{</span><span class="Variable">who</span><span class="Comment">}</span><span class="Invalid"><span class="Invalid">]</span></span></span>
+</pre>
+<p>Et voici le résultat obtenu à partir de la ligne de commande <code>dyn  hello.dyn</code> :</p>
+<pre>
+from Dyn, Hello Miss
+from Dyn, Hello Mister
+from ruby, Hello Miss Ruby
+from R, Hello MisteR
+</pre>
+<h3 id="commentaires-généraux-sur-lexemple-de-bienvenue">Commentaires généraux sur l'exemple de bienvenue</h3>
+<p>Le code est découpé en 4 parties délimitées par les balises <code><em>[#r&lt;]</em></code>, <code><em>[#rb&lt;]</em></code>, <code><em>[#&lt;]</em></code> et <code><em>[#&gt;]</em></code>. La première permet de réaliser un traitement <code>R</code> (ici très sommaire). La deuxième réalise un traitement <code>ruby</code>. La troisième popose la définition d'une fonction <code>hello</code> (déclarée en <code>dyndoc</code> entre les balises <code><em>{#def]</em></code> et <code><em>[#def}</em></code>) utilisée dans la quatrième et dernière partie (via les appels <code><em>{#hello#}</em></code> et <code><em>{#hello]Mister[#}</em></code>) qui est ici en charge de l'affichage du résultat. En effet, toutes les balises de la forme <code><em>[#...&lt;]</em></code> sont censées ne produire aucun affichage dans le document de sortie. Il est ainsi possible de rajouter des commentaires en dehors des commandes <code>dyndoc</code> (ici, déinition de la fonction <code>hello</code>) comme cela a été fait dans le contenu de la balise <code><em>[#&lt;]</em></code>. Sans rentrer dans les détails, notons que cette fonction a un seul paramètre <code>name</code> avec pour valeur par défaut <code>Miss</code>. Toutes les balises <code>dyndoc</code> suivant la dernière balise <code><em>[#,]</em></code> forment le corps de la fonction qui sera executé à chaque futur appel de la fonction.</p>
+<p>La quatrième partie fait tout d'abord appel par 2 fois à la fonction <code>hello</code>. La première forme <code><em>{#hello#}</em></code> correspond à l'appel de la fonction sans aucun argument pour le paramètre <code>name</code>. La valeur par défaut est ainsi utilisée. Le deuxième appel est lui fourni avec un nouvel argument pour le paramètre <code>name</code>. Les deux dernières lignes affichées permettent d'extraire successivement la variable <code>miss</code> en <code>ruby</code> (via <code><em>Miss Ruby</em></code>) et <code>mister</code> en <code>R</code> (via <code><em>MisteR</em></code>). Les différentes commandes d'extraction sont <code><em>:{...}</em></code> (équivalent à <code><em>:{...}</em></code> ou <code><em>:{...}</em></code>) pour des variables <code>ruby</code>, <em>:r{...}</em> (équivalent à <em>#r{...}</em>) pour des variables <code>R</code> et <code><em>#{...}</em></code> pour de variables <code>dyndoc</code>. L'usage de variable <code>dyndoc</code> n'a été introduit actuellement qu'à travers le paramètre <code>name</code> de la fonction <code>hello</code>. Notons l'usage de <code><em>#{name}</em></code> dans le corps de la fonction <code>hello</code> pour extraire le contenu du paramètre <code>name</code> (considéré par <code>dyndoc</code> comme une variable).</p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>
