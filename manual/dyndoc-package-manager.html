@@ -1,0 +1,23 @@
+
+<h2 id="dyndoc-package-manager">Dyndoc Package Manager</h2>
+<ul>
+<li><code>dpm install &lt;github repo&gt;</code> where <code>&lt;github repos&gt;</code> is the name of a Github repo containing one or more dyndoc folder:</li>
+</ul>
+<pre class="{bash}"><code>dpm install rcqls/dyndoc-library-demo</code></pre>
+<ul>
+<li><code>dpm link</code></li>
+</ul>
+<pre class="{bash}"><code>dpm link rcqls/dyndoc-library-demo/LibOne LibTest
+# or
+dpm link rcqls/dyndoc-library-demo/LibTwo LibTest</code></pre>
+<ul>
+<li>Now depending of using first or second link, the following dyndoc file with content:</li>
+</ul>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">require</span>]LibTest/tools
+<span class="line-numbers">   2 </span> [#<span class="Keyword">main</span>]
+<span class="line-numbers">   3 </span> {#<span class="TagName">hello</span>]Moi[#}
+</pre>
+<p>would answer: <code>hello Moi</code> or <code>bonjour Moi</code>.</p>
+<ul>
+<li><code>dpm unlink</code></li>
+</ul>

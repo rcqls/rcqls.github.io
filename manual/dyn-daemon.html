@@ -1,0 +1,38 @@
+<h2 id="dyndoc-server-started-as-a-daemon">Dyndoc server started as a daemon</h2>
+<ul>
+<li>on MacOSX, <code>launchctl</code>:</li>
+<li><code>gem install dyn-ruby-launchctl</code></li>
+<li><code>dyn-daemon srv new</code> (create the service and load it automatically)</li>
+<li><code>dyn-daemon srv start|stop</code> (start or stop the service)</li>
+<li><code>dyn-daemon srv status</code> (list the status of the service)</li>
+<li><code>dyn-daemon srv load|unload</code> (load or unload the service already created)</li>
+<li>on Windows,</li>
+<li><code>gem install dyn-ruby-win32daemon</code></li>
+<li><code>dyn-daemon srv start|stop</code> (start or stop the daemon)</li>
+<li><code>dyn-daemon srv status</code> (list the status of the daemon)</li>
+<li>on linux, <code>upstart</code>:</li>
+<li>dyn server: adapt the following to your needs (APPUSER and APPDIR)</li>
+</ul>
+<pre class="{bash}"><code>author &quot;rcqls&quot;
+description &quot;start and stop dyn-srv for Ubuntu (upstart)&quot;
+version &quot;0.1&quot;
+
+start on started networking
+stop on runlevel [!2345]
+
+env APPUSER=&quot;cqls&quot;
+env APPDIR=&quot;/home/cqls/.gem/ruby/2.2.0/bin&quot;
+env APPBIN=&quot;dyn-srv&quot;
+
+respawn
+
+script
+  exec su - $APPUSER -c &quot;$APPDIR/$APPBIN&quot;
+end script</code></pre>
+<ul>
+<li>dyntask server: adapt the following to your needs (APPUSER and APPDIR) ```{bash} author &quot;rcqls&quot; description &quot;start and stop dyntask for Ubuntu (upstart)&quot; version &quot;0.1&quot;</li>
+</ul>
+<p>start on started networking stop on runlevel [!2345]</p>
+<p>env APPUSER=&quot;cqls&quot; env APPDIR=&quot;/home/cqls/.gem/ruby/2.2.0/bin&quot; env APPBIN=&quot;dyntask-server&quot;</p>
+<p>respawn</p>
+<p>script exec su - <span class="math inline">$APPUSER -c &quot;$</span>APPDIR/$APPBIN&quot; end script ```</p>

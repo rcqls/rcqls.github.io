@@ -1,0 +1,63 @@
+<h3 id="commandes-r">Commandes <code>R</code></h3>
+<p>Comme avec <code>Sweave</code> et même si <code>dyndoc</code> est développé en <code>ruby</code> (et non en <code>R</code> comme <code>Sweave</code>), il est possible d'embarquer le système <code>R</code> dans <code>dyndoc</code> et ainsi de faire interagir <code>R</code> et <code>dyndoc</code>.</p>
+<p>L'exemple suivant propose d'exécuter du code <code>R</code> sans affichage dans un premier temps. Dans un second temps, les contenus de variables <code>R</code> sont extraites dans <code>dyndoc</code>.</p>
+<h5 id="code-source">Code source</h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">R&lt;</span>]<span class="Comment"><span class="Comment">#</span> No output even for the following &quot;cat(...)&quot;</span>
+<span class="line-numbers">   2 </span> <span class="Variable">a</span> <span class="Keyword">&lt;-</span> c(<span class="QuotedString"><span class="Quotes">&quot;</span>toto<span class="Quotes">&quot;</span></span>,<span class="QuotedString"><span class="Quotes">&quot;</span>titi<span class="Quotes">&quot;</span></span>)
+<span class="line-numbers">   3 </span> cat(<span class="Variable">a</span>,<span class="QuotedString"><span class="Quotes">&#39;</span><span class="UserDefinedConstant">\n</span><span class="Quotes">&#39;</span></span>)
+<span class="line-numbers">   4 </span> <span class="Variable">a2</span> <span class="Keyword">&lt;-</span> paste(<span class="Variable">a</span>,<span class="Number">1</span><span class="Keyword">:</span><span class="Number">2</span>,<span class="FunctionArgument">sep</span><span class="Keyword">=</span><span class="QuotedString"><span class="Quotes">&quot;</span><span class="Quotes">&quot;</span></span>)
+<span class="line-numbers">   5 </span> cat(<span class="Variable">a2</span>,<span class="QuotedString"><span class="Quotes">&#39;</span><span class="UserDefinedConstant">\n</span><span class="Quotes">&#39;</span></span>)
+<span class="line-numbers">   6 </span> <span class="Variable">a3</span> <span class="Keyword">&lt;-</span> paste(<span class="Variable">a2</span>,<span class="FunctionArgument">collapse</span><span class="Keyword">=</span><span class="QuotedString"><span class="Quotes">&quot;</span> &amp; <span class="Quotes">&quot;</span></span>)
+<span class="line-numbers">   7 </span> cat(<span class="Variable">a3</span>)
+<span class="line-numbers">   8 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">Extracting the R results inside dyndoc:</span>
+<span class="line-numbers">   9 </span> <span class="DiffInserted"><span class="Comment">:r{</span><span class="Variable">a</span><span class="Comment">}</span></span>
+<span class="line-numbers">  10 </span> <span class="DiffInserted"><span class="Comment">:r{</span><span class="Variable">a2</span><span class="Comment">}</span></span>
+<span class="line-numbers">  11 </span> <span class="DiffInserted"><span class="Comment">:r{</span><span class="Variable">a3</span><span class="Comment">}</span></span>
+</pre>
+<h5 id="résultat">Résultat</h5>
+<pre class="dynres">
+Extracting the R results inside dyndoc:
+toto,titi
+toto1,titi2
+toto1 & titi2
+
+</pre>
+<h5 id="commentaires">Commentaires</h5>
+<p>Remarquez qu'aucun affichage des instructions <code>cat(...)</code> n'apparaît dans la sortie. L'affichage des <code>cat(...)</code> comme tout autre affichage <code>R</code> apparaît éventuellement dans une console si <code>dyndoc</code> est exécuté en ligne de commande.</p>
+<p>L'instruction <code><em>:r{...}</em></code> (ou <code><em>#r{...}</em>)</code>, qui est l'équivalent de <code>\Sexpr{...}</code> en <code>Sweave</code>, permet d'extraire le contenu de la variable nommée <code>...</code> défini dans un bloc <code><em>[#R&lt;]</em></code>, qui est une sorte d'équivalent <code>Sweave</code> de <code>&lt;&lt;echo=FALSE,results=hide&gt;&gt;=</code>.</p>
+<p>L'exemple suivant permet au contraire de rediriger les sorties <code>R</code> dans le document. C'est l'équivalent <code>Sweave</code> de <code>&lt;&lt;echo=FALSE&gt;&gt;=</code>.</p>
+<h5 id="code-source-1">Code source</h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">R&gt;</span>]<span class="Comment"><span class="Comment">#</span> Each output goes to the document</span>
+<span class="line-numbers">   2 </span> <span class="Variable">a</span> <span class="Keyword">&lt;-</span> c(<span class="QuotedString"><span class="Quotes">&quot;</span>toto<span class="Quotes">&quot;</span></span>,<span class="QuotedString"><span class="Quotes">&quot;</span>titi<span class="Quotes">&quot;</span></span>)
+<span class="line-numbers">   3 </span> cat(<span class="Variable">a</span>,<span class="QuotedString"><span class="Quotes">&#39;</span><span class="UserDefinedConstant">\n</span><span class="Quotes">&#39;</span></span>)
+<span class="line-numbers">   4 </span> <span class="Variable">a2</span> <span class="Keyword">&lt;-</span> paste(<span class="Variable">a</span>,<span class="Number">1</span><span class="Keyword">:</span><span class="Number">2</span>,<span class="FunctionArgument">sep</span><span class="Keyword">=</span><span class="QuotedString"><span class="Quotes">&quot;</span><span class="Quotes">&quot;</span></span>)
+<span class="line-numbers">   5 </span> cat(<span class="Variable">a2</span>,<span class="QuotedString"><span class="Quotes">&#39;</span><span class="UserDefinedConstant">\n</span><span class="Quotes">&#39;</span></span>)
+<span class="line-numbers">   6 </span> <span class="Variable">a3</span> <span class="Keyword">&lt;-</span> paste(<span class="Variable">a2</span>,<span class="FunctionArgument">collapse</span><span class="Keyword">=</span><span class="QuotedString"><span class="Quotes">&quot;</span> &amp; <span class="Quotes">&quot;</span></span>)
+<span class="line-numbers">   7 </span> cat(<span class="Variable">a3</span>)
+</pre>
+<h5 id="résultat-1">Résultat</h5>
+<pre class="dynres">
+toto titi 
+toto1 titi2 
+toto1 & titi2
+</pre>
+<p>L'exemple suivant permet d'obtenir la commande de base <code>Sweave</code> (i.e. <code>&lt;&lt;&gt;&gt;=</code>) en affichant les entrées et sorties d'une session <code>R</code>.</p>
+<h5 id="code-source-2">Code source</h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">R&gt;&gt;</span>]<span class="Variable">x</span> <span class="Keyword">&lt;-</span> rnorm(<span class="Number">10</span>)
+<span class="line-numbers">   2 </span> <span class="Variable">x</span>
+<span class="line-numbers">   3 </span> mean(<span class="Variable">x</span>)
+</pre>
+<h5 id="résultat-2">Résultat</h5>
+<pre class="dynres">
+<pre class="solarized">
+<span class="Variable">R</span><span class="Keyword">&gt;</span> <span class="Variable">x</span> <span class="Keyword">&lt;-</span> rnorm(<span class="Number">10</span>)
+<span class="Variable">R</span><span class="Keyword">&gt;</span> <span class="Variable">x</span>
+ [<span class="Number">1</span>]  <span class="Number">0.95483581</span> <span class="Keyword">-</span><span class="Number">0.06577645</span> <span class="Keyword">-</span><span class="Number">0.08922012</span> <span class="Keyword">-</span><span class="Number">0.31158353</span> <span class="Keyword">-</span><span class="Number">0.02201361</span> <span class="Keyword">-</span><span class="Number">1.09506881</span>
+ [<span class="Number">7</span>]  <span class="Number">1.10615808</span> <span class="Keyword">-</span><span class="Number">0.42894912</span> <span class="Keyword">-</span><span class="Number">0.37239047</span> <span class="Keyword">-</span><span class="Number">0.32052545</span>
+<span class="Variable">R</span><span class="Keyword">&gt;</span> mean(<span class="Variable">x</span>)
+[<span class="Number">1</span>] <span class="Keyword">-</span><span class="Number">0.06445337</span>
+
+</pre>
+</pre>
+<h5 id="commentaires-1">Commentaires</h5>
+<p>Cette sortie verbatim <code>R</code> est assez sommaire. Comme <code>dyndoc</code> est aussi un langage de programmation pour étendre les fonctionnalités de base, il existe des librairies <code>dyndoc</code> qui permettent de définir des sorties à la guise de l'utilisateur-développeur.</p>

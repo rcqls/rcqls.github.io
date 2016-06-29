@@ -1,0 +1,24 @@
+<h3 id="for-macosx-user">for MacOSX user</h3>
+<ul>
+<li>requirements</li>
+<li><code>ruby</code>: <a href="https://developer.apple.com/downloads/">Xcode</a> provides one and <a href="http://brew.sh">homebrew</a> is based on ruby.</li>
+<li>Command-line tools for Xcode (to access ruby): inside Terminal, <code>xcode-select --install</code> (details is proposed in the <a href="https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Installation.md#installation">homebrew github</a> website).</li>
+<li>gem config: create ~/.gemrc containing <code>gem: --user-install --no-ri --no-rdoc</code>. This simply defines the default behavior of <code>gem</code> command. <code>--no-ri --no-rdoc</code> avoids to generate documentation when '--user-install' installs gem at the predefined user folder <code>~/.gem/ruby/&lt;ruby-version&gt;</code>. <strong>Important</strong>: do not forget then to add the following lines in your <code>.bash_profile</code>: <code>{bash}   if which ruby &gt;/dev/null &amp;&amp; which gem &gt;/dev/null; then PATH=&quot;$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH&quot;   fi</code></li>
+<li><a href="http://brew.sh">homebrew</a> (can be avoided but, as a linux user, I love it)</li>
+<li><a href="http://caskroom.io">homebrew-cask</a> optional but nice-to-have if you are in love with command-line to install applications: <code>brew tap caskroom/cask</code></li>
+<li><a href="http://cran.r-project.org/bin/macosx/">R</a> or <code>brew cask install r</code></li>
+<li><a href="http://www.tug.org/mactex/">latex (MacTex)</a> or <code>brew cask install mactex</code></li>
+<li><code>git</code>: <code>brew install git</code></li>
+<li><a href="https://github.com/jgm/pandoc/releases">pandoc</a> or <code>brew cask install pandoc</code></li>
+<li>optional but nice-to-have (do it after main installation):
+<ul>
+<li><a href="http://hutchinson.belmont.ma.us/tth/mml">Ttm</a> from source</li>
+</ul></li>
+<li>ruby gems</li>
+<li><code>(sudo) gem install dyndoc-ruby --no-ri --no-rdoc</code></li>
+<li><p>R packages</p>
+<pre class="{bash}"><code>brew install libxml2 gmp
+R -e &#39;install.packages(&quot;devtools&quot;,repos=&quot;http://cran.rstudio.com/&quot;)&#39;
+R -e &#39;devtools::install_github(&quot;rcqls/rb4R&quot;,args=&quot;--no-multiarch&quot;)&#39;
+R -e &#39;install.packages(&quot;base64&quot;,repos=&quot;http://cran.rstudio.com/&quot;)&#39;</code></pre></li>
+</ul>

@@ -1,0 +1,46 @@
+<h3 id="for-windows-user">for Windows user</h3>
+<p>Installation is proposed with basic installers and also with <a href="http://scoop.sh">scoop</a> which allow us to install the required tools in command-line mode.</p>
+<h4 id="common-pre-installations">Common pre-installations</h4>
+<ul>
+<li><a href="https://conemu.github.io">ConEmu</a> (optional but strongly required). Rmk: <code>conemu</code>can be installed also via <code>scoop</code> but in such a case it is not in the Windows menu.</li>
+<li><a href="http://cran.r-project.org/bin/windows/base/">R</a>, <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a> and <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a> (pandoc is embedded)</li>
+<li>add R (<code>C:\Program Files\R\R-3.2.3\bin\i386</code> or <code>C:\Program Files\R\R-3.2.3\bin\x64</code>) and pandoc (<code>C:\Program Files\RStudio\bin\pandoc\bin</code>) to the PATH environment variable.</li>
+</ul>
+<h4 id="installation-with-scoop-my-preferred-choice">Installation with <a href="http://scoop.sh">scoop</a> (my preferred choice)</h4>
+<p><code>scoop</code> requires powershell version &gt;= 3 installed.</p>
+<ul>
+<li><p>open <code>powershell</code> and install <a href="http://scoop.sh">scoop</a>:</p>
+<pre class="{bash}"><code>iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)
+set-executionpolicy unrestricted -s cu</code></pre></li>
+<li><code>scoop install git</code></li>
+<li><code>scoop install ruby</code> (ruby and devkit automatically installed)</li>
+<li><code>scoop install latex</code></li>
+<li><a href="https://github.com/lukesampson/scoop-extras">scoop-extras</a> (not required but allow to install Application like Atom): <code>scoop bucket add extras</code></li>
+<li><p>Rmk: if <code>scoop install latex</code> fails, it is sometimes because the current version is obsolete in the scoop directory, then I have my own scoop-bucket (thanks scoop!):</p>
+<pre class="{bash}"><code>scoop bucket add rcqls https://github.com/rcqls/scoop-bucket
+scoop install rcqls/miktex
+## pandoc
+scoop install rcqls/pandoc</code></pre></li>
+<li><p>If you want to update <code>scoop</code> or applications installed by <code>scoop</code>:</p>
+<pre class="{bash}"><code>scoop status
+scoop update
+## scoop update &lt;application&gt;</code></pre></li>
+</ul>
+<h4 id="basic-with-windows-installers">Basic with Windows installers</h4>
+<ul>
+<li>ruby: <a href="http://rubyinstaller.org">rubyinstaller</a> and <a href="http://rubyinstaller.org/add-ons/devkit">devkit</a> (Advice: put them in the same directory <code>C:\tools</code> and follow the instructions for devkit: <code>ruby dk.rb init</code> and then <code>ruby dk.rb install</code>)</li>
+<li><a href="https://git-for-windows.github.io">git</a> (for Windows: useable in cmd)</li>
+<li>latex (with pdflatex in PATH) : <a href="http:/miktex.org">MikTex</a></li>
+</ul>
+<h4 id="common-post-installations">Common post-installations</h4>
+<ul>
+<li><p>Open <code>powershell</code> terminal (ConEmu is excellent) and then:</p>
+<pre class="{bash}"><code>gem install dyndoc-ruby --no-ri --no-rdoc
+R -e &#39;install.packages(&quot;devtools&quot;,repos=&quot;http://cran.rstudio.com/&quot;)&#39;
+R -e &#39;devtools::install_github(&quot;rcqls/rb4R&quot;,args=&quot;--no-multiarch&quot;)&#39;
+R -e &#39;install.packages(&quot;base64&quot;,repos=&quot;http://cran.rstudio.com/&quot;)&#39;</code></pre></li>
+<li>optional but nice-to-have:</li>
+<li><code>gem install asciidoctor --no-ri --no-rdoc</code></li>
+<li>If RStudio not installed: <a href="https://github.com/jgm/pandoc/releases">pandoc</a> or <code>scoop install pandoc</code></li>
+<li><p><a href="http://hutchinson.belmont.ma.us/tth/mml">Ttm</a></p></li>
+</ul>

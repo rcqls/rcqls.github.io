@@ -1,0 +1,28 @@
+<h3 id="forme-des-syntaxes-dyndoc">Forme des syntaxes <code>dyndoc</code></h3>
+<p>La syntaxe de <code>dyndoc</code> est reconnaissable par son jeu de balises très exotiques de type domino. Une balise se décompose en une séquence d'une accolade ou crochet ouvert, du caractère <code>#</code> (et parfois <code>@</code>), d'un nom d'instruction et finalement d'un crochet ou accolade fermé comme le montre la sortie suivante :</p>
+<pre class="solarized"><span class="line-numbers">   1 </span> {#...] ... [#<span class="Keyword">...</span>] ... [#<span class="Keyword">...</span>] ... [#...}
+</pre>
+Il y a donc trois types de balises : ouverte (commençant par une accolade ouverte), fermée (finissant par une accolade fermée) et une balise séquentielle (commençant et finissant par des crochets ouvert et fermé). Une balise ouverte a toujours sa balise fermée correspondante correspondant à une commande <code>dyndoc</code> dite de bloc. Une commande de bloc peut contenir une ou plusieurs balises séquentielles qui sont interprétées séquentiellement à l'intérieur d'une commande de bloc et correspondent à des commandes <span class="citation">@dyndoc</span>@ dites séquentielles. Les balises <code>dyndoc</code> peuvent être agencées sur une même ligne comme dans l'exemple précédent ou sur plusieurs lignes commme dans les exemples suivants :
+<pre class="solarized"><span class="line-numbers">   1 </span> {#...] ...
+<span class="line-numbers">   2 </span> [#<span class="Keyword">...</span>] ...
+<span class="line-numbers">   3 </span> [#<span class="Keyword">...</span>] ...
+<span class="line-numbers">   4 </span> [#...}
+</pre>
+<pre class="solarized"><span class="line-numbers">   1 </span> {#...] ...
+<span class="line-numbers">   2 </span> [#<span class="Keyword">...</span>] ... [#<span class="Keyword">...</span>] ... [#<span class="Keyword">...</span>] ...
+<span class="line-numbers">   3 </span> [#<span class="Keyword">...</span>] ... [#...}
+</pre>
+<p>A toute balise ouverte ou séquentielle associée à une commande de bloc, correspond un contenu commençant juste après la balise et se terminant juste avant la balise suivante séquentielle ou fermée associée à cette même commande de bloc. L'exemple suivant illustre cette notion.</p>
+<pre class="solarized"><span class="line-numbers">   1 </span> {#<span class="TagName">cmd1</span>]contenu associé la la balise ouverte de la commande de bloc cmd1
+<span class="line-numbers">   2 </span> [#<span class="Keyword">cmd1Seq1</span>]début du contenu de la balise cmd1Seq1{#<span class="TagName">cmd2</span>] ... [#<span class="TagName">cmd2</span>}
+<span class="line-numbers">   3 </span> suite du contenu de la balise cmd1Seq1
+<span class="line-numbers">   4 </span> [#<span class="Keyword">cmd1Seq2</span>]contenu de la balise cmd1Seq2[#<span class="TagName">cmd1</span>}
+</pre>
+<p>Cette exemple illustre la possibilité d'inclure une nouvelle commande de bloc dans le contenu d'une balise associée à une commande de bloc. Ici la commande de bloc <code>cmd2</code> est inclus dans le contenu de la première balise séquentielle <code>cmd1Seq</code> associée à la commande de bloc <code>cmd1</code>.</p>
+<h3 id="structure-dun-document-source-dyndoc">Structure d'un document source <code>dyndoc</code></h3>
+<p>Un document source <code>dyndoc</code> est pour la convenance de l'utilisateur automatiquement complété :</p>
+<p><em>(arrow) avant le code utilisateur par : <code></em>{#document]<strong>[#main]</strong>[#&gt;]<em></code> </em>(arrow) après le code utilisateur par : <code><em>[#document}</em></code></p>
+<p>Ainsi, un document source <code>dyndoc</code> ne contenant que du contenu <code>latex</code> (sans aucune commande <code>dyndoc</code>) peut être converti en un document <code>latex</code> directement compilable. Cette facilité est rendue possible en soulignant qu'un modèle de présentation (&quot;layout&quot; en anglais) par défaut est associé à tout type de format de sortie. Il est à noter que le &quot;layout&quot; est lui-même défini dans le langage <code>dyndoc</code>.</p>
+<p>Un utilisateur de niveau avancé est invité à se référer à la description plus complète de la commande <em>{#document]</em> afin de découvrir les balises séquentielles associées <code><em>[#main]</em></code> (ou <code><em>[#content]</em></code> ), <code><em>[#require]</em></code>, <code><em>[#package]</em></code>, <code><em>[#title]</em></code>, <code><em>[#preamble]</em></code>, <code><em>[#postamble]</em></code>.</p>
+<h3 id="conversion-des-balises-séquentielles-de-base-en-une-commande-de-bloc-dyndoc">Conversion des balises séquentielles de base en une commande de bloc <code>dyndoc</code></h3>
+<p>Nous verrons dans la prochaine section les balises séquentielles de base associées à la commande de bloc principale <code><em>{#blck]</em></code>. Afin de présenter un processus d'autoconversion par le parser <code>dyndoc</code>, signalons que parmi ces balises principales, la balise <code><em>[#&gt;]</em></code> permet d'afficher le contenu obtenu après quelques traitements <code>dyndoc</code> dans le document de sortie tandis que <code><em>[#&lt;]</em></code> permet de faire des traitements <code>dyndoc</code> dont le contenu est au contraire non redirigé vers le document de sortie.</p>

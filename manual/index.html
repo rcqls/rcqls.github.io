@@ -1,100 +1,852 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
-  <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-  <title>
-    
-      DynDoc &middot; Black Theme for Jekyll
-    
-  </title>
-
-  <!-- CSS -->
+<head>
+  <title>DynDoc</title>
+  <meta charset='utf-8'/>
+  <meta name='description' content='Documentation website'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
   <link href="http://sagag6.upmf-grenoble.fr/stylesheets/uv/css/amy.css" media="screen,projection,print" rel="Stylesheet" type="text/css" />
   <link href="http://sagag6.upmf-grenoble.fr/stylesheets/uv/css/solarized.css" media="screen,projection,print" rel="Stylesheet" type="text/css" />
-
-  <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
-  <link rel="stylesheet" href="/public/css/blackdoc.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=EB+Garamond">
-
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/public/favicon.ico">
-
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <link href='assets.css' rel='stylesheet' type='text/css'>
 </head>
-
-
-  <body>
-
-    <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1>
-        <a href="/">
-          DynDoc
-        </a>
-      </h1>
-      <p class="lead">A macro language</p>
-    </div>
-
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item active" href="/">DynDoc</a>
-
+<body>
+  <nav id='sidebar'>
+	<h1 id="title">DynDoc</h1>
+<ul id='links'>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <li><h2>Intro</h2>
+    <ul>
+    
       
-
+        <li class=''><a href='#'></a></li>
       
+    
       
-        
-          
-            <a class="sidebar-nav-item" href="/introduction/">Introduction</a>
-          
-        
+        <li class='BASE'><a href='#/intro'>Introduction</a></li>
       
-        
-          
-            <a class="sidebar-nav-item" href="/styles/">Theme Styles</a>
-          
-        
+    
+    </ul>
+  </li>
+
+  <li><h2>Install</h2>
+    <ul>
+    
       
-        
-          
-            <a class="sidebar-nav-item" href="/about/">About</a>
-          
-        
+        <li class=''><a href='#'></a></li>
       
-        
-          
-        
+    
       
+        <li class='BASE'><a href='#/linux-install'>Linux Install</a></li>
+      
+        <li class='BASE'><a href='#/macosx-install'>MacOSX Install</a></li>
+      
+        <li class='BASE'><a href='#/windows-install'>Windows Install</a></li>
+      
+        <li class='BASE'><a href='#/dyndoc-config'>Dyndoc config (install completion)</a></li>
+      
+        <li class='BASE'><a href='#/atom-install'>Atom install</a></li>
+      
+        <li class='BASE'><a href='#/dyn-daemon'>Daemon Install</a></li>
+      
+        <li class='BASE'><a href='#/dyndoc-package-manager'>Dyndoc Package Manager</a></li>
+      
+    
+    </ul>
+  </li>
 
-      <hr>
-      <a class="sidebar-nav-item" href="https://github.com/rcqls/dyndoc-ruby">GitHub project</a>
-      <span class="sidebar-nav-item">Currently v0.1.0</span>
-    </nav>
+  <li><h2>Language</h2>
+    <ul>
+    
+      
+        <li class=''><a href='#'></a></li>
+      
+    
+      
+        <li class='BASE'><a href='#/tags'>Balises Dyndoc</a></li>
+      
+        <li class='MIDDLE'><a href='#/vars'>Variables</a></li>
+      
+        <li class='BASE'><a href='#/if'>Condition If</a></li>
+      
+        <li class='BASE'><a href='#/case'>Condition Case</a></li>
+      
+    
+    </ul>
+  </li>
 
-    <p>&copy; 2016. All rights reserved.</p>
-  </div>
-</div>
+  <li><h2>R Stuff</h2>
+    <ul>
+    
+      
+        <li class=''><a href='#'></a></li>
+      
+    
+      
+        <li class='MIDDLE'><a href='#/R'>R Bloc</a></li>
+      
+        <li class='ADVANCED'><a href='#/dyn-in-R'>Dyndoc inside R</a></li>
+      
+    
+    </ul>
+  </li>
+
+  <li><h2>Ruby Stuff</h2>
+    <ul>
+    
+      
+        <li class=''><a href='#'></a></li>
+      
+    
+      
+        <li class='MIDDLE'><a href='#/ruby'>Ruby Bloc</a></li>
+      
+        <li class='ADVANCED'><a href='#/dyn-in-ruby'>Dyndoc in Ruby</a></li>
+      
+    
+    </ul>
+  </li>
+
+  <li><h2>R, Ruby et dyndoc</h2>
+    <ul>
+    
+      
+        <li class=''><a href='#'></a></li>
+      
+    
+      
+        <li class='ADVANCED'><a href='#/R-rb-dyn-vars'>Variables R, Ruby et dyndoc</a></li>
+      
+    
+    </ul>
+  </li>
+
+</ul>
+
+</nav>
+
+<section id='content'>
+
+  <article class='BASE'>
+    <a name='/intro' href='#/intro'><h2><code><b>BASE</b> _posts/1-1-1-intro.dyn</code> Introduction</h2></a>
+    <section class='body'>
+      <h3 id="un-exemple-de-bienvenue">Un exemple de bienvenue</h3>
+<p>Voilà un premier exemple donnant une idée générale de ce qu'est <code>dyndoc</code>. Le code source suivant (enregistré dans la fichier <code>hello.dyn</code>) propose l'habituel exemple <code>hello</code> fourni pour présenter un nouveau langage.</p>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">R&lt;</span>]<span class="Comment"><span class="Comment">#</span> R code without output since R&lt;</span>
+<span class="line-numbers">   2 </span> <span class="Variable">who</span> <span class="Keyword">&lt;-</span> <span class="QuotedString"><span class="Quotes">&quot;</span>MisteR<span class="Quotes">&quot;</span></span>
+<span class="line-numbers">   3 </span> [#<span class="Keyword">rb&lt;</span>]<span class="Comment"><span class="Comment">#</span> ruby code without output since rb&lt;</span>
+<span class="line-numbers">   4 </span> who <span class="Keyword">=</span> <span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span>Miss Ruby<span class="RubyPunctuationSection">&quot;</span></span>
+<span class="line-numbers">   5 </span> [#<span class="Keyword">&lt;</span>]<span class="DiffDeleted"> No output since &lt;.</span>
+<span class="line-numbers">   6 </span> <span class="DiffDeleted">Next, definition of function hello</span>
+<span class="line-numbers">   7 </span> <span class="DiffDeleted"></span>
+<span class="line-numbers">   8 </span> <span class="DiffDeleted"><span class="DiffDeleted">{#</span><span class="Keyword">def</span><span class="DiffDeleted">]</span>hello<span class="DiffDeleted">[#</span><span class="Keyword">,</span><span class="DiffDeleted">]</span>name[Miss]<span class="DiffDeleted">[#</span><span class="Keyword">&gt;</span><span class="DiffDeleted">]</span><span class="DiffInserted"></span></span>
+<span class="line-numbers">   9 </span> <span class="DiffDeleted"><span class="DiffInserted"><span class="Invalid">  <span class="Invalid">[</span></span>from Dyn, Hello <span class="Comment">#{</span><span class="Variable">name</span><span class="Comment">}</span><span class="Invalid"><span class="Invalid">]</span></span></span></span>
+<span class="line-numbers">  10 </span> <span class="DiffDeleted"><span class="DiffInserted"></span><span class="DiffDeleted">[#</span><span class="DiffDeleted">}</span></span>
+<span class="line-numbers">  11 </span> <span class="DiffDeleted"></span>
+<span class="line-numbers">  12 </span> <span class="DiffDeleted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted"></span>
+<span class="line-numbers">  13 </span> <span class="DiffInserted"></span>
+<span class="line-numbers">  14 </span> <span class="DiffInserted"><span class="Invalid">  <span class="Invalid">[</span></span><span class="DiffInserted">{#</span><span class="Keyword">hello</span><span class="DiffInserted">#}</span></span>
+<span class="line-numbers">  15 </span> <span class="DiffInserted"><span class="Invalid">  <span class="Invalid">|</span></span><span class="DiffInserted">{#</span><span class="TagName">hello</span><span class="DiffInserted">]</span>Mister<span class="DiffInserted">[#</span><span class="DiffInserted">}</span></span>
+<span class="line-numbers">  16 </span> <span class="DiffInserted"><span class="Invalid">  <span class="Invalid">|</span></span>from ruby, Hello <span class="Comment">:{</span><span class="Variable">who</span><span class="Comment">}</span></span>
+<span class="line-numbers">  17 </span> <span class="DiffInserted"><span class="Invalid">  <span class="Invalid">|</span></span>from R, Hello <span class="Comment">:r{</span><span class="Variable">who</span><span class="Comment">}</span><span class="Invalid"><span class="Invalid">]</span></span></span>
+</pre>
+<p>Et voici le résultat obtenu à partir de la ligne de commande <code>dyn  hello.dyn</code> :</p>
+<pre class="dynres">
+from Dyn, Hello Miss
+from Dyn, Hello Mister
+from ruby, Hello Miss Ruby
+from R, Hello MisteR
+</pre>
+<h3 id="commentaires-généraux-sur-lexemple-de-bienvenue">Commentaires généraux sur l'exemple de bienvenue</h3>
+<p>Le code est découpé en 4 parties délimitées par les balises <code><em>[#r&lt;]</em></code>, <code><em>[#rb&lt;]</em></code>, <code><em>[#&lt;]</em></code> et <code><em>[#&gt;]</em></code>. La première permet de réaliser un traitement <code>R</code> (ici très sommaire). La deuxième réalise un traitement <code>ruby</code>. La troisième popose la définition d'une fonction <code>hello</code> (déclarée en <code>dyndoc</code> entre les balises <code><em>{#def]</em></code> et <code><em>[#def}</em></code>) utilisée dans la quatrième et dernière partie (via les appels <code><em>{#hello#}</em></code> et <code><em>{#hello]Mister[#}</em></code>) qui est ici en charge de l'affichage du résultat. En effet, toutes les balises de la forme <code><em>[#...&lt;]</em></code> sont censées ne produire aucun affichage dans le document de sortie. Il est ainsi possible de rajouter des commentaires en dehors des commandes <code>dyndoc</code> (ici, déinition de la fonction <code>hello</code>) comme cela a été fait dans le contenu de la balise <code><em>[#&lt;]</em></code>. Sans rentrer dans les détails, notons que cette fonction a un seul paramètre <code>name</code> avec pour valeur par défaut <code>Miss</code>. Toutes les balises <code>dyndoc</code> suivant la dernière balise <code><em>[#,]</em></code> forment le corps de la fonction qui sera executé à chaque futur appel de la fonction.</p>
+<p>La quatrième partie fait tout d'abord appel par 2 fois à la fonction <code>hello</code>. La première forme <code><em>{#hello#}</em></code> correspond à l'appel de la fonction sans aucun argument pour le paramètre <code>name</code>. La valeur par défaut est ainsi utilisée. Le deuxième appel est lui fourni avec un nouvel argument pour le paramètre <code>name</code>. Les deux dernières lignes affichées permettent d'extraire successivement la variable <code>miss</code> en <code>ruby</code> (via <code><em>Miss Ruby</em></code>) et <code>mister</code> en <code>R</code> (via <code><em>MisteR</em></code>). Les différentes commandes d'extraction sont <code><em>:{...}</em></code> (équivalent à <code><em>:{...}</em></code> ou <code><em>:{...}</em></code>) pour des variables <code>ruby</code>, <em>:r{...}</em> (équivalent à <em>#r{...}</em>) pour des variables <code>R</code> et <code><em>#{...}</em></code> pour de variables <code>dyndoc</code>. L'usage de variable <code>dyndoc</code> n'a été introduit actuellement qu'à travers le paramètre <code>name</code> de la fonction <code>hello</code>. Notons l'usage de <code><em>#{name}</em></code> dans le corps de la fonction <code>hello</code> pour extraire le contenu du paramètre <code>name</code> (considéré par <code>dyndoc</code> comme une variable).</p>
+<p>Le dernier commentaire porte sur un aspect de présentation du code <code>dyndoc</code> concernant les balises du type <code><em>[#&gt;]</em></code>. En effet, le contenu associé à cette balise commence normalement par le premier caractère à droite jusqu'au caractère précédent la prochaine balise incluant les caractères spéciaux invisibles de tabulation et de retour à la ligne. Afin de permettre une présentation plus agréable du code <span class="citation">@dyndoc</span>@, les règles suivantes ont été introduites :</p>
+<ul>
+<li>le contenu associé à une balise (du type <code><em>[#&gt;]</em></code>) peut être délimité entre un crochet ouvert (précédé par des espaces facultatifs) et un crochet fermé (suivi par des espaces facultatifs)</li>
+<li>lorsque tout espace commençant une ligne suivi du caractère |, ceux-ci sont automatiquement supprimés</li>
+<li>lorsque toute fin de ligne (i.e. un retour de ligne \n) précédé par le caractère |, ceux sont automatiquement supprimés.</li>
+</ul>
+<p>Ces régles ont été appliquées dans l'exemple introductif à la fois dans le corps de la fonction <span class="citation">@hello</span>@ ainsi que pour la dernière balise d'affichage <code><em>[#&gt;]</em></code>.</p>
+<h3 id="le-même-exemple-avec-appel-dune-librairie-dyndoc">Le même exemple avec appel d'une librairie <code>dyndoc</code></h3>
+<p>Si les deux codes suivants sont respectivement enregistrés dans les fichier <code>helloLib.dyn</code> et <code>helloBis.dyn</code> placés dans le même répertoire courant</p>
+<pre class="solarized"><span class="line-numbers">   1 </span> {#<span class="Keyword">def</span>]hello[#<span class="Keyword">,</span>]name[Miss][#<span class="Keyword">&gt;</span>]<span class="DiffInserted"></span>
+<span class="line-numbers">   2 </span> <span class="DiffInserted"><span class="Invalid">  <span class="Invalid">[</span></span>from Dyn, Hello <span class="Comment">#{</span><span class="Variable">name</span><span class="Comment">}</span><span class="Invalid"><span class="Invalid">]</span></span></span>
+<span class="line-numbers">   3 </span> <span class="DiffInserted"></span>[#}
+</pre>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">require</span>]helloLib
+<span class="line-numbers">   2 </span> [#<span class="Keyword">main</span>][#<span class="Keyword">r&lt;</span>]<span class="Variable">who</span> <span class="Keyword">&lt;-</span> <span class="QuotedString"><span class="Quotes">&quot;</span>MisteR<span class="Quotes">&quot;</span></span>[#<span class="Keyword">rb&lt;</span>] who <span class="Keyword">=</span> <span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span>Miss Ruby<span class="RubyPunctuationSection">&quot;</span></span>
+<span class="line-numbers">   3 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted"></span>
+<span class="line-numbers">   4 </span> <span class="DiffInserted"></span>
+<span class="line-numbers">   5 </span> <span class="DiffInserted"><span class="Invalid">  <span class="Invalid">[</span></span><span class="DiffInserted">{#</span><span class="Keyword">hello</span><span class="DiffInserted">#}</span></span>
+<span class="line-numbers">   6 </span> <span class="DiffInserted"><span class="Invalid">  <span class="Invalid">|</span></span><span class="DiffInserted">{#</span><span class="TagName">hello</span><span class="DiffInserted">]</span>Mister<span class="DiffInserted">[#</span><span class="DiffInserted">}</span></span>
+<span class="line-numbers">   7 </span> <span class="DiffInserted"><span class="Invalid">  <span class="Invalid">|</span></span>from ruby, Hello <span class="Comment">:{</span><span class="Variable">who</span><span class="Comment">}</span></span>
+<span class="line-numbers">   8 </span> <span class="DiffInserted"><span class="Invalid">  <span class="Invalid">|</span></span>from R, Hello <span class="Comment">:r{</span><span class="Variable">who</span><span class="Comment">}</span><span class="Invalid"><span class="Invalid">]</span></span></span>
+</pre>
+<p>alors la ligne de commmande <code>dyn helloBis.dyn</code> produirait exactement la même sortie que précédemment. Remarquons que toutes les parties de code inutiles pour l'obtention du résultat ont été retirées dans cet exemple.</p>
+<p>Le point important à souligner est que <code>dyndoc</code> permet de créer ses propres outils de &quot;reporting&quot; que l'on peut placer dans des fichiers (appelés librairies <code>dyndoc</code>) réutilisables par l'utilisateur dans ses documents source. Nous verrons plus tard que <code>dyndoc</code> dispose aussi d'un mécanisme de programmation orientée objet (assez similaire à celui du <code>R</code>).</p>
+<p>Enfin, le document source <code>helloBis.dyn</code> nous indique la structure principale d'un document <code>dyndoc</code> (voir Concepts généraux pour plus de détails). Dans l'exemple, Les balises prioritaires sont <code><em>[#require]</em></code> et <code><em>[#main]</em></code> (équivalent à <code><em>[#content]</em></code>). Les autres balises <code><em>[#r&lt;]</em></code>, <code><em>[#rb&lt;]</em></code>, <code><em>[#&lt;]</em></code> et <code><em>[#&gt;]</em></code> sont des sous-balises attachées à la balise <code><em>[#main]</em></code> représentant le contenu principal du document source. La balise <code><em>[#require]</em></code> permet de charger des librairies <code>dyndoc</code> avant le traitement du contenu principal. Pour un document <code>latex</code> par exemple, il existe au même niveau de priorité les balises <code><em>[#title]</em></code>, <code><em>[#package]</em></code> et <code><em>[#preamble]</em></code> (par exemples) qui permettent respectivement de définir la partie titre (auteur et date inclus), la partie <code>\usepackage</code> et la partie préliminaire (appelé preamble en <code>latex</code>) d'un document de sortie <code>latex</code>.</p>
+
+    </section>
+  </article>
+
+  <article class='BASE'>
+    <a name='/linux-install' href='#/linux-install'><h2><code><b>BASE</b> _posts/1-2-1-linux-install.dyn</code> Linux Install</h2></a>
+    <section class='body'>
+      <h3 id="for-ubuntu-or-linux-ubuntu-based-distribution-user">for Ubuntu (or linux Ubuntu-based distribution) user</h3>
+<p>Note that linux user from other distributions generally knows how to adapt the following steps to his own linux distribution.</p>
+<ul>
+<li><a href="http://sites.psu.edu/theubunturblog/installing-r-in-ubuntu/">R</a>, <a href="https://www.brightbox.com/docs/ruby/ubuntu/">ruby</a>, git and dyndoc install</li>
+</ul>
+<pre class="{bash}"><code># R install
+sudo add-apt-repository -y ppa:marutter/rrutter
+sudo apt-get update -y
+sudo apt-get install -y r-base r-base-dev
+
+# ruby install
+sudo apt-get install -y software-properties-common
+sudo apt-add-repository -y ppa:brightbox/ruby-ng
+sudo apt-get update -y
+sudo apt-get install -y ruby2.2 ruby2.2-dev ruby-switch
+ruby-switch --list
+
+# git install
+sudo apt-get install -y git
+
+# ruby gems: dyndoc
+sudo gem install dyndoc-ruby --no-ri --no-rdoc
+
+# R package devtools
+sudo apt-get install -y libxml2-dev  libcurl4-openssl-dev libssl-dev
+R -e &#39;install.packages(&quot;devtools&quot;,repos=&quot;http://cran.rstudio.com/&quot;)&#39;
+
+# R package rb4R
+sudo R -e &#39;devtools::install_github(&quot;rcqls/rb4R&quot;,args=&quot;--no-multiarch&quot;)&#39;
+# if something goes wrong in the previous instruction redo after: sudo apt-get install libgmp-dev
+
+# R package base64
+sudo R -e &#39;install.packages(&quot;base64&quot;,repos=&quot;http://cran.rstudio.com/&quot;)&#39;</code></pre>
+<ul>
+<li>pdflatex</li>
+<li><code>sudo apt-get install -y texlive-full</code></li>
+<li><a href="http://pandoc.org/installing.html">pandoc</a></li>
+<li>optional but nice-to-have:</li>
+<li><code>sudo gem install asciidoctor --no-ri --no-rdoc</code></li>
+<li><a href="http://hutchinson.belmont.ma.us/tth/mml">Ttm</a> from source</li>
+</ul>
+    </section>
+  </article>
+
+  <article class='BASE'>
+    <a name='/macosx-install' href='#/macosx-install'><h2><code><b>BASE</b> _posts/1-2-2-macosx-install.dyn</code> MacOSX Install</h2></a>
+    <section class='body'>
+      <h3 id="for-macosx-user">for MacOSX user</h3>
+<ul>
+<li>requirements</li>
+<li><code>ruby</code>: <a href="https://developer.apple.com/downloads/">Xcode</a> provides one and <a href="http://brew.sh">homebrew</a> is based on ruby.</li>
+<li>Command-line tools for Xcode (to access ruby): inside Terminal, <code>xcode-select --install</code> (details is proposed in the <a href="https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Installation.md#installation">homebrew github</a> website).</li>
+<li>gem config: create ~/.gemrc containing <code>gem: --user-install --no-ri --no-rdoc</code>. This simply defines the default behavior of <code>gem</code> command. <code>--no-ri --no-rdoc</code> avoids to generate documentation when '--user-install' installs gem at the predefined user folder <code>~/.gem/ruby/&lt;ruby-version&gt;</code>. <strong>Important</strong>: do not forget then to add the following lines in your <code>.bash_profile</code>: <code>{bash}   if which ruby &gt;/dev/null &amp;&amp; which gem &gt;/dev/null; then PATH=&quot;$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH&quot;   fi</code></li>
+<li><a href="http://brew.sh">homebrew</a> (can be avoided but, as a linux user, I love it)</li>
+<li><a href="http://caskroom.io">homebrew-cask</a> optional but nice-to-have if you are in love with command-line to install applications: <code>brew tap caskroom/cask</code></li>
+<li><a href="http://cran.r-project.org/bin/macosx/">R</a> or <code>brew cask install r</code></li>
+<li><a href="http://www.tug.org/mactex/">latex (MacTex)</a> or <code>brew cask install mactex</code></li>
+<li><code>git</code>: <code>brew install git</code></li>
+<li><a href="https://github.com/jgm/pandoc/releases">pandoc</a> or <code>brew cask install pandoc</code></li>
+<li>optional but nice-to-have (do it after main installation):
+<ul>
+<li><a href="http://hutchinson.belmont.ma.us/tth/mml">Ttm</a> from source</li>
+</ul></li>
+<li>ruby gems</li>
+<li><code>(sudo) gem install dyndoc-ruby --no-ri --no-rdoc</code></li>
+<li><p>R packages</p>
+<pre class="{bash}"><code>brew install libxml2 gmp
+R -e &#39;install.packages(&quot;devtools&quot;,repos=&quot;http://cran.rstudio.com/&quot;)&#39;
+R -e &#39;devtools::install_github(&quot;rcqls/rb4R&quot;,args=&quot;--no-multiarch&quot;)&#39;
+R -e &#39;install.packages(&quot;base64&quot;,repos=&quot;http://cran.rstudio.com/&quot;)&#39;</code></pre></li>
+</ul>
+    </section>
+  </article>
+
+  <article class='BASE'>
+    <a name='/windows-install' href='#/windows-install'><h2><code><b>BASE</b> _posts/1-2-3-windows-install.dyn</code> Windows Install</h2></a>
+    <section class='body'>
+      <h3 id="for-windows-user">for Windows user</h3>
+<p>Installation is proposed with basic installers and also with <a href="http://scoop.sh">scoop</a> which allow us to install the required tools in command-line mode.</p>
+<h4 id="common-pre-installations">Common pre-installations</h4>
+<ul>
+<li><a href="https://conemu.github.io">ConEmu</a> (optional but strongly required). Rmk: <code>conemu</code>can be installed also via <code>scoop</code> but in such a case it is not in the Windows menu.</li>
+<li><a href="http://cran.r-project.org/bin/windows/base/">R</a>, <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a> and <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a> (pandoc is embedded)</li>
+<li>add R (<code>C:\Program Files\R\R-3.2.3\bin\i386</code> or <code>C:\Program Files\R\R-3.2.3\bin\x64</code>) and pandoc (<code>C:\Program Files\RStudio\bin\pandoc\bin</code>) to the PATH environment variable.</li>
+</ul>
+<h4 id="installation-with-scoop-my-preferred-choice">Installation with <a href="http://scoop.sh">scoop</a> (my preferred choice)</h4>
+<p><code>scoop</code> requires powershell version &gt;= 3 installed.</p>
+<ul>
+<li><p>open <code>powershell</code> and install <a href="http://scoop.sh">scoop</a>:</p>
+<pre class="{bash}"><code>iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)
+set-executionpolicy unrestricted -s cu</code></pre></li>
+<li><code>scoop install git</code></li>
+<li><code>scoop install ruby</code> (ruby and devkit automatically installed)</li>
+<li><code>scoop install latex</code></li>
+<li><a href="https://github.com/lukesampson/scoop-extras">scoop-extras</a> (not required but allow to install Application like Atom): <code>scoop bucket add extras</code></li>
+<li><p>Rmk: if <code>scoop install latex</code> fails, it is sometimes because the current version is obsolete in the scoop directory, then I have my own scoop-bucket (thanks scoop!):</p>
+<pre class="{bash}"><code>scoop bucket add rcqls https://github.com/rcqls/scoop-bucket
+scoop install rcqls/miktex
+## pandoc
+scoop install rcqls/pandoc</code></pre></li>
+<li><p>If you want to update <code>scoop</code> or applications installed by <code>scoop</code>:</p>
+<pre class="{bash}"><code>scoop status
+scoop update
+## scoop update &lt;application&gt;</code></pre></li>
+</ul>
+<h4 id="basic-with-windows-installers">Basic with Windows installers</h4>
+<ul>
+<li>ruby: <a href="http://rubyinstaller.org">rubyinstaller</a> and <a href="http://rubyinstaller.org/add-ons/devkit">devkit</a> (Advice: put them in the same directory <code>C:\tools</code> and follow the instructions for devkit: <code>ruby dk.rb init</code> and then <code>ruby dk.rb install</code>)</li>
+<li><a href="https://git-for-windows.github.io">git</a> (for Windows: useable in cmd)</li>
+<li>latex (with pdflatex in PATH) : <a href="http:/miktex.org">MikTex</a></li>
+</ul>
+<h4 id="common-post-installations">Common post-installations</h4>
+<ul>
+<li><p>Open <code>powershell</code> terminal (ConEmu is excellent) and then:</p>
+<pre class="{bash}"><code>gem install dyndoc-ruby --no-ri --no-rdoc
+R -e &#39;install.packages(&quot;devtools&quot;,repos=&quot;http://cran.rstudio.com/&quot;)&#39;
+R -e &#39;devtools::install_github(&quot;rcqls/rb4R&quot;,args=&quot;--no-multiarch&quot;)&#39;
+R -e &#39;install.packages(&quot;base64&quot;,repos=&quot;http://cran.rstudio.com/&quot;)&#39;</code></pre></li>
+<li>optional but nice-to-have:</li>
+<li><code>gem install asciidoctor --no-ri --no-rdoc</code></li>
+<li>If RStudio not installed: <a href="https://github.com/jgm/pandoc/releases">pandoc</a> or <code>scoop install pandoc</code></li>
+<li><p><a href="http://hutchinson.belmont.ma.us/tth/mml">Ttm</a></p></li>
+</ul>
+    </section>
+  </article>
+
+  <article class='BASE'>
+    <a name='/dyndoc-config' href='#/dyndoc-config'><h2><code><b>BASE</b> _posts/1-2-4-dyndoc-config.dyn</code> Dyndoc config (install completion)</h2></a>
+    <section class='body'>
+      <h2 id="dyndoc-config">Dyndoc Config</h2>
+<ul>
+<li>open terminal (ConEmu for Windows user) and type: <code>dyn-init</code></li>
+<li>edit <code>~/dyndoc/etc/dyndoc_library_path</code> (maybe later is better since you don't have any personal library yet): this a semicolon separated list of paths supposed to contain dyndoc library.</li>
+<li><p>dyndoc test: open a terminal and go to dyndoc folder (<code>HOME/dyndoc</code>)</p>
+<pre class="{bash}"><code>cd demo
+dyn first
+pdflatex first</code></pre>
+<p>Normally, if everything is fine, <code>first.tex</code> and <code>first.pdf</code> are created.</p></li>
+</ul>
+    </section>
+  </article>
+
+  <article class='BASE'>
+    <a name='/atom-install' href='#/atom-install'><h2><code><b>BASE</b> _posts/1-2-5-atom-install.dyn</code> Atom install</h2></a>
+    <section class='body'>
+      <h2 id="dyndoc-inside-atom-editor">Dyndoc inside Atom editor</h2>
+<ul>
+<li>Install <a href="https://atom.io">Atom</a></li>
+<li>for MacOSX user: <code>brew cask install atom</code> (Important: atom can be installed with a basic installer but this way allows us to set the environment variable PATH properly)</li>
+<li>for Windows user: <code>scoop install atom</code></li>
+<li>install packages <code>(atom-)dyndoc</code> and <code>(atom-)language-dyndoc</code> via settings inside atom (via comamnd line: <code>apm install dyndoc language-dyndoc</code>)</li>
+</ul>
+<h2 id="dyndoc-testing-inside-atom-editor">Dyndoc testing inside Atom editor</h2>
+<ul>
+<li><p>dyndoc server: open console and type</p>
+<pre class="{bash}"><code>dpm install rcqls/DyndocWebTools.dyn  # install DyndocWebTools.dyn (git is required)
+dpm link rcqls/DyndocWebTools.dyn     # to be required in dyndoc
+dyn-srv                               # launch the dyndoc server</code></pre></li>
+<li>optional atom packages but nice-to-have or even almost required:</li>
+<li>asciidoc-preview, language-asciidoc (made by asciidoctor team)</li>
+<li>pdf-view</li>
+<li>Command line: apm install asciidoc-preview language-asciidoc pdf-view</li>
+<li>open atom and select ~/dyndoc/demo folder, open first.dyn</li>
+<li>to open dyndoc viewer: <code>[Ctrl+Alt+x] [t]</code> (Windows and Linux) or <code>[Cmd+Alt+x] [t]</code> (MacOSX)</li>
+<li><p>to execute dyndoc code: <code>[Ctrl+Alt+d]</code> (Windows and Linux) or <code>[Cmd+Alt+x] [d]</code> (MacOSX)</p></li>
+</ul>
+    </section>
+  </article>
+
+  <article class='BASE'>
+    <a name='/dyn-daemon' href='#/dyn-daemon'><h2><code><b>BASE</b> _posts/1-3-1-dyn-daemon.dyn</code> Daemon Install</h2></a>
+    <section class='body'>
+      <h2 id="dyndoc-server-started-as-a-daemon">Dyndoc server started as a daemon</h2>
+<ul>
+<li>on MacOSX, <code>launchctl</code>:</li>
+<li><code>gem install dyn-ruby-launchctl</code></li>
+<li><code>dyn-daemon srv new</code> (create the service and load it automatically)</li>
+<li><code>dyn-daemon srv start|stop</code> (start or stop the service)</li>
+<li><code>dyn-daemon srv status</code> (list the status of the service)</li>
+<li><code>dyn-daemon srv load|unload</code> (load or unload the service already created)</li>
+<li>on Windows,</li>
+<li><code>gem install dyn-ruby-win32daemon</code></li>
+<li><code>dyn-daemon srv start|stop</code> (start or stop the daemon)</li>
+<li><code>dyn-daemon srv status</code> (list the status of the daemon)</li>
+<li>on linux, <code>upstart</code>:</li>
+<li>dyn server: adapt the following to your needs (APPUSER and APPDIR)</li>
+</ul>
+<pre class="{bash}"><code>author &quot;rcqls&quot;
+description &quot;start and stop dyn-srv for Ubuntu (upstart)&quot;
+version &quot;0.1&quot;
+
+start on started networking
+stop on runlevel [!2345]
+
+env APPUSER=&quot;cqls&quot;
+env APPDIR=&quot;/home/cqls/.gem/ruby/2.2.0/bin&quot;
+env APPBIN=&quot;dyn-srv&quot;
+
+respawn
+
+script
+  exec su - $APPUSER -c &quot;$APPDIR/$APPBIN&quot;
+end script</code></pre>
+<ul>
+<li>dyntask server: adapt the following to your needs (APPUSER and APPDIR) ```{bash} author &quot;rcqls&quot; description &quot;start and stop dyntask for Ubuntu (upstart)&quot; version &quot;0.1&quot;</li>
+</ul>
+<p>start on started networking stop on runlevel [!2345]</p>
+<p>env APPUSER=&quot;cqls&quot; env APPDIR=&quot;/home/cqls/.gem/ruby/2.2.0/bin&quot; env APPBIN=&quot;dyntask-server&quot;</p>
+<p>respawn</p>
+<p>script exec su - <span class="math inline">$APPUSER -c &quot;$</span>APPDIR/$APPBIN&quot; end script ```</p>
+    </section>
+  </article>
+
+  <article class='BASE'>
+    <a name='/dyndoc-package-manager' href='#/dyndoc-package-manager'><h2><code><b>BASE</b> _posts/1-4-1-dyndoc-package-manager.dyn</code> Dyndoc Package Manager</h2></a>
+    <section class='body'>
+      
+<h2 id="dyndoc-package-manager">Dyndoc Package Manager</h2>
+<ul>
+<li><code>dpm install &lt;github repo&gt;</code> where <code>&lt;github repos&gt;</code> is the name of a Github repo containing one or more dyndoc folder:</li>
+</ul>
+<pre class="{bash}"><code>dpm install rcqls/dyndoc-library-demo</code></pre>
+<ul>
+<li><code>dpm link</code></li>
+</ul>
+<pre class="{bash}"><code>dpm link rcqls/dyndoc-library-demo/LibOne LibTest
+# or
+dpm link rcqls/dyndoc-library-demo/LibTwo LibTest</code></pre>
+<ul>
+<li>Now depending of using first or second link, the following dyndoc file with content:</li>
+</ul>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">require</span>]LibTest/tools
+<span class="line-numbers">   2 </span> [#<span class="Keyword">main</span>]
+<span class="line-numbers">   3 </span> {#<span class="TagName">hello</span>]Moi[#}
+</pre>
+<p>would answer: <code>hello Moi</code> or <code>bonjour Moi</code>.</p>
+<ul>
+<li><code>dpm unlink</code></li>
+</ul>
+    </section>
+  </article>
+
+  <article class='BASE'>
+    <a name='/tags' href='#/tags'><h2><code><b>BASE</b> _posts/2-1-1-tags.dyn</code> Balises Dyndoc</h2></a>
+    <section class='body'>
+      <h3 id="forme-des-syntaxes-dyndoc">Forme des syntaxes <code>dyndoc</code></h3>
+<p>La syntaxe de <code>dyndoc</code> est reconnaissable par son jeu de balises très exotiques de type domino. Une balise se décompose en une séquence d'une accolade ou crochet ouvert, du caractère <code>#</code> (et parfois <code>@</code>), d'un nom d'instruction et finalement d'un crochet ou accolade fermé comme le montre la sortie suivante :</p>
+<pre class="solarized"><span class="line-numbers">   1 </span> {#...] ... [#<span class="Keyword">...</span>] ... [#<span class="Keyword">...</span>] ... [#...}
+</pre>
+Il y a donc trois types de balises : ouverte (commençant par une accolade ouverte), fermée (finissant par une accolade fermée) et une balise séquentielle (commençant et finissant par des crochets ouvert et fermé). Une balise ouverte a toujours sa balise fermée correspondante correspondant à une commande <code>dyndoc</code> dite de bloc. Une commande de bloc peut contenir une ou plusieurs balises séquentielles qui sont interprétées séquentiellement à l'intérieur d'une commande de bloc et correspondent à des commandes <span class="citation">@dyndoc</span>@ dites séquentielles. Les balises <code>dyndoc</code> peuvent être agencées sur une même ligne comme dans l'exemple précédent ou sur plusieurs lignes commme dans les exemples suivants :
+<pre class="solarized"><span class="line-numbers">   1 </span> {#...] ...
+<span class="line-numbers">   2 </span> [#<span class="Keyword">...</span>] ...
+<span class="line-numbers">   3 </span> [#<span class="Keyword">...</span>] ...
+<span class="line-numbers">   4 </span> [#...}
+</pre>
+<pre class="solarized"><span class="line-numbers">   1 </span> {#...] ...
+<span class="line-numbers">   2 </span> [#<span class="Keyword">...</span>] ... [#<span class="Keyword">...</span>] ... [#<span class="Keyword">...</span>] ...
+<span class="line-numbers">   3 </span> [#<span class="Keyword">...</span>] ... [#...}
+</pre>
+<p>A toute balise ouverte ou séquentielle associée à une commande de bloc, correspond un contenu commençant juste après la balise et se terminant juste avant la balise suivante séquentielle ou fermée associée à cette même commande de bloc. L'exemple suivant illustre cette notion.</p>
+<pre class="solarized"><span class="line-numbers">   1 </span> {#<span class="TagName">cmd1</span>]contenu associé la la balise ouverte de la commande de bloc cmd1
+<span class="line-numbers">   2 </span> [#<span class="Keyword">cmd1Seq1</span>]début du contenu de la balise cmd1Seq1{#<span class="TagName">cmd2</span>] ... [#<span class="TagName">cmd2</span>}
+<span class="line-numbers">   3 </span> suite du contenu de la balise cmd1Seq1
+<span class="line-numbers">   4 </span> [#<span class="Keyword">cmd1Seq2</span>]contenu de la balise cmd1Seq2[#<span class="TagName">cmd1</span>}
+</pre>
+<p>Cette exemple illustre la possibilité d'inclure une nouvelle commande de bloc dans le contenu d'une balise associée à une commande de bloc. Ici la commande de bloc <code>cmd2</code> est inclus dans le contenu de la première balise séquentielle <code>cmd1Seq</code> associée à la commande de bloc <code>cmd1</code>.</p>
+<h3 id="structure-dun-document-source-dyndoc">Structure d'un document source <code>dyndoc</code></h3>
+<p>Un document source <code>dyndoc</code> est pour la convenance de l'utilisateur automatiquement complété :</p>
+<p><em>(arrow) avant le code utilisateur par : <code></em>{#document]<strong>[#main]</strong>[#&gt;]<em></code> </em>(arrow) après le code utilisateur par : <code><em>[#document}</em></code></p>
+<p>Ainsi, un document source <code>dyndoc</code> ne contenant que du contenu <code>latex</code> (sans aucune commande <code>dyndoc</code>) peut être converti en un document <code>latex</code> directement compilable. Cette facilité est rendue possible en soulignant qu'un modèle de présentation (&quot;layout&quot; en anglais) par défaut est associé à tout type de format de sortie. Il est à noter que le &quot;layout&quot; est lui-même défini dans le langage <code>dyndoc</code>.</p>
+<p>Un utilisateur de niveau avancé est invité à se référer à la description plus complète de la commande <em>{#document]</em> afin de découvrir les balises séquentielles associées <code><em>[#main]</em></code> (ou <code><em>[#content]</em></code> ), <code><em>[#require]</em></code>, <code><em>[#package]</em></code>, <code><em>[#title]</em></code>, <code><em>[#preamble]</em></code>, <code><em>[#postamble]</em></code>.</p>
+<h3 id="conversion-des-balises-séquentielles-de-base-en-une-commande-de-bloc-dyndoc">Conversion des balises séquentielles de base en une commande de bloc <code>dyndoc</code></h3>
+<p>Nous verrons dans la prochaine section les balises séquentielles de base associées à la commande de bloc principale <code><em>{#blck]</em></code>. Afin de présenter un processus d'autoconversion par le parser <code>dyndoc</code>, signalons que parmi ces balises principales, la balise <code><em>[#&gt;]</em></code> permet d'afficher le contenu obtenu après quelques traitements <code>dyndoc</code> dans le document de sortie tandis que <code><em>[#&lt;]</em></code> permet de faire des traitements <code>dyndoc</code> dont le contenu est au contraire non redirigé vers le document de sortie.</p>
+
+    </section>
+  </article>
+
+  <article class='MIDDLE'>
+    <a name='/vars' href='#/vars'><h2><code><b>MIDDLE</b> _posts/2-2-1-vars.dyn</code> Variables</h2></a>
+    <section class='body'>
+      <h3 id="variables-dyndoc">Variables <code>dyndoc</code></h3>
+<p>Une variable <code>dyndoc</code> est avant tout une variable ne contenant que des chaînes de caractères.</p>
+<h5 id="code-source">Code source</h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted"><span class="DiffInserted">toto</span><span class="DiffInserted">[</span>TOTO<span class="DiffInserted">]</span></span>[#<span class="Keyword">=</span>]<span class="DiffInserted"><span class="DiffInserted">titi</span><span class="DiffInserted">[</span>TITI<span class="Invalid"><span class="Invalid">]</span></span></span>
+<span class="line-numbers">   2 </span> <span class="DiffInserted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">First step: (<span class="Comment">#{</span><span class="Variable">toto</span><span class="Comment">}</span>) AND (<span class="Comment">#{</span><span class="Variable">titi</span><span class="Comment">}</span>)</span>
+<span class="line-numbers">   3 </span> <span class="DiffInserted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">toto+[ and TOTO2<span class="DiffInserted">]</span></span>[#<span class="Keyword">+</span>]<span class="DiffDeleted">titi[ and TITI2]</span>
+<span class="line-numbers">   4 </span> <span class="DiffDeleted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">Second step: (<span class="Comment">#{</span><span class="Variable">toto</span><span class="Comment">}</span>) AND (<span class="Comment">#{</span><span class="Variable">titi</span><span class="Comment">}</span>)</span>
+<span class="line-numbers">   5 </span> <span class="DiffInserted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted"><span class="DiffInserted">toto</span><span class="DiffInserted">[</span>NewTOTO<span class="DiffInserted">]</span></span>[#<span class="Keyword">=</span>]<span class="DiffInserted"><span class="DiffInserted">titi</span><span class="DiffInserted">[</span>NewTITI<span class="Invalid"><span class="Invalid">]</span></span></span>
+<span class="line-numbers">   6 </span> <span class="DiffInserted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">Third step: (<span class="Comment">#{</span><span class="Variable">toto</span><span class="Comment">}</span>) AND (<span class="Comment">#{</span><span class="Variable">titi</span><span class="Comment">}</span>)</span>
+</pre>
+<h5 id="résultat">Résultat</h5>
+<pre class="dynres">
+First step: (TOTO) AND (TITI)
+Second step: (TOTO and TOTO2) AND (TITI and TITI2)
+Third step: (NewTOTO) AND (NewTITI)
+
+</pre>
+<h5 id="commentaires">Commentaires</h5>
+<ul>
+<li>La ligne 1 du code source permet de définir les variables <code>toto</code> et <code>titi</code> à partir des balises <code><em>[#&gt;]</em></code> (ancien format) et <code><em>[#=]</em></code> (nouveau format).</li>
+<li>La ligne 3 quand à elle permet d'ajouter du contenu aux 2 variables via les balises <code><em>[#&gt;]</em></code> (notez l'ajout du <code>+</code> dans <code>toto+</code>) et <code><em>[#+]</em></code>.</li>
+<li>La ligne 5 montre comment écraser les contenus de ces variables.</li>
+<li>Notez comment les contenus des variables <code>toto</code> et <code>titi</code> sont extraits à l'aide de <code><em>#{toto}</em></code> et <code><em>#{titi}</em></code> dans les lignes 2, 4 et 6.</li>
+</ul>
+
+    </section>
+  </article>
+
+  <article class='BASE'>
+    <a name='/if' href='#/if'><h2><code><b>BASE</b> _posts/2-3-1-if.dyn</code> Condition If</h2></a>
+    <section class='body'>
+      <h3 id="condition-if-en-dyndoc">Condition <code>if</code> en <code>dyndoc</code></h3>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">rb&lt;</span>]number<span class="Keyword">=</span><span class="RubyConstant">11</span>
+<span class="line-numbers">   2 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">number <span class="Comment">:{</span><span class="Variable">number</span><span class="Comment">}</span> is <span class="DiffInserted">{#</span><span class="Keyword">if</span><span class="DiffInserted">]</span>number%2==1<span class="DiffInserted">[#</span><span class="Keyword">&gt;</span><span class="DiffInserted">]</span><span class="DiffInserted">odd</span><span class="DiffInserted">[#</span><span class="Keyword">else</span><span class="DiffInserted">]</span>even<span class="DiffInserted">[#</span><span class="Keyword">if</span><span class="DiffInserted">}</span></span>
+<span class="line-numbers">   3 </span> <span class="DiffInserted"></span>[#<span class="Keyword">R&lt;</span>]<span class="Variable">number</span> <span class="Keyword">&lt;-</span> <span class="Number">28</span>
+<span class="line-numbers">   4 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">number <span class="Comment">:r{</span><span class="Variable">number</span><span class="Comment">}</span> is <span class="DiffInserted">{#</span><span class="Keyword">if</span><span class="DiffInserted">]</span><span class="Comment">:r{</span><span class="Variable">number%%2==1</span><span class="Comment">}</span><span class="DiffInserted">[#</span><span class="Keyword">&gt;</span><span class="DiffInserted">]</span><span class="DiffInserted">odd</span><span class="DiffInserted">[#</span><span class="Keyword">else</span><span class="DiffInserted">]</span>even<span class="DiffInserted">[#</span><span class="Keyword">if</span><span class="DiffInserted">}</span></span>
+</pre>
+<pre class="dynres">
+number 11 is odd
+number 28 is even
+
+</pre>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">rb&lt;</span>]number<span class="Keyword">=</span><span class="RubyConstant">14</span>[#<span class="Keyword">R&lt;</span>]<span class="Variable">number</span> <span class="Keyword">&lt;-</span> <span class="Number">25</span>
+<span class="line-numbers">   2 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">number <span class="Comment">:{</span><span class="Variable">number</span><span class="Comment">}</span> is </span>[#<span class="Keyword">?</span>]<span class="DiffDeleted">number%2==1</span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">odd</span>[#<span class="Keyword">?</span>]<span class="DiffDeleted">else</span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">even</span>[#<span class="Keyword">?</span>]<span class="DiffDeleted">end</span>
+<span class="line-numbers">   3 </span> <span class="DiffDeleted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted"></span>
+<span class="line-numbers">   4 </span> <span class="DiffInserted">number <span class="Comment">:r{</span><span class="Variable">number</span><span class="Comment">}</span> is </span>[#<span class="Keyword">?</span>]<span class="DiffDeleted"><span class="Comment">:r{</span><span class="Variable">number%%2==1</span><span class="Comment">}</span></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">odd</span>[#<span class="Keyword">?</span>]<span class="DiffDeleted">else</span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">even</span>
+</pre>
+<pre class="dynres">
+number 14 is even
+number 25 is odd
+</pre>
+
+    </section>
+  </article>
+
+  <article class='BASE'>
+    <a name='/case' href='#/case'><h2><code><b>BASE</b> _posts/2-3-2-case.dyn</code> Condition Case</h2></a>
+    <section class='body'>
+      <h3 id="structure-case-en-dyndoc">Structure <code>case</code> en <code>dyndoc</code></h3>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">=</span>]<span class="DiffInserted"><span class="DiffInserted">todo</span><span class="DiffInserted">[</span>first,third,second,first<span class="Invalid"><span class="Invalid">]</span></span></span>
+<span class="line-numbers">   2 </span> <span class="DiffInserted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">This is the list of the translated words in French:</span>
+<span class="line-numbers">   3 </span> <span class="DiffInserted"><span class="DiffInserted">{#</span><span class="Keyword">case</span><span class="DiffInserted">]</span><span class="Comment">#{</span><span class="Variable">todo</span><span class="Comment">}</span></span>
+<span class="line-numbers">   4 </span> <span class="DiffInserted"><span class="DiffInserted">[#</span><span class="Keyword">when</span><span class="DiffInserted">]</span>first<span class="DiffInserted">[#</span><span class="Keyword">&gt;</span><span class="DiffInserted">]</span><span class="DiffInserted">[premier <span class="Invalid"><span class="Invalid">]</span></span></span></span>
+<span class="line-numbers">   5 </span> <span class="DiffInserted"><span class="DiffInserted"></span><span class="DiffInserted">[#</span><span class="Keyword">when</span><span class="DiffInserted">]</span>second<span class="DiffInserted">[#</span><span class="Keyword">&gt;</span><span class="DiffInserted">]</span><span class="DiffInserted">[deuxième <span class="Invalid"><span class="Invalid">]</span></span></span></span>
+<span class="line-numbers">   6 </span> <span class="DiffInserted"><span class="DiffInserted"></span><span class="DiffInserted">[#</span><span class="Keyword">when</span><span class="DiffInserted">]</span>third<span class="DiffInserted">[#</span><span class="Keyword">&gt;</span><span class="DiffInserted">]</span><span class="DiffInserted">[troisième <span class="Invalid"><span class="Invalid">]</span></span></span></span>
+<span class="line-numbers">   7 </span> <span class="DiffInserted"><span class="DiffInserted"></span><span class="DiffInserted">[#</span><span class="Keyword">case</span><span class="DiffInserted">}</span></span>
+</pre>
+<pre class="dynres">
+This is the list of the translated words in French:
+premier troisième deuxième premier 
+
+</pre>
+
+    </section>
+  </article>
+
+  <article class='MIDDLE'>
+    <a name='/R' href='#/R'><h2><code><b>MIDDLE</b> _posts/3-1-1-R.dyn</code> R Bloc</h2></a>
+    <section class='body'>
+      <h3 id="commandes-r">Commandes <code>R</code></h3>
+<p>Comme avec <code>Sweave</code> et même si <code>dyndoc</code> est développé en <code>ruby</code> (et non en <code>R</code> comme <code>Sweave</code>), il est possible d'embarquer le système <code>R</code> dans <code>dyndoc</code> et ainsi de faire interagir <code>R</code> et <code>dyndoc</code>.</p>
+<p>L'exemple suivant propose d'exécuter du code <code>R</code> sans affichage dans un premier temps. Dans un second temps, les contenus de variables <code>R</code> sont extraites dans <code>dyndoc</code>.</p>
+<h5 id="code-source">Code source</h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">R&lt;</span>]<span class="Comment"><span class="Comment">#</span> No output even for the following &quot;cat(...)&quot;</span>
+<span class="line-numbers">   2 </span> <span class="Variable">a</span> <span class="Keyword">&lt;-</span> c(<span class="QuotedString"><span class="Quotes">&quot;</span>toto<span class="Quotes">&quot;</span></span>,<span class="QuotedString"><span class="Quotes">&quot;</span>titi<span class="Quotes">&quot;</span></span>)
+<span class="line-numbers">   3 </span> cat(<span class="Variable">a</span>,<span class="QuotedString"><span class="Quotes">&#39;</span><span class="UserDefinedConstant">\n</span><span class="Quotes">&#39;</span></span>)
+<span class="line-numbers">   4 </span> <span class="Variable">a2</span> <span class="Keyword">&lt;-</span> paste(<span class="Variable">a</span>,<span class="Number">1</span><span class="Keyword">:</span><span class="Number">2</span>,<span class="FunctionArgument">sep</span><span class="Keyword">=</span><span class="QuotedString"><span class="Quotes">&quot;</span><span class="Quotes">&quot;</span></span>)
+<span class="line-numbers">   5 </span> cat(<span class="Variable">a2</span>,<span class="QuotedString"><span class="Quotes">&#39;</span><span class="UserDefinedConstant">\n</span><span class="Quotes">&#39;</span></span>)
+<span class="line-numbers">   6 </span> <span class="Variable">a3</span> <span class="Keyword">&lt;-</span> paste(<span class="Variable">a2</span>,<span class="FunctionArgument">collapse</span><span class="Keyword">=</span><span class="QuotedString"><span class="Quotes">&quot;</span> &amp; <span class="Quotes">&quot;</span></span>)
+<span class="line-numbers">   7 </span> cat(<span class="Variable">a3</span>)
+<span class="line-numbers">   8 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">Extracting the R results inside dyndoc:</span>
+<span class="line-numbers">   9 </span> <span class="DiffInserted"><span class="Comment">:r{</span><span class="Variable">a</span><span class="Comment">}</span></span>
+<span class="line-numbers">  10 </span> <span class="DiffInserted"><span class="Comment">:r{</span><span class="Variable">a2</span><span class="Comment">}</span></span>
+<span class="line-numbers">  11 </span> <span class="DiffInserted"><span class="Comment">:r{</span><span class="Variable">a3</span><span class="Comment">}</span></span>
+</pre>
+<h5 id="résultat">Résultat</h5>
+<pre class="dynres">
+Extracting the R results inside dyndoc:
+toto,titi
+toto1,titi2
+toto1 & titi2
+
+</pre>
+<h5 id="commentaires">Commentaires</h5>
+<p>Remarquez qu'aucun affichage des instructions <code>cat(...)</code> n'apparaît dans la sortie. L'affichage des <code>cat(...)</code> comme tout autre affichage <code>R</code> apparaît éventuellement dans une console si <code>dyndoc</code> est exécuté en ligne de commande.</p>
+<p>L'instruction <code><em>:r{...}</em></code> (ou <code><em>#r{...}</em>)</code>, qui est l'équivalent de <code>\Sexpr{...}</code> en <code>Sweave</code>, permet d'extraire le contenu de la variable nommée <code>...</code> défini dans un bloc <code><em>[#R&lt;]</em></code>, qui est une sorte d'équivalent <code>Sweave</code> de <code>&lt;&lt;echo=FALSE,results=hide&gt;&gt;=</code>.</p>
+<p>L'exemple suivant permet au contraire de rediriger les sorties <code>R</code> dans le document. C'est l'équivalent <code>Sweave</code> de <code>&lt;&lt;echo=FALSE&gt;&gt;=</code>.</p>
+<h5 id="code-source-1">Code source</h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">R&gt;</span>]<span class="Comment"><span class="Comment">#</span> Each output goes to the document</span>
+<span class="line-numbers">   2 </span> <span class="Variable">a</span> <span class="Keyword">&lt;-</span> c(<span class="QuotedString"><span class="Quotes">&quot;</span>toto<span class="Quotes">&quot;</span></span>,<span class="QuotedString"><span class="Quotes">&quot;</span>titi<span class="Quotes">&quot;</span></span>)
+<span class="line-numbers">   3 </span> cat(<span class="Variable">a</span>,<span class="QuotedString"><span class="Quotes">&#39;</span><span class="UserDefinedConstant">\n</span><span class="Quotes">&#39;</span></span>)
+<span class="line-numbers">   4 </span> <span class="Variable">a2</span> <span class="Keyword">&lt;-</span> paste(<span class="Variable">a</span>,<span class="Number">1</span><span class="Keyword">:</span><span class="Number">2</span>,<span class="FunctionArgument">sep</span><span class="Keyword">=</span><span class="QuotedString"><span class="Quotes">&quot;</span><span class="Quotes">&quot;</span></span>)
+<span class="line-numbers">   5 </span> cat(<span class="Variable">a2</span>,<span class="QuotedString"><span class="Quotes">&#39;</span><span class="UserDefinedConstant">\n</span><span class="Quotes">&#39;</span></span>)
+<span class="line-numbers">   6 </span> <span class="Variable">a3</span> <span class="Keyword">&lt;-</span> paste(<span class="Variable">a2</span>,<span class="FunctionArgument">collapse</span><span class="Keyword">=</span><span class="QuotedString"><span class="Quotes">&quot;</span> &amp; <span class="Quotes">&quot;</span></span>)
+<span class="line-numbers">   7 </span> cat(<span class="Variable">a3</span>)
+</pre>
+<h5 id="résultat-1">Résultat</h5>
+<pre class="dynres">
+toto titi 
+toto1 titi2 
+toto1 & titi2
+</pre>
+<p>L'exemple suivant permet d'obtenir la commande de base <code>Sweave</code> (i.e. <code>&lt;&lt;&gt;&gt;=</code>) en affichant les entrées et sorties d'une session <code>R</code>.</p>
+<h5 id="code-source-2">Code source</h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">R&gt;&gt;</span>]<span class="Variable">x</span> <span class="Keyword">&lt;-</span> rnorm(<span class="Number">10</span>)
+<span class="line-numbers">   2 </span> <span class="Variable">x</span>
+<span class="line-numbers">   3 </span> mean(<span class="Variable">x</span>)
+</pre>
+<h5 id="résultat-2">Résultat</h5>
+<pre class="dynres">
+<pre class="solarized">
+<span class="Variable">R</span><span class="Keyword">&gt;</span> <span class="Variable">x</span> <span class="Keyword">&lt;-</span> rnorm(<span class="Number">10</span>)
+<span class="Variable">R</span><span class="Keyword">&gt;</span> <span class="Variable">x</span>
+ [<span class="Number">1</span>]  <span class="Number">0.95483581</span> <span class="Keyword">-</span><span class="Number">0.06577645</span> <span class="Keyword">-</span><span class="Number">0.08922012</span> <span class="Keyword">-</span><span class="Number">0.31158353</span> <span class="Keyword">-</span><span class="Number">0.02201361</span> <span class="Keyword">-</span><span class="Number">1.09506881</span>
+ [<span class="Number">7</span>]  <span class="Number">1.10615808</span> <span class="Keyword">-</span><span class="Number">0.42894912</span> <span class="Keyword">-</span><span class="Number">0.37239047</span> <span class="Keyword">-</span><span class="Number">0.32052545</span>
+<span class="Variable">R</span><span class="Keyword">&gt;</span> mean(<span class="Variable">x</span>)
+[<span class="Number">1</span>] <span class="Keyword">-</span><span class="Number">0.06445337</span>
+
+</pre>
+</pre>
+<h5 id="commentaires-1">Commentaires</h5>
+<p>Cette sortie verbatim <code>R</code> est assez sommaire. Comme <code>dyndoc</code> est aussi un langage de programmation pour étendre les fonctionnalités de base, il existe des librairies <code>dyndoc</code> qui permettent de définir des sorties à la guise de l'utilisateur-développeur.</p>
+
+    </section>
+  </article>
+
+  <article class='ADVANCED'>
+    <a name='/dyn-in-R' href='#/dyn-in-R'><h2><code><b>ADVANCED</b> _posts/3-2-1-dyn-in-R.dyn</code> Dyndoc inside R</h2></a>
+    <section class='body'>
+      <h3 id="code-dyndoc-dans-un-bloc-r">Code <code>dyndoc</code> dans un bloc <code>R</code></h3>
+<p>Maintenant, l'une des possibilités les plus appréciables en <code>dyndoc</code> est la possibilité d'éxecuter du code <code>dyndoc</code> dans un bloc <code>R</code> (voir section suivante pour bloc <code>ruby</code>).</p>
+<h5 id="boucle-r">Boucle <code>R</code></h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">Dyndoc inside R block!</span>
+<span class="line-numbers">   2 </span> <span class="DiffInserted"></span>[#<span class="Keyword">R&gt;</span>] <span class="Keyword">for</span>(<span class="Variable">cpt</span> <span class="Keyword">in</span> <span class="Number">1</span><span class="Keyword">:</span><span class="Number">4</span>) { {#<span class="Keyword">&gt;</span>]item<span class="Comment">:r{</span><span class="Variable">cpt</span><span class="Comment">}</span> [#<span class="Keyword">&gt;</span>} }
+<span class="line-numbers">   3 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted"></span>
+<span class="line-numbers">   4 </span> <span class="DiffInserted">but also,</span>
+<span class="line-numbers">   5 </span> <span class="DiffInserted"></span>[#<span class="Keyword">R&gt;</span>] sapply(<span class="Number">5</span><span class="Keyword">:</span><span class="Number">8</span>,<span class="Keyword">function</span>(<span class="Variable">cpt</span>) {#<span class="Keyword">&gt;</span>]item<span class="Comment">:r{</span><span class="Variable">cpt</span><span class="Comment">}</span> [#<span class="Keyword">&gt;</span>})
+</pre>
+<pre class="dynres">
+Dyndoc inside R block!
+item1 item2 item3 item4 
+but also,
+item5 item6 item7 item8 
+</pre>
+<h5 id="condition-if-en-r">Condition <code>if</code> en <code>R</code></h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">R&gt;</span>]<span class="FunctionArgument">number</span><span class="Keyword">=</span><span class="Number">31</span>
+<span class="line-numbers">   2 </span>     <span class="Keyword">if</span>(<span class="Variable">number</span><span class="Keyword">%%</span><span class="Number">2</span><span class="Keyword">=</span><span class="Keyword">=</span><span class="Number">1</span>)
+<span class="line-numbers">   3 </span>         {#<span class="Keyword">&gt;</span>]number <span class="Comment">:r{</span><span class="Variable">number</span><span class="Comment">}</span> is odd[#<span class="Keyword">&gt;</span>}
+<span class="line-numbers">   4 </span>     <span class="Keyword">else</span>
+<span class="line-numbers">   5 </span>         {#<span class="Keyword">&gt;</span>]number <span class="Comment">:r{</span><span class="Variable">number</span><span class="Comment">}</span> is even[#<span class="Keyword">&gt;</span>}
+</pre>
+<pre class="dynres">
+number 31 is odd
+</pre>
+<h5 id="structure-switch-en-r">Structure <code>switch</code> en <code>R</code></h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">=</span>]<span class="DiffInserted"><span class="DiffInserted">todo</span><span class="DiffInserted">[</span>first,third,second,first<span class="Invalid"><span class="Invalid">]</span></span></span>
+<span class="line-numbers">   2 </span> <span class="DiffInserted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">This is the list of the translated words in French:</span>
+<span class="line-numbers">   3 </span> <span class="DiffInserted"></span>[#<span class="Keyword">R&gt;</span>]
+<span class="line-numbers">   4 </span>     <span class="Keyword">for</span>(<span class="Variable">todo</span> <span class="Keyword">in</span> strsplit(<span class="Comment">#{</span><span class="Variable">=todo</span><span class="Comment">}</span>,<span class="QuotedString"><span class="Quotes">&quot;</span>,<span class="Quotes">&quot;</span></span>)[[<span class="Number">1</span>]]) {
+<span class="line-numbers">   5 </span>         <span class="Keyword">switch</span>(<span class="Variable">todo</span>,
+<span class="line-numbers">   6 </span>         <span class="FunctionArgument">first</span><span class="Keyword">=</span>{#<span class="Keyword">&gt;</span>]premier [#<span class="Keyword">&gt;</span>},
+<span class="line-numbers">   7 </span>         <span class="FunctionArgument">second</span><span class="Keyword">=</span>{#<span class="Keyword">&gt;</span>]deuxième [#<span class="Keyword">&gt;</span>},
+<span class="line-numbers">   8 </span>         <span class="FunctionArgument">third</span><span class="Keyword">=</span>{#<span class="Keyword">&gt;</span>]troisième [#<span class="Keyword">&gt;</span>})
+<span class="line-numbers">   9 </span>     }
+</pre>
+<pre class="dynres">
+This is the list of the translated words in French:
+premier troisième deuxième premier 
+</pre>
+
+    </section>
+  </article>
+
+  <article class='MIDDLE'>
+    <a name='/ruby' href='#/ruby'><h2><code><b>MIDDLE</b> _posts/4-1-1-ruby.dyn</code> Ruby Bloc</h2></a>
+    <section class='body'>
+      <h3 id="commandes-ruby">Commandes <code>ruby</code></h3>
+<p>A la différence de <code>Sweave</code> (ainsi que <code>knitr</code>) développé exclusivement en <code>R</code>, <code>dyndoc</code> est développé en <code>ruby</code>. Il est ainsi très facile de faire interagir <code>ruby</code> et <code>dyndoc</code>.</p>
+<h5 id="code-source">Code source</h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">rb&lt;</span>]<span class="Comment"><span class="Comment">#</span> No output even for the following &quot;puts&quot;</span>
+<span class="line-numbers">   2 </span> a<span class="Keyword">=</span>[<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span>toto<span class="RubyPunctuationSection">&quot;</span></span>,<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span>titi<span class="RubyPunctuationSection">&quot;</span></span>]
+<span class="line-numbers">   3 </span> puts a
+<span class="line-numbers">   4 </span> a2<span class="Keyword">=</span>a.<span class="RubyFunction">each</span>.<span class="RubyFunction">with_index</span>.<span class="RubyFunction">map</span>{|<span class="Variable">e</span>,<span class="Variable">i</span>| e<span class="Keyword">+</span>(i<span class="Keyword">+</span><span class="RubyConstant">1</span>).<span class="RubyFunction">to_s</span>}
+<span class="line-numbers">   5 </span> puts a2
+<span class="line-numbers">   6 </span> a3<span class="Keyword">=</span>a2.<span class="RubyFunction">join</span>(<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span> &amp; <span class="RubyPunctuationSection">&quot;</span></span>)
+<span class="line-numbers">   7 </span> puts a3
+<span class="line-numbers">   8 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">Extracting the ruby results inside dyndoc:</span>
+<span class="line-numbers">   9 </span> <span class="DiffInserted"><span class="Comment">:{</span><span class="Variable">a</span><span class="Comment">}</span></span>
+<span class="line-numbers">  10 </span> <span class="DiffInserted"><span class="Comment">:{</span><span class="Variable">a2</span><span class="Comment">}</span></span>
+<span class="line-numbers">  11 </span> <span class="DiffInserted"><span class="Comment">:{</span><span class="Variable">a3</span><span class="Comment">}</span></span>
+</pre>
+<h5 id="résultat">Résultat</h5>
+<pre class="dynres">
+Extracting the ruby results inside dyndoc:
+toto,titi
+toto1,titi2
+toto1 & titi2
+
+</pre>
+<h5 id="commentaires">Commentaires</h5>
+<p>Remarquez qu'aucun affichage des instructions <code>puts</code> n'apparaît dans la sortie. L'affichage des <code>puts</code> comme tout autre affichage <code>ruby</code> apparaît éventuellement dans une console si <code>dyndoc</code> est exécuté en ligne de commande.</p>
+<p>L'instruction <code><em>:{...}</em></code> (ou <code><em>:{...}</em></code> ou <code><em>:{...}</em></code>), permet d'extraire le contenu de la variable nommée <code>...</code> défini dans un bloc <code><em>[#rb&lt;]</em></code>.</p>
+<p>L'exemple suivant permet au contraire de rediriger les sorties <code>ruby</code> dans le document.</p>
+<h5 id="code-source-1">Code source</h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">rb&gt;</span>]<span class="Comment"><span class="Comment">#</span> Each output goes to the document</span>
+<span class="line-numbers">   2 </span> a<span class="Keyword">=</span>[<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span>toto<span class="RubyPunctuationSection">&quot;</span></span>,<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span>titi<span class="RubyPunctuationSection">&quot;</span></span>]
+<span class="line-numbers">   3 </span> puts a
+<span class="line-numbers">   4 </span> a2<span class="Keyword">=</span>a.<span class="RubyFunction">each_with_index</span>.<span class="RubyFunction">map</span>{|<span class="Variable">e</span>,<span class="Variable">i</span>| e<span class="Keyword">+</span>(i<span class="Keyword">+</span><span class="RubyConstant">1</span>).<span class="RubyFunction">to_s</span>}
+<span class="line-numbers">   5 </span> puts a2
+<span class="line-numbers">   6 </span> a3<span class="Keyword">=</span>a2.<span class="RubyFunction">join</span>(<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span> &amp; <span class="RubyPunctuationSection">&quot;</span></span>)
+<span class="line-numbers">   7 </span> puts a3
+</pre>
+<h5 id="résultat-1">Résultat</h5>
+<pre class="dynres">
+toto
+titi
+toto1
+titi2
+toto1 & titi2
+
+</pre>
+
+    </section>
+  </article>
+
+  <article class='ADVANCED'>
+    <a name='/dyn-in-ruby' href='#/dyn-in-ruby'><h2><code><b>ADVANCED</b> _posts/4-2-1-dyn-in-ruby.dyn</code> Dyndoc in Ruby</h2></a>
+    <section class='body'>
+      <h3 id="code-dyndoc-dans-un-bloc-ruby">Code <code>dyndoc</code> dans un bloc <code>ruby</code></h3>
+<p>Comme signalé dans la section précédente et de manière similaire, il est possible d'éxecuter du code <code>dyndoc</code> dans un bloc <code>ruby</code>.</p>
+<h5 id="boucle-ruby">Boucle <code>ruby</code></h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">Dyndoc inside ruby block!</span>
+<span class="line-numbers">   2 </span> <span class="DiffInserted"></span>[#<span class="Keyword">rb&gt;</span>] <span class="RubyKeywordControl">for</span> cpt <span class="RubyKeywordControl">in</span> <span class="RubyConstant">1</span>..<span class="RubyConstant">4</span> <span class="RubyKeywordControl">do </span>{#<span class="Keyword">&gt;</span>]item<span class="Comment">:{</span><span class="Variable">cpt</span><span class="Comment">}</span> [#<span class="Keyword">&gt;</span>}; <span class="RubyKeywordControl">end</span>
+<span class="line-numbers">   3 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted"></span>
+<span class="line-numbers">   4 </span> <span class="DiffInserted">but also,</span>
+<span class="line-numbers">   5 </span> <span class="DiffInserted"></span>[#<span class="Keyword">rb&gt;</span>] (<span class="RubyConstant">5</span>..<span class="RubyConstant">8</span>).<span class="RubyFunction">each</span> <span class="RubyKeywordControl">do </span>|<span class="Variable">cpt</span>| {#<span class="Keyword">&gt;</span>]item<span class="Comment">:{</span><span class="Variable">cpt</span><span class="Comment">}</span> [#<span class="Keyword">&gt;</span>}; <span class="RubyKeywordControl">end</span>
+</pre>
+<pre class="dynres">
+Dyndoc inside ruby block!
+item1 item2 item3 item4 
+but also,
+item5 item6 item7 item8 
+</pre>
+<h5 id="condition-if-en-ruby">Condition <code>if</code> en <code>ruby</code></h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">rb&gt;</span>]number<span class="Keyword">=</span><span class="RubyConstant">33</span>
+<span class="line-numbers">   2 </span>     <span class="RubyKeywordControl">if</span> number<span class="Keyword">%</span><span class="RubyConstant">2</span><span class="Keyword">==</span><span class="RubyConstant">1</span>
+<span class="line-numbers">   3 </span>         {#<span class="Keyword">&gt;</span>]number <span class="Comment">:{</span><span class="Variable">number</span><span class="Comment">}</span> is odd[#<span class="Keyword">&gt;</span>}
+<span class="line-numbers">   4 </span>     <span class="RubyKeywordControl">else</span>
+<span class="line-numbers">   5 </span>         {#<span class="Keyword">&gt;</span>]number <span class="Comment">:{</span><span class="Variable">number</span><span class="Comment">}</span> is even[#<span class="Keyword">&gt;</span>}
+<span class="line-numbers">   6 </span>     <span class="RubyKeywordControl">end</span>
+</pre>
+<pre class="dynres">
+number 33 is odd
+</pre>
+<h5 id="structure-case-en-ruby">Structure <code>case</code> en <code>ruby</code></h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">=</span>]<span class="DiffInserted"><span class="DiffInserted">todo</span><span class="DiffInserted">[</span>first,third,second,first<span class="Invalid"><span class="Invalid">]</span></span></span>
+<span class="line-numbers">   2 </span> <span class="DiffInserted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">This is the list of the translated words in French:</span>
+<span class="line-numbers">   3 </span> <span class="DiffInserted"></span>[#<span class="Keyword">rb&gt;</span>]<span class="Comment">#{</span><span class="Variable">=todo</span><span class="Comment">}</span>.<span class="RubyFunction">split</span>(<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span>,<span class="RubyPunctuationSection">&quot;</span></span>).<span class="RubyFunction">each</span> <span class="RubyKeywordControl">do </span>|<span class="Variable">todo</span>| <span class="Comment"><span class="Comment">#</span></span>
+<span class="line-numbers">   4 </span>     <span class="RubyKeywordControl">case</span> todo.<span class="RubyFunction">to_sym</span>
+<span class="line-numbers">   5 </span>     <span class="RubyKeywordControl">when</span> <span class="RubySymbol"><span class="RubySymbol">:</span>first</span> <span class="RubyKeywordControl">then</span> {#<span class="Keyword">&gt;</span>]premier [#<span class="Keyword">&gt;</span>}
+<span class="line-numbers">   6 </span>     <span class="RubyKeywordControl">when</span> <span class="RubySymbol"><span class="RubySymbol">:</span>second</span> <span class="RubyKeywordControl">then</span> {#<span class="Keyword">&gt;</span>]deuxième [#<span class="Keyword">&gt;</span>}
+<span class="line-numbers">   7 </span>     <span class="RubyKeywordControl">when</span> <span class="RubySymbol"><span class="RubySymbol">:</span>third</span> <span class="RubyKeywordControl">then</span> {#<span class="Keyword">&gt;</span>]troisième [#<span class="Keyword">&gt;</span>}
+<span class="line-numbers">   8 </span>     <span class="RubyKeywordControl">end</span>
+<span class="line-numbers">   9 </span> <span class="RubyKeywordControl">end</span>
+</pre>
+<pre class="dynres">
+This is the list of the translated words in French:
+premier troisième deuxième premier 
+</pre>
+
+    </section>
+  </article>
+
+  <article class='ADVANCED'>
+    <a name='/R-rb-dyn-vars' href='#/R-rb-dyn-vars'><h2><code><b>ADVANCED</b> _posts/5-1-1-R-rb-dyn-vars.dyn</code> Variables R, Ruby et dyndoc</h2></a>
+    <section class='body'>
+      <h3 id="traitement-ruby-et-r">Traitement <code>ruby</code> et <code>R</code></h3>
 
 
-    <div class="content container">
-      <div class="page">
-  <h1 class="page-title">DynDoc</h1>
-  <h2 id="a-macro-language-and-templating-system">A macro language and templating system</h2>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">rb&lt;</span>]  <span class="Keyword">&lt;</span>toto@<span class="Keyword">&gt;</span>[<span class="RubyConstant">0</span>]<span class="Keyword">=</span> <span class="Keyword">&lt;</span>toto@<span class="Keyword">&gt;</span>.<span class="RubyFunction">inject</span>(<span class="RubyConstant">0</span>) { |<span class="Variable">s</span>,<span class="Variable">v</span>| s <span class="Keyword">+=</span> v }
+<span class="line-numbers">   2 </span>  		<span class="Keyword">&lt;</span>toto<span class="RubySymbol"><span class="RubySymbol">:</span>&gt;</span> <span class="Keyword">=</span> <span class="Keyword">&lt;</span>toto<span class="RubySymbol"><span class="RubySymbol">:</span>&gt;</span>.<span class="RubyFunction">downcase</span>
+<span class="line-numbers">   3 </span>  		<span class="Keyword">&lt;</span>toto[<span class="RubyConstant">1</span>]<span class="Variable"><span class="RubyVariableDefinition">$</span>&gt;</span> <span class="Keyword">=</span> <span class="Keyword">&lt;</span>toto<span class="Variable"><span class="RubyVariableDefinition">$</span>&gt;</span>.<span class="RubyFunction">inject</span>(<span class="RubyConstant">0</span>) { |<span class="Variable">s</span>,<span class="Variable">v</span>| s <span class="Keyword">+=</span> v }
+<span class="line-numbers">   4 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">After ruby: toto (resp. toto@ and toto$)</span>
+<span class="line-numbers">   5 </span> <span class="DiffInserted">contains <span class="Comment">#{</span><span class="Variable">toto</span><span class="Comment">}</span> (resp. <span class="Comment">#{</span><span class="Variable">toto@</span><span class="Comment">}</span> and <span class="Comment">#{</span><span class="Variable">toto$</span><span class="Comment">}</span>)</span>
+</pre>
 
-</div>
 
-    </div>
 
-  </body>
+
+<pre class="dynres">
+After ruby: toto (resp. toto@ and toto$)
+contains toto (resp. 6,3,2 and 6.0,3.0,2.0)
+
+</pre>
+
+
+
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">R&lt;</span>]	<span class="Keyword">&lt;</span><span class="Variable">toto</span>@<span class="Keyword">&gt;</span>[<span class="Number">1</span>]<span class="Keyword">=</span> <span class="Number">1L</span>
+<span class="line-numbers">   2 </span>  		<span class="Keyword">&lt;</span><span class="Variable">toto</span><span class="Keyword">:</span><span class="Keyword">&gt;</span> <span class="Keyword">=</span> toupper(<span class="Keyword">&lt;</span><span class="Variable">toto</span><span class="Keyword">:</span><span class="Keyword">&gt;</span>)
+<span class="line-numbers">   3 </span>  		<span class="Keyword">&lt;</span><span class="Variable">toto</span><span class="Keyword">$</span><span class="Keyword">&gt;</span>[<span class="Number">1</span>] <span class="Keyword">=</span> <span class="Number">1</span>
+<span class="line-numbers">   4 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">After R: toto (resp. toto@ and toto$)</span>
+<span class="line-numbers">   5 </span> <span class="DiffInserted">contains <span class="Comment">#{</span><span class="Variable">toto</span><span class="Comment">}</span> (resp. <span class="Comment">#{</span><span class="Variable">toto@</span><span class="Comment">}</span> and <span class="Comment">#{</span><span class="Variable">toto$</span><span class="Comment">}</span>)</span>
+</pre>
+
+
+
+
+<pre class="dynres">
+After R: toto (resp. toto@ and toto$)
+contains TOTO (resp. 1,3,2 and 1.0,3.0,2.0)
+
+</pre>
+
+    </section>
+  </article>
+
+</section>
+
+
+  <!--[if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
+  <script src='assets.js' type='text/javascript'></script>
+  <script>require('boot');</script>
+</body>
 </html>

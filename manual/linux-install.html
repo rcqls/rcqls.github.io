@@ -1,0 +1,41 @@
+<h3 id="for-ubuntu-or-linux-ubuntu-based-distribution-user">for Ubuntu (or linux Ubuntu-based distribution) user</h3>
+<p>Note that linux user from other distributions generally knows how to adapt the following steps to his own linux distribution.</p>
+<ul>
+<li><a href="http://sites.psu.edu/theubunturblog/installing-r-in-ubuntu/">R</a>, <a href="https://www.brightbox.com/docs/ruby/ubuntu/">ruby</a>, git and dyndoc install</li>
+</ul>
+<pre class="{bash}"><code># R install
+sudo add-apt-repository -y ppa:marutter/rrutter
+sudo apt-get update -y
+sudo apt-get install -y r-base r-base-dev
+
+# ruby install
+sudo apt-get install -y software-properties-common
+sudo apt-add-repository -y ppa:brightbox/ruby-ng
+sudo apt-get update -y
+sudo apt-get install -y ruby2.2 ruby2.2-dev ruby-switch
+ruby-switch --list
+
+# git install
+sudo apt-get install -y git
+
+# ruby gems: dyndoc
+sudo gem install dyndoc-ruby --no-ri --no-rdoc
+
+# R package devtools
+sudo apt-get install -y libxml2-dev  libcurl4-openssl-dev libssl-dev
+R -e &#39;install.packages(&quot;devtools&quot;,repos=&quot;http://cran.rstudio.com/&quot;)&#39;
+
+# R package rb4R
+sudo R -e &#39;devtools::install_github(&quot;rcqls/rb4R&quot;,args=&quot;--no-multiarch&quot;)&#39;
+# if something goes wrong in the previous instruction redo after: sudo apt-get install libgmp-dev
+
+# R package base64
+sudo R -e &#39;install.packages(&quot;base64&quot;,repos=&quot;http://cran.rstudio.com/&quot;)&#39;</code></pre>
+<ul>
+<li>pdflatex</li>
+<li><code>sudo apt-get install -y texlive-full</code></li>
+<li><a href="http://pandoc.org/installing.html">pandoc</a></li>
+<li>optional but nice-to-have:</li>
+<li><code>sudo gem install asciidoctor --no-ri --no-rdoc</code></li>
+<li><a href="http://hutchinson.belmont.ma.us/tth/mml">Ttm</a> from source</li>
+</ul>

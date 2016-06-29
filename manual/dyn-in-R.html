@@ -1,0 +1,40 @@
+<h3 id="code-dyndoc-dans-un-bloc-r">Code <code>dyndoc</code> dans un bloc <code>R</code></h3>
+<p>Maintenant, l'une des possibilités les plus appréciables en <code>dyndoc</code> est la possibilité d'éxecuter du code <code>dyndoc</code> dans un bloc <code>R</code> (voir section suivante pour bloc <code>ruby</code>).</p>
+<h5 id="boucle-r">Boucle <code>R</code></h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">Dyndoc inside R block!</span>
+<span class="line-numbers">   2 </span> <span class="DiffInserted"></span>[#<span class="Keyword">R&gt;</span>] <span class="Keyword">for</span>(<span class="Variable">cpt</span> <span class="Keyword">in</span> <span class="Number">1</span><span class="Keyword">:</span><span class="Number">4</span>) { {#<span class="Keyword">&gt;</span>]item<span class="Comment">:r{</span><span class="Variable">cpt</span><span class="Comment">}</span> [#<span class="Keyword">&gt;</span>} }
+<span class="line-numbers">   3 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted"></span>
+<span class="line-numbers">   4 </span> <span class="DiffInserted">but also,</span>
+<span class="line-numbers">   5 </span> <span class="DiffInserted"></span>[#<span class="Keyword">R&gt;</span>] sapply(<span class="Number">5</span><span class="Keyword">:</span><span class="Number">8</span>,<span class="Keyword">function</span>(<span class="Variable">cpt</span>) {#<span class="Keyword">&gt;</span>]item<span class="Comment">:r{</span><span class="Variable">cpt</span><span class="Comment">}</span> [#<span class="Keyword">&gt;</span>})
+</pre>
+<pre class="dynres">
+Dyndoc inside R block!
+item1 item2 item3 item4 
+but also,
+item5 item6 item7 item8 
+</pre>
+<h5 id="condition-if-en-r">Condition <code>if</code> en <code>R</code></h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">R&gt;</span>]<span class="FunctionArgument">number</span><span class="Keyword">=</span><span class="Number">31</span>
+<span class="line-numbers">   2 </span>     <span class="Keyword">if</span>(<span class="Variable">number</span><span class="Keyword">%%</span><span class="Number">2</span><span class="Keyword">=</span><span class="Keyword">=</span><span class="Number">1</span>)
+<span class="line-numbers">   3 </span>         {#<span class="Keyword">&gt;</span>]number <span class="Comment">:r{</span><span class="Variable">number</span><span class="Comment">}</span> is odd[#<span class="Keyword">&gt;</span>}
+<span class="line-numbers">   4 </span>     <span class="Keyword">else</span>
+<span class="line-numbers">   5 </span>         {#<span class="Keyword">&gt;</span>]number <span class="Comment">:r{</span><span class="Variable">number</span><span class="Comment">}</span> is even[#<span class="Keyword">&gt;</span>}
+</pre>
+<pre class="dynres">
+number 31 is odd
+</pre>
+<h5 id="structure-switch-en-r">Structure <code>switch</code> en <code>R</code></h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">=</span>]<span class="DiffInserted"><span class="DiffInserted">todo</span><span class="DiffInserted">[</span>first,third,second,first<span class="Invalid"><span class="Invalid">]</span></span></span>
+<span class="line-numbers">   2 </span> <span class="DiffInserted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">This is the list of the translated words in French:</span>
+<span class="line-numbers">   3 </span> <span class="DiffInserted"></span>[#<span class="Keyword">R&gt;</span>]
+<span class="line-numbers">   4 </span>     <span class="Keyword">for</span>(<span class="Variable">todo</span> <span class="Keyword">in</span> strsplit(<span class="Comment">#{</span><span class="Variable">=todo</span><span class="Comment">}</span>,<span class="QuotedString"><span class="Quotes">&quot;</span>,<span class="Quotes">&quot;</span></span>)[[<span class="Number">1</span>]]) {
+<span class="line-numbers">   5 </span>         <span class="Keyword">switch</span>(<span class="Variable">todo</span>,
+<span class="line-numbers">   6 </span>         <span class="FunctionArgument">first</span><span class="Keyword">=</span>{#<span class="Keyword">&gt;</span>]premier [#<span class="Keyword">&gt;</span>},
+<span class="line-numbers">   7 </span>         <span class="FunctionArgument">second</span><span class="Keyword">=</span>{#<span class="Keyword">&gt;</span>]deuxième [#<span class="Keyword">&gt;</span>},
+<span class="line-numbers">   8 </span>         <span class="FunctionArgument">third</span><span class="Keyword">=</span>{#<span class="Keyword">&gt;</span>]troisième [#<span class="Keyword">&gt;</span>})
+<span class="line-numbers">   9 </span>     }
+</pre>
+<pre class="dynres">
+This is the list of the translated words in French:
+premier troisième deuxième premier 
+</pre>

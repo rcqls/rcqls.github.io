@@ -1,0 +1,36 @@
+<h3 id="traitement-ruby-et-r">Traitement <code>ruby</code> et <code>R</code></h3>
+
+
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">rb&lt;</span>]  <span class="Keyword">&lt;</span>toto@<span class="Keyword">&gt;</span>[<span class="RubyConstant">0</span>]<span class="Keyword">=</span> <span class="Keyword">&lt;</span>toto@<span class="Keyword">&gt;</span>.<span class="RubyFunction">inject</span>(<span class="RubyConstant">0</span>) { |<span class="Variable">s</span>,<span class="Variable">v</span>| s <span class="Keyword">+=</span> v }
+<span class="line-numbers">   2 </span>  		<span class="Keyword">&lt;</span>toto<span class="RubySymbol"><span class="RubySymbol">:</span>&gt;</span> <span class="Keyword">=</span> <span class="Keyword">&lt;</span>toto<span class="RubySymbol"><span class="RubySymbol">:</span>&gt;</span>.<span class="RubyFunction">downcase</span>
+<span class="line-numbers">   3 </span>  		<span class="Keyword">&lt;</span>toto[<span class="RubyConstant">1</span>]<span class="Variable"><span class="RubyVariableDefinition">$</span>&gt;</span> <span class="Keyword">=</span> <span class="Keyword">&lt;</span>toto<span class="Variable"><span class="RubyVariableDefinition">$</span>&gt;</span>.<span class="RubyFunction">inject</span>(<span class="RubyConstant">0</span>) { |<span class="Variable">s</span>,<span class="Variable">v</span>| s <span class="Keyword">+=</span> v }
+<span class="line-numbers">   4 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">After ruby: toto (resp. toto@ and toto$)</span>
+<span class="line-numbers">   5 </span> <span class="DiffInserted">contains <span class="Comment">#{</span><span class="Variable">toto</span><span class="Comment">}</span> (resp. <span class="Comment">#{</span><span class="Variable">toto@</span><span class="Comment">}</span> and <span class="Comment">#{</span><span class="Variable">toto$</span><span class="Comment">}</span>)</span>
+</pre>
+
+
+
+
+<pre class="dynres">
+After ruby: toto (resp. toto@ and toto$)
+contains toto (resp. 6,3,2 and 6.0,3.0,2.0)
+
+</pre>
+
+
+
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">R&lt;</span>]	<span class="Keyword">&lt;</span><span class="Variable">toto</span>@<span class="Keyword">&gt;</span>[<span class="Number">1</span>]<span class="Keyword">=</span> <span class="Number">1L</span>
+<span class="line-numbers">   2 </span>  		<span class="Keyword">&lt;</span><span class="Variable">toto</span><span class="Keyword">:</span><span class="Keyword">&gt;</span> <span class="Keyword">=</span> toupper(<span class="Keyword">&lt;</span><span class="Variable">toto</span><span class="Keyword">:</span><span class="Keyword">&gt;</span>)
+<span class="line-numbers">   3 </span>  		<span class="Keyword">&lt;</span><span class="Variable">toto</span><span class="Keyword">$</span><span class="Keyword">&gt;</span>[<span class="Number">1</span>] <span class="Keyword">=</span> <span class="Number">1</span>
+<span class="line-numbers">   4 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">After R: toto (resp. toto@ and toto$)</span>
+<span class="line-numbers">   5 </span> <span class="DiffInserted">contains <span class="Comment">#{</span><span class="Variable">toto</span><span class="Comment">}</span> (resp. <span class="Comment">#{</span><span class="Variable">toto@</span><span class="Comment">}</span> and <span class="Comment">#{</span><span class="Variable">toto$</span><span class="Comment">}</span>)</span>
+</pre>
+
+
+
+
+<pre class="dynres">
+After R: toto (resp. toto@ and toto$)
+contains TOTO (resp. 1,3,2 and 1.0,3.0,2.0)
+
+</pre>

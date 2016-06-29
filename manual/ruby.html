@@ -1,0 +1,45 @@
+<h3 id="commandes-ruby">Commandes <code>ruby</code></h3>
+<p>A la différence de <code>Sweave</code> (ainsi que <code>knitr</code>) développé exclusivement en <code>R</code>, <code>dyndoc</code> est développé en <code>ruby</code>. Il est ainsi très facile de faire interagir <code>ruby</code> et <code>dyndoc</code>.</p>
+<h5 id="code-source">Code source</h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">rb&lt;</span>]<span class="Comment"><span class="Comment">#</span> No output even for the following &quot;puts&quot;</span>
+<span class="line-numbers">   2 </span> a<span class="Keyword">=</span>[<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span>toto<span class="RubyPunctuationSection">&quot;</span></span>,<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span>titi<span class="RubyPunctuationSection">&quot;</span></span>]
+<span class="line-numbers">   3 </span> puts a
+<span class="line-numbers">   4 </span> a2<span class="Keyword">=</span>a.<span class="RubyFunction">each</span>.<span class="RubyFunction">with_index</span>.<span class="RubyFunction">map</span>{|<span class="Variable">e</span>,<span class="Variable">i</span>| e<span class="Keyword">+</span>(i<span class="Keyword">+</span><span class="RubyConstant">1</span>).<span class="RubyFunction">to_s</span>}
+<span class="line-numbers">   5 </span> puts a2
+<span class="line-numbers">   6 </span> a3<span class="Keyword">=</span>a2.<span class="RubyFunction">join</span>(<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span> &amp; <span class="RubyPunctuationSection">&quot;</span></span>)
+<span class="line-numbers">   7 </span> puts a3
+<span class="line-numbers">   8 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">Extracting the ruby results inside dyndoc:</span>
+<span class="line-numbers">   9 </span> <span class="DiffInserted"><span class="Comment">:{</span><span class="Variable">a</span><span class="Comment">}</span></span>
+<span class="line-numbers">  10 </span> <span class="DiffInserted"><span class="Comment">:{</span><span class="Variable">a2</span><span class="Comment">}</span></span>
+<span class="line-numbers">  11 </span> <span class="DiffInserted"><span class="Comment">:{</span><span class="Variable">a3</span><span class="Comment">}</span></span>
+</pre>
+<h5 id="résultat">Résultat</h5>
+<pre class="dynres">
+Extracting the ruby results inside dyndoc:
+toto,titi
+toto1,titi2
+toto1 & titi2
+
+</pre>
+<h5 id="commentaires">Commentaires</h5>
+<p>Remarquez qu'aucun affichage des instructions <code>puts</code> n'apparaît dans la sortie. L'affichage des <code>puts</code> comme tout autre affichage <code>ruby</code> apparaît éventuellement dans une console si <code>dyndoc</code> est exécuté en ligne de commande.</p>
+<p>L'instruction <code><em>:{...}</em></code> (ou <code><em>:{...}</em></code> ou <code><em>:{...}</em></code>), permet d'extraire le contenu de la variable nommée <code>...</code> défini dans un bloc <code><em>[#rb&lt;]</em></code>.</p>
+<p>L'exemple suivant permet au contraire de rediriger les sorties <code>ruby</code> dans le document.</p>
+<h5 id="code-source-1">Code source</h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">rb&gt;</span>]<span class="Comment"><span class="Comment">#</span> Each output goes to the document</span>
+<span class="line-numbers">   2 </span> a<span class="Keyword">=</span>[<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span>toto<span class="RubyPunctuationSection">&quot;</span></span>,<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span>titi<span class="RubyPunctuationSection">&quot;</span></span>]
+<span class="line-numbers">   3 </span> puts a
+<span class="line-numbers">   4 </span> a2<span class="Keyword">=</span>a.<span class="RubyFunction">each_with_index</span>.<span class="RubyFunction">map</span>{|<span class="Variable">e</span>,<span class="Variable">i</span>| e<span class="Keyword">+</span>(i<span class="Keyword">+</span><span class="RubyConstant">1</span>).<span class="RubyFunction">to_s</span>}
+<span class="line-numbers">   5 </span> puts a2
+<span class="line-numbers">   6 </span> a3<span class="Keyword">=</span>a2.<span class="RubyFunction">join</span>(<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span> &amp; <span class="RubyPunctuationSection">&quot;</span></span>)
+<span class="line-numbers">   7 </span> puts a3
+</pre>
+<h5 id="résultat-1">Résultat</h5>
+<pre class="dynres">
+toto
+titi
+toto1
+titi2
+toto1 & titi2
+
+</pre>

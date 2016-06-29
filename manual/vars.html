@@ -1,0 +1,24 @@
+<h3 id="variables-dyndoc">Variables <code>dyndoc</code></h3>
+<p>Une variable <code>dyndoc</code> est avant tout une variable ne contenant que des chaînes de caractères.</p>
+<h5 id="code-source">Code source</h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted"><span class="DiffInserted">toto</span><span class="DiffInserted">[</span>TOTO<span class="DiffInserted">]</span></span>[#<span class="Keyword">=</span>]<span class="DiffInserted"><span class="DiffInserted">titi</span><span class="DiffInserted">[</span>TITI<span class="Invalid"><span class="Invalid">]</span></span></span>
+<span class="line-numbers">   2 </span> <span class="DiffInserted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">First step: (<span class="Comment">#{</span><span class="Variable">toto</span><span class="Comment">}</span>) AND (<span class="Comment">#{</span><span class="Variable">titi</span><span class="Comment">}</span>)</span>
+<span class="line-numbers">   3 </span> <span class="DiffInserted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">toto+[ and TOTO2<span class="DiffInserted">]</span></span>[#<span class="Keyword">+</span>]<span class="DiffDeleted">titi[ and TITI2]</span>
+<span class="line-numbers">   4 </span> <span class="DiffDeleted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">Second step: (<span class="Comment">#{</span><span class="Variable">toto</span><span class="Comment">}</span>) AND (<span class="Comment">#{</span><span class="Variable">titi</span><span class="Comment">}</span>)</span>
+<span class="line-numbers">   5 </span> <span class="DiffInserted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted"><span class="DiffInserted">toto</span><span class="DiffInserted">[</span>NewTOTO<span class="DiffInserted">]</span></span>[#<span class="Keyword">=</span>]<span class="DiffInserted"><span class="DiffInserted">titi</span><span class="DiffInserted">[</span>NewTITI<span class="Invalid"><span class="Invalid">]</span></span></span>
+<span class="line-numbers">   6 </span> <span class="DiffInserted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">Third step: (<span class="Comment">#{</span><span class="Variable">toto</span><span class="Comment">}</span>) AND (<span class="Comment">#{</span><span class="Variable">titi</span><span class="Comment">}</span>)</span>
+</pre>
+<h5 id="résultat">Résultat</h5>
+<pre class="dynres">
+First step: (TOTO) AND (TITI)
+Second step: (TOTO and TOTO2) AND (TITI and TITI2)
+Third step: (NewTOTO) AND (NewTITI)
+
+</pre>
+<h5 id="commentaires">Commentaires</h5>
+<ul>
+<li>La ligne 1 du code source permet de définir les variables <code>toto</code> et <code>titi</code> à partir des balises <code><em>[#&gt;]</em></code> (ancien format) et <code><em>[#=]</em></code> (nouveau format).</li>
+<li>La ligne 3 quand à elle permet d'ajouter du contenu aux 2 variables via les balises <code><em>[#&gt;]</em></code> (notez l'ajout du <code>+</code> dans <code>toto+</code>) et <code><em>[#+]</em></code>.</li>
+<li>La ligne 5 montre comment écraser les contenus de ces variables.</li>
+<li>Notez comment les contenus des variables <code>toto</code> et <code>titi</code> sont extraits à l'aide de <code><em>#{toto}</em></code> et <code><em>#{titi}</em></code> dans les lignes 2, 4 et 6.</li>
+</ul>

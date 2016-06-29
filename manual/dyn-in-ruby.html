@@ -1,0 +1,41 @@
+<h3 id="code-dyndoc-dans-un-bloc-ruby">Code <code>dyndoc</code> dans un bloc <code>ruby</code></h3>
+<p>Comme signalé dans la section précédente et de manière similaire, il est possible d'éxecuter du code <code>dyndoc</code> dans un bloc <code>ruby</code>.</p>
+<h5 id="boucle-ruby">Boucle <code>ruby</code></h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">Dyndoc inside ruby block!</span>
+<span class="line-numbers">   2 </span> <span class="DiffInserted"></span>[#<span class="Keyword">rb&gt;</span>] <span class="RubyKeywordControl">for</span> cpt <span class="RubyKeywordControl">in</span> <span class="RubyConstant">1</span>..<span class="RubyConstant">4</span> <span class="RubyKeywordControl">do </span>{#<span class="Keyword">&gt;</span>]item<span class="Comment">:{</span><span class="Variable">cpt</span><span class="Comment">}</span> [#<span class="Keyword">&gt;</span>}; <span class="RubyKeywordControl">end</span>
+<span class="line-numbers">   3 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted"></span>
+<span class="line-numbers">   4 </span> <span class="DiffInserted">but also,</span>
+<span class="line-numbers">   5 </span> <span class="DiffInserted"></span>[#<span class="Keyword">rb&gt;</span>] (<span class="RubyConstant">5</span>..<span class="RubyConstant">8</span>).<span class="RubyFunction">each</span> <span class="RubyKeywordControl">do </span>|<span class="Variable">cpt</span>| {#<span class="Keyword">&gt;</span>]item<span class="Comment">:{</span><span class="Variable">cpt</span><span class="Comment">}</span> [#<span class="Keyword">&gt;</span>}; <span class="RubyKeywordControl">end</span>
+</pre>
+<pre class="dynres">
+Dyndoc inside ruby block!
+item1 item2 item3 item4 
+but also,
+item5 item6 item7 item8 
+</pre>
+<h5 id="condition-if-en-ruby">Condition <code>if</code> en <code>ruby</code></h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">rb&gt;</span>]number<span class="Keyword">=</span><span class="RubyConstant">33</span>
+<span class="line-numbers">   2 </span>     <span class="RubyKeywordControl">if</span> number<span class="Keyword">%</span><span class="RubyConstant">2</span><span class="Keyword">==</span><span class="RubyConstant">1</span>
+<span class="line-numbers">   3 </span>         {#<span class="Keyword">&gt;</span>]number <span class="Comment">:{</span><span class="Variable">number</span><span class="Comment">}</span> is odd[#<span class="Keyword">&gt;</span>}
+<span class="line-numbers">   4 </span>     <span class="RubyKeywordControl">else</span>
+<span class="line-numbers">   5 </span>         {#<span class="Keyword">&gt;</span>]number <span class="Comment">:{</span><span class="Variable">number</span><span class="Comment">}</span> is even[#<span class="Keyword">&gt;</span>}
+<span class="line-numbers">   6 </span>     <span class="RubyKeywordControl">end</span>
+</pre>
+<pre class="dynres">
+number 33 is odd
+</pre>
+<h5 id="structure-case-en-ruby">Structure <code>case</code> en <code>ruby</code></h5>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">=</span>]<span class="DiffInserted"><span class="DiffInserted">todo</span><span class="DiffInserted">[</span>first,third,second,first<span class="Invalid"><span class="Invalid">]</span></span></span>
+<span class="line-numbers">   2 </span> <span class="DiffInserted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">This is the list of the translated words in French:</span>
+<span class="line-numbers">   3 </span> <span class="DiffInserted"></span>[#<span class="Keyword">rb&gt;</span>]<span class="Comment">#{</span><span class="Variable">=todo</span><span class="Comment">}</span>.<span class="RubyFunction">split</span>(<span class="QuotedString"><span class="RubyPunctuationSection">&quot;</span>,<span class="RubyPunctuationSection">&quot;</span></span>).<span class="RubyFunction">each</span> <span class="RubyKeywordControl">do </span>|<span class="Variable">todo</span>| <span class="Comment"><span class="Comment">#</span></span>
+<span class="line-numbers">   4 </span>     <span class="RubyKeywordControl">case</span> todo.<span class="RubyFunction">to_sym</span>
+<span class="line-numbers">   5 </span>     <span class="RubyKeywordControl">when</span> <span class="RubySymbol"><span class="RubySymbol">:</span>first</span> <span class="RubyKeywordControl">then</span> {#<span class="Keyword">&gt;</span>]premier [#<span class="Keyword">&gt;</span>}
+<span class="line-numbers">   6 </span>     <span class="RubyKeywordControl">when</span> <span class="RubySymbol"><span class="RubySymbol">:</span>second</span> <span class="RubyKeywordControl">then</span> {#<span class="Keyword">&gt;</span>]deuxième [#<span class="Keyword">&gt;</span>}
+<span class="line-numbers">   7 </span>     <span class="RubyKeywordControl">when</span> <span class="RubySymbol"><span class="RubySymbol">:</span>third</span> <span class="RubyKeywordControl">then</span> {#<span class="Keyword">&gt;</span>]troisième [#<span class="Keyword">&gt;</span>}
+<span class="line-numbers">   8 </span>     <span class="RubyKeywordControl">end</span>
+<span class="line-numbers">   9 </span> <span class="RubyKeywordControl">end</span>
+</pre>
+<pre class="dynres">
+This is the list of the translated words in French:
+premier troisième deuxième premier 
+</pre>

@@ -1,0 +1,20 @@
+<h3 id="condition-if-en-dyndoc">Condition <code>if</code> en <code>dyndoc</code></h3>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">rb&lt;</span>]number<span class="Keyword">=</span><span class="RubyConstant">11</span>
+<span class="line-numbers">   2 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">number <span class="Comment">:{</span><span class="Variable">number</span><span class="Comment">}</span> is <span class="DiffInserted">{#</span><span class="Keyword">if</span><span class="DiffInserted">]</span>number%2==1<span class="DiffInserted">[#</span><span class="Keyword">&gt;</span><span class="DiffInserted">]</span><span class="DiffInserted">odd</span><span class="DiffInserted">[#</span><span class="Keyword">else</span><span class="DiffInserted">]</span>even<span class="DiffInserted">[#</span><span class="Keyword">if</span><span class="DiffInserted">}</span></span>
+<span class="line-numbers">   3 </span> <span class="DiffInserted"></span>[#<span class="Keyword">R&lt;</span>]<span class="Variable">number</span> <span class="Keyword">&lt;-</span> <span class="Number">28</span>
+<span class="line-numbers">   4 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">number <span class="Comment">:r{</span><span class="Variable">number</span><span class="Comment">}</span> is <span class="DiffInserted">{#</span><span class="Keyword">if</span><span class="DiffInserted">]</span><span class="Comment">:r{</span><span class="Variable">number%%2==1</span><span class="Comment">}</span><span class="DiffInserted">[#</span><span class="Keyword">&gt;</span><span class="DiffInserted">]</span><span class="DiffInserted">odd</span><span class="DiffInserted">[#</span><span class="Keyword">else</span><span class="DiffInserted">]</span>even<span class="DiffInserted">[#</span><span class="Keyword">if</span><span class="DiffInserted">}</span></span>
+</pre>
+<pre class="dynres">
+number 11 is odd
+number 28 is even
+
+</pre>
+<pre class="solarized"><span class="line-numbers">   1 </span> [#<span class="Keyword">rb&lt;</span>]number<span class="Keyword">=</span><span class="RubyConstant">14</span>[#<span class="Keyword">R&lt;</span>]<span class="Variable">number</span> <span class="Keyword">&lt;-</span> <span class="Number">25</span>
+<span class="line-numbers">   2 </span> [#<span class="Keyword">&gt;</span>]<span class="DiffInserted">number <span class="Comment">:{</span><span class="Variable">number</span><span class="Comment">}</span> is </span>[#<span class="Keyword">?</span>]<span class="DiffDeleted">number%2==1</span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">odd</span>[#<span class="Keyword">?</span>]<span class="DiffDeleted">else</span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">even</span>[#<span class="Keyword">?</span>]<span class="DiffDeleted">end</span>
+<span class="line-numbers">   3 </span> <span class="DiffDeleted"></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted"></span>
+<span class="line-numbers">   4 </span> <span class="DiffInserted">number <span class="Comment">:r{</span><span class="Variable">number</span><span class="Comment">}</span> is </span>[#<span class="Keyword">?</span>]<span class="DiffDeleted"><span class="Comment">:r{</span><span class="Variable">number%%2==1</span><span class="Comment">}</span></span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">odd</span>[#<span class="Keyword">?</span>]<span class="DiffDeleted">else</span>[#<span class="Keyword">&gt;</span>]<span class="DiffInserted">even</span>
+</pre>
+<pre class="dynres">
+number 14 is even
+number 25 is odd
+</pre>

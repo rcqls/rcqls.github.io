@@ -1,0 +1,21 @@
+<h2 id="dyndoc-inside-atom-editor">Dyndoc inside Atom editor</h2>
+<ul>
+<li>Install <a href="https://atom.io">Atom</a></li>
+<li>for MacOSX user: <code>brew cask install atom</code> (Important: atom can be installed with a basic installer but this way allows us to set the environment variable PATH properly)</li>
+<li>for Windows user: <code>scoop install atom</code></li>
+<li>install packages <code>(atom-)dyndoc</code> and <code>(atom-)language-dyndoc</code> via settings inside atom (via comamnd line: <code>apm install dyndoc language-dyndoc</code>)</li>
+</ul>
+<h2 id="dyndoc-testing-inside-atom-editor">Dyndoc testing inside Atom editor</h2>
+<ul>
+<li><p>dyndoc server: open console and type</p>
+<pre class="{bash}"><code>dpm install rcqls/DyndocWebTools.dyn  # install DyndocWebTools.dyn (git is required)
+dpm link rcqls/DyndocWebTools.dyn     # to be required in dyndoc
+dyn-srv                               # launch the dyndoc server</code></pre></li>
+<li>optional atom packages but nice-to-have or even almost required:</li>
+<li>asciidoc-preview, language-asciidoc (made by asciidoctor team)</li>
+<li>pdf-view</li>
+<li>Command line: apm install asciidoc-preview language-asciidoc pdf-view</li>
+<li>open atom and select ~/dyndoc/demo folder, open first.dyn</li>
+<li>to open dyndoc viewer: <code>[Ctrl+Alt+x] [t]</code> (Windows and Linux) or <code>[Cmd+Alt+x] [t]</code> (MacOSX)</li>
+<li><p>to execute dyndoc code: <code>[Ctrl+Alt+d]</code> (Windows and Linux) or <code>[Cmd+Alt+x] [d]</code> (MacOSX)</p></li>
+</ul>
